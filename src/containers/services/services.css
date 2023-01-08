@@ -1,0 +1,88 @@
+.RO__services{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: absolute;
+    top: 150rem;
+    padding: 3rem;
+    border: 1px solid red;
+}
+
+.RO__services-title{
+    width: 100%;
+    margin: 3rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    border: 1px solid blue;
+}
+
+.RO__services-title h1{
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 78px;
+}
+
+.RO__services-content{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: 3rem;
+    height: 980px;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    border: 1px solid blue;
+}
+
+.RO__services-content_cats{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 20%;
+    border: 1px solid yellow;
+}
+
+.RO__services-content_cats-DataAnalysis,
+.RO__services-content_cats-WebDev,
+.RO__services-content_cats-BS{
+    margin-bottom: 3rem;
+    border: 1px solid cyan;
+}
+
+.RO__services-content_cats-DataAnalysis_title,
+.RO__services-content_cats-WebDev_title,
+.RO__services-content_cats-BS_title{
+    margin-bottom: 2rem;
+} 
+
+.RO__services-content_cats-DataAnalysis_title h2,
+.RO__services-content_cats-WebDev_title h2,
+.RO__services-content_cats-BS_title h2{
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 49px;
+} 
+
+.RO__services-content_cats-DataAnalysis_content p,
+.RO__services-content_cats-WebDev_content p,
+.RO__services-content_cats-BS_content p{
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.RO__services-content_cats-DataAnalysis_bar,
+.RO__services-content_cat-WebDev_bar,
+.RO__services-content_cats-BS_bar{
+    width: 630px;
+    height: 0px;
+    border: 3px solid #A39E9E;
+    margin-top: 33px;
+}
+
+.RO__services-content_img{
+    align-self: center;
+    border: 1px solid yellow;
+}

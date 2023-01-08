@@ -1,0 +1,91 @@
+.RO__header {
+    display: flex;
+    position: relative;
+    top: 12rem;
+    z-index: 1;
+}
+
+.RO__header-content {
+    align-items: flex-start;
+    margin-right: 30%;
+    margin-bottom: 3rem;
+}
+
+.RO__header-content h1 {
+    font-family: "Montserrat";
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 117px;
+    color: #000000;
+}
+
+
+.content_text-effect{
+    font-family: "Montserrat";
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 117px;
+    color: #CB4242;
+}
+
+@media screen and (max-width: 1630px){
+    .RO__header-content h1{
+        font-size: 82px;
+        line-height: 100px;
+    }
+    .content_text-effect{
+        font-size: 82px;
+        font-weight: 600;
+        line-height: 100px;
+    }
+}
+@media screen and (max-width: 1050px){
+    .RO__header-content{
+        margin-right: 23%;
+        margin-top: 0.5rem;
+    }
+    .RO__header-content h1{
+        font-size: 70px;
+        font-weight: 600;
+        line-height: 80px;
+    }
+    .content_text-effect{
+        font-size: 70px;
+        font-weight: 600;
+        line-height: 80px;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    .RO__header-content{
+        margin-right: 25%;
+    }
+    .RO__header-content h1{
+        font-size: 50px;
+        font-weight: 600;
+        line-height: 60px;
+    }
+    .content_text-effect{
+        font-size: 50px;
+        font-weight: 600;
+        line-height: 60px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .RO__header-content{
+        margin-right: 25%;
+        margin-top: 0.5rem;
+    }
+    .RO__header-content h1{
+        font-size: 45px;
+        font-weight: 600;
+        line-height: 45px;
+    }
+    .content_text-effect{
+        font-size: 45px;
+        font-weight: 600;
+        line-height: 45px;
+    }
+}

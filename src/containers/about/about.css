@@ -1,0 +1,212 @@
+
+.RO__about{
+    display: inline;
+    width: 100%;
+    position: absolute;
+    top: 66rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    padding-bottom: 3rem;
+}
+
+.RO__about-title{
+    align-items: center;
+    margin: 3rem;
+    position: relative;
+}
+
+.RO__about-title h1{
+    font-family: "Montserrat";
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 78px;
+    color: #000;
+}
+
+.RO__about-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.RO__about-content_p{
+    margin: 3rem;
+    width: 900px;
+    height: auto;
+}
+
+.RO__about-content_img-1{
+    position: absolute;
+    width: 542px;
+    height: 542px;
+    left: 65%;
+    transform: scale(1.5,1.5);
+}
+
+.RO__about-content_img-2{
+    position: absolute;
+    margin-bottom: 1rem;
+    width: 542px;
+    height: 542px;
+    left: 65.8%;
+    transform: rotate(-20deg) scale(1.5);
+}
+
+.RO__about-content_img-3{
+    position: absolute;
+    margin-bottom: 1.2rem;
+    width: 542px;
+    height: 542px;
+    left: 66.2%;
+    transform: rotate(-40deg) scale(1.5);
+}
+
+.RO__about-content_img-4{
+    position: absolute;
+    margin-bottom: 4rem;
+    width: 640px;
+    height: 531px;
+    left: 62%;
+}
+
+.RO__about-content_p p{
+    font-family: "Montserrat";
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #000;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.RO__about-more{
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    height: 345px;
+    background-color: #FF4C4C;
+    border-radius: 12px;
+    margin-top: 6rem;
+}
+
+.RO__about-more_quote{
+    position: absolute;
+    margin: 3rem;
+}
+
+.RO__about-more_quote p {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 54px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.RO__about-more_button{
+    display: flex;
+    margin: 15rem auto;
+    width: 30%;
+    height: 20%;
+    background-color: #000;
+    border-radius: 40px;
+}
+
+.RO__about-more_button p{
+    font-family: 'Montserrat';
+    display: flex;
+    font-weight: 500;
+    font-size: 40px;
+    margin: 0 auto;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 1630px){
+    .RO__about-content_img-1,
+    .RO__about-content_img-2,
+    .RO__about-content_img-3,
+    .RO__about-content_img-4{
+        display: none;
+    }
+    .RO__about-content_p{
+        width: auto;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1160px){
+    .RO__about-more_quote p,
+    .RO__about-more_button p{
+        font-size: 34px;
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-width: 940px){
+    .RO__about-more{
+        height: 280px;
+        margin-top: 9rem;
+    }
+    .RO__about-more_quote p,
+    .RO__about-more_button p{
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .RO__about-more_button{
+        margin: 12rem auto;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .RO__about{
+        padding: 0;
+        padding-bottom: 3rem;
+    }
+    .RO__about-title{
+        margin: 0;
+        margin-left: 10%;
+    }
+    .RO__about-title h1{
+        font-size: 50px;
+    }
+    .RO__about-content_p{
+        margin-top: 1rem;
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+    .RO__about-content_p p{
+        font-size: 20px;
+    }
+    .RO__about-more{
+        margin-top: 3rem;
+    }
+    .RO__about-more_quote p,
+    .RO__about-more_button p{
+        font-size: 22px;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .RO__about-title h1{
+        font-size: 45px;
+        line-height: 45px;
+    }
+    .RO__about-content_p p{
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .RO__about-more_quote{
+        margin-top: 10%;
+    }
+    .RO__about-more_quote p,
+    .RO__about-more_button p{
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
