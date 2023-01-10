@@ -85,6 +85,9 @@
     .RO__navbar-rafael{
         display: none;
     }
+    .RO__navbar-links_logo img{
+        transform: scale(0.65);
+    }
     .RO__navbar-menu{
         display: flex;
         margin-right: 1.5rem;
