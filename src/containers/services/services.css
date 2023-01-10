@@ -8,7 +8,7 @@
 
 .RO__services-title{
     width: 100%;
-    padding: 1rem;
+    margin: 3rem;
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -22,7 +22,7 @@
 
 .RO__services-content{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-content: center;
     height: 980px;
     margin-left: 10%;
@@ -77,4 +77,35 @@
 
 .RO__services-content_img{
     align-self: center;
+}
+
+@media screen and (max-width: 1300px){
+    .RO__services-content_img{
+        display: none;
+    }
+    .RO__services-content_cats{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .RO__services-title{
+        margin-bottom: 1rem;
+    }
+    .RO__services-title h1{
+        font-size: 58px;
+        font-weight: 500;
+    }
+    .RO__services-content_cats-DataAnalysis_title h2,
+    .RO__services-content_cats-WebDev_title h2,
+    .RO__services-content_cats-BS_title h2{
+        font-size: 34px;
+        line-height: 40px;
+    }
+    .RO__services-content_cats-DataAnalysis_content p,
+    .RO__services-content_cats-WebDev_content p,
+    .RO__services-content_cats-BS_content p{
+        font-size: 20px;
+        line-height: 24px;
+    }
 }
