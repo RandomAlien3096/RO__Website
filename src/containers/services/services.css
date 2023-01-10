@@ -4,16 +4,13 @@
     width: 100%;
     position: absolute;
     top: 150rem;
-    padding: 3rem;
-    border: 1px solid red;
 }
 
 .RO__services-title{
     width: 100%;
-    margin: 3rem;
-    margin-left: 15rem;
-    margin-right: 15rem;
-    border: 1px solid blue;
+    padding: 1rem;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .RO__services-title h1{
@@ -25,28 +22,24 @@
 
 .RO__services-content{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-content: center;
-    margin: 3rem;
     height: 980px;
-    margin-left: 15rem;
-    margin-right: 15rem;
-    border: 1px solid blue;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .RO__services-content_cats{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin-right: 20%;
-    border: 1px solid yellow;
+    width: 42.5%;
 }
 
 .RO__services-content_cats-DataAnalysis,
 .RO__services-content_cats-WebDev,
 .RO__services-content_cats-BS{
     margin-bottom: 3rem;
-    border: 1px solid cyan;
 }
 
 .RO__services-content_cats-DataAnalysis_title,
@@ -76,7 +69,7 @@
 .RO__services-content_cats-DataAnalysis_bar,
 .RO__services-content_cat-WebDev_bar,
 .RO__services-content_cats-BS_bar{
-    width: 630px;
+    width: 100%;
     height: 0px;
     border: 3px solid #A39E9E;
     margin-top: 33px;
@@ -84,5 +77,4 @@
 
 .RO__services-content_img{
     align-self: center;
-    border: 1px solid yellow;
 }

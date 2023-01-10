@@ -46,12 +46,7 @@ const Services = () => {
           </div>
         </div>
         <div className='RO__services-content_img'>
-          <img 
-            src = {build_one} alt = "visual representation for services"
-            onMouseOver={e => (e.currentTarget.src = "build_two")} />
-          <img
-            src = {build_two} alt = "visual representation for services"
-            onMouseOut={e => (e.currentTarget.src = "build_one")} />
+          <img src = {build_one} alt = "visual representation for services" />
         </div>
       </div>
     </div>
