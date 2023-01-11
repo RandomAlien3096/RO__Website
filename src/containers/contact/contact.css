@@ -1,0 +1,58 @@
+.RO__contact {
+    position: absolute;
+    display: grid;
+    top: 270rem;
+    place-items: center;
+    height: 30vh;
+    width: 100vw;
+}
+
+.RO__contact-content {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    height: 100%;
+    background-color: #F5F5F5;
+}
+
+.RO__contact-content_text {
+    display: flex;
+    align-self: center;
+    margin-left: 2rem;
+    height: 80%;
+    width: 40%;
+}
+.RO__contact-content_text p {
+    align-self: center;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 42px;
+}
+
+.RO__contact-content_shape {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin-right: 1rem;
+    height: 80%;
+    width: 30%;
+    background-color: #FF4C4C;
+}
+
+.RO__contact-content_shape-title {
+    display: flex;
+    border: 1px solid black;
+    height: 30%;
+    width: 80%;
+    margin-top: 10%;
+}
+.RO__contact-content_shape-title p {
+    align-self: center;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 42px;
+    color: #ffffff;
+
+}
