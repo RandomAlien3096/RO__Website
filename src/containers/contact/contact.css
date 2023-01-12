@@ -87,3 +87,99 @@
     border-radius: 30px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 1300px) {
+    .RO__contact{
+        top: 285rem;
+    }
+}
+@media screen and (max-width: 880px) {
+    .RO__contact{
+        top: 280rem;
+    }
+    .RO__contact-content_shape-title p{
+        font-size: 28px;
+    }
+    .RO__contact-content_shape-text p {
+        font-size: 90%;
+    }
+    .RO__contact-content_shape-button button {
+        font-size: 90%;
+    }
+}
+@media screen and (max-width: 740px) {
+    .RO__contact{
+        top: 280rem;
+    }
+    .RO__contact-content_shape-title {
+        height: 25%;
+        margin-top: 10%;
+    }
+    .RO__contact-content_shape-title p{
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .RO__contact-content_shape-text {
+        height: 40%;
+    }
+    .RO__contact-content_shape-text p {
+        font-size: 80%;
+    }
+    .RO__contact-content_shape-button button {
+        font-size: 80%;
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .RO__contact-content{
+        flex-direction: column;
+        width: 90%;
+    }
+    .RO__contact-content_text{
+        width: 80%;
+        margin-left: 0;
+    }
+    .RO__contact-content_shape{
+        width: 80%;
+        margin-right: 0;
+    }
+    .RO__contact-content_shape-title{
+        margin-top: 2.5%;
+    }
+    .RO__contact-content_shape-title p{
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .RO__contact-content_shape-text p {
+        font-size: 100%;
+    }
+    .RO__contact-content_shape-button button {
+        font-size: 90%;
+        height: 35px;
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .RO__contact-content{
+        flex-direction: column;
+        width: 90%;
+    }
+    .RO__contact-content_text p{
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .RO__contact-content_shape-title p{
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .RO__contact-content_shape-text p {
+        font-size: 90%;
+    }
+    .RO__contact-content_shape-button button {
+        font-size: 85%;
+        height: 35px;
+        width: 100px;
+    }
+}

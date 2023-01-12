@@ -20,7 +20,6 @@ const rand = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
   let prev = 0;
 
   
-
 const Portfolio = () => {
 
   const wrapper = document.getElementById("wrapper");
@@ -36,7 +35,7 @@ const Portfolio = () => {
   }, 3000);
   
   return (
-    <div className='RO__portfolio'>
+    <div className='RO__portfolio' id='portfolio'>
       <div className='RO__portfolio-content' data-roundness="1" data-configuration ="1" id='wrapper'>
         <div className='RO__portfolio-content_shape'></div>
         <div className='RO__portfolio-content_shape'></div>
