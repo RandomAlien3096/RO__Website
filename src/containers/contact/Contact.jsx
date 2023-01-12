@@ -12,8 +12,12 @@ const Contact = () => {
           <div className='RO__contact-content_shape-title'>
             <p>Let's talk</p> 
           </div>
-          <div className='RO__contact-content_shape-text'></div>
-          <div className='RO__contact-content_shape-button'></div>
+          <div className='RO__contact-content_shape-text'>
+            <p>The door is always open for a good cup of coffee.</p> 
+          </div>
+          <div className='RO__contact-content_shape-button'>
+            <button type='button'>Let's start</button>
+          </div>
         </div>
         
       </div>
