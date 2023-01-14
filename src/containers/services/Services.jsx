@@ -5,7 +5,7 @@ import build_two from '../../assets/build2.png';
 
 const Services = () => {
   return (
-    <div className='RO__services'>
+    <div className='RO__services' id='services'>
       <div className='RO__services-title'>
         <h1>Services</h1>
       </div>

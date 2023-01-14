@@ -6,7 +6,7 @@ import t_three from '../../assets/triangles/3-t.png';
 import astronaut from '../../assets/astronaut.png';
 const about = () => {
   return (
-    <div className='RO__about'>
+    <div className='RO__about' id='about'>
       <div className='RO__about-title'>
         <h1>About Me</h1>
       </div>
@@ -52,7 +52,7 @@ const about = () => {
             but it is engineering that changes the world."</p>
         </div>
         <div className='RO__about-more_button'>
-          <p>More...</p>
+          <button type='button'>More...</button>
         </div>
       </div>
 
