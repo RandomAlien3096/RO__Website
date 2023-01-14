@@ -4,6 +4,9 @@ import t_four from '../../assets/triangles/4-t.png';
 import t_two from '../../assets/triangles/2-t.png';
 import t_three from '../../assets/triangles/3-t.png';
 import astronaut from '../../assets/astronaut.png';
+
+import CV from '../../assets/files/RafaelOliva_CV.pdf';
+
 const about = () => {
   return (
     <div className='RO__about' id='about'>
@@ -52,7 +55,9 @@ const about = () => {
             but it is engineering that changes the world."</p>
         </div>
         <div className='RO__about-more_button'>
-          <button type='button'>More...</button>
+          <a href={CV} download='RafaelOliva_cv.pdf'>
+            <button type='button' >More...</button>
+          </a>
         </div>
       </div>
 

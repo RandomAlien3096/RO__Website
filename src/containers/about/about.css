@@ -116,7 +116,8 @@
     height: 20%;
 }
 
-.RO__about-more_button button{
+.RO__about-more_button button,
+.RO__about-more_button a {
     font-family: 'Montserrat';
     display: flex;
     justify-content: center;
