@@ -19,7 +19,6 @@
     align-items: center;
 
     justify-content: flex-start;
-
 }
 
 .RO__navbar-links_logo img {
@@ -99,11 +98,14 @@
 
 @media screen and (max-width: 700px) {
     .RO__navbar-links_logo{
-        margin-left: 1rem;
+        margin-left: 0;
     }
 }
 
 @media screen and (max-width: 550px) {
+    .RO__navbar{
+        padding: 1rem 1rem;
+    }
     .RO__navbar-links_logo{
         margin-left: 0;
     }

@@ -57,6 +57,9 @@
 }
 
 @media screen and (max-width: 800px){
+    .RO__header{
+        top: 9rem;
+    }
 
     .RO__header-content{
         margin-right: 25%;
