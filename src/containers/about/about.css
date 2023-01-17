@@ -238,3 +238,15 @@
         line-height: 30px;
     }
 }
+
+@media screen and (max-width: 390px){
+    .RO__about-more_quote p,
+    .RO__about-more_button button{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .RO__about-more_quote{
+        margin: 1.5rem;
+        margin-top: 10%;
+    }
+}
