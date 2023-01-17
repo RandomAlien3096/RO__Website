@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './portfolio.css';
 
 const rand = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
@@ -22,21 +22,40 @@ const rand = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
   
 const Portfolio = () => {
 
-  const wrapper = document.getElementById("wrapper");
+  const wrapperRef = useRef();
+  const interval = useRef();
+  //const wrapper = document.getElementById("wrapper");
 
-  setInterval(() => {
-    const index = uniqueRand(0, combinations.length - 1, prev),
-          combination = combinations[index];
-    
-    wrapper.dataset.configuration = combination.configuration;
-    wrapper.dataset.roundness = combination.roundness;
-    
-    prev = index;
-  }, 3000);
+  useEffect(() => {
+    let wrapper = wrapperRef.current;
+
+    if (interval.current) {
+      clearInterval(interval.current);
+    }
+
+    interval.current = setInterval(() => {
+      const index = uniqueRand(0, combinations.length - 1, prev),
+        combination = combinations[index];
+
+      wrapper.dataset.configuration = combination.configuration;
+      wrapper.dataset.roundness = combination.roundness;
+
+      console.log({
+        configuration: wrapper.dataset.configuration,
+        roundness: wrapper.dataset.roundness
+      });
+      prev = index;
+    }, 3000);
+  }, []);
   
   return (
     <div className='RO__portfolio' id='portfolio'>
-      <div className='RO__portfolio-content' data-roundness="1" data-configuration ="1" id='wrapper'>
+      <div 
+        className='RO__portfolio-content' 
+        data-roundness="1" 
+        data-configuration ="1" 
+        id='wrapper'
+        ref={wrapperRef}  >
         <div className='RO__portfolio-content_shape'></div>
         <div className='RO__portfolio-content_shape'></div>
         <div className='RO__portfolio-content_shape'></div>
