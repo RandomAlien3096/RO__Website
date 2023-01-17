@@ -132,9 +132,13 @@
 }
 
 @media screen and (max-width: 560px) {
+    .RO__contact{
+        top: 270rem;
+    }
     .RO__contact-content{
         flex-direction: column;
         width: 90%;
+        height: 350px;
     }
     .RO__contact-content_text{
         width: 80%;
@@ -143,6 +147,7 @@
     .RO__contact-content_shape{
         width: 80%;
         margin-right: 0;
+        margin-bottom: 2.5rem;
     }
     .RO__contact-content_shape-title{
         margin-top: 2.5%;

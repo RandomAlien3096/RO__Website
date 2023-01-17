@@ -89,6 +89,9 @@
 }
 
 @media screen and (max-width: 800px) {
+    .RO__services{
+        top: 130rem;
+    }
     .RO__services-title{
         margin-bottom: 1.5rem;
     }
@@ -110,6 +113,9 @@
     }
 }
 @media screen and (max-width: 450px){
+    .RO__services{
+        top: 135rem;
+    }
     .RO__services-title{
         display: flex;
         justify-content: center;

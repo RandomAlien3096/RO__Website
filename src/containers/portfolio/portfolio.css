@@ -162,3 +162,9 @@
 .RO__portfolio-content[data-roundness="3"] > .RO__portfolio-content_shape{
     border-radius: 6rem;
 }
+
+@media screen and (max-width: 800px){
+    .RO__portfolio{
+        top: 205rem;
+    }
+}

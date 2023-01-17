@@ -148,7 +148,7 @@
 
 @media screen and (max-width: 1160px){
     .RO__about-more_quote p,
-    .RO__about-more_button p{
+    .RO__about-more_button button{
         font-size: 34px;
         font-weight: 400;
     }
@@ -160,7 +160,7 @@
         margin-top: 9rem;
     }
     .RO__about-more_quote p,
-    .RO__about-more_button p{
+    .RO__about-more_button button{
         font-size: 28px;
         line-height: 36px;
     }
@@ -191,15 +191,31 @@
     }
     .RO__about-more{
         margin-top: 3rem;
+        height: 250px;
     }
+    .RO__about-more_quote{
+        margin-top: 7%;
+    }
+
+    .RO__about-more_button button,
+    .RO__about-more_button a{
+        width: 150px;
+    }
+
     .RO__about-more_quote p,
-    .RO__about-more_button p{
+    .RO__about-more_button button{
         font-size: 22px;
         line-height: 30px;
+    }
+    .RO__about-more_button{
+        margin: 10.5rem auto;
     }
 }
 
 @media screen and (max-width: 450px){
+    .RO__about{
+        top: 60rem;
+    }
     .RO__about-title h1{
         font-size: 45px;
         line-height: 45px;
@@ -211,8 +227,13 @@
     .RO__about-more_quote{
         margin-top: 10%;
     }
+    .RO__about-more_button button,
+    .RO__about-more_button a{
+        width: 120px;
+        height: 50px;
+    }
     .RO__about-more_quote p,
-    .RO__about-more_button p{
+    .RO__about-more_button button{
         font-size: 18px;
         line-height: 30px;
     }

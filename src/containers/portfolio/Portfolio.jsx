@@ -22,6 +22,11 @@ const rand = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
   
 const Portfolio = () => {
 
+  const handleClick = (event, shapeNum) => {
+    console.log(event.currentTarget);
+    console.log('shape clicked: ' + shapeNum);
+  };
+
   const wrapperRef = useRef();
   const interval = useRef();
   //const wrapper = document.getElementById("wrapper");
@@ -56,13 +61,13 @@ const Portfolio = () => {
         data-configuration ="1" 
         id='wrapper'
         ref={wrapperRef}  >
-        <div className='RO__portfolio-content_shape'></div>
-        <div className='RO__portfolio-content_shape'></div>
-        <div className='RO__portfolio-content_shape'></div>
-        <div className='RO__portfolio-content_shape'></div>
-        <div className='RO__portfolio-content_shape'></div>
-        <div className='RO__portfolio-content_shape'></div>
-        <div className='RO__portfolio-content_shape'></div>
+        <div className='RO__portfolio-content_shape' onClick={event => handleClick(event, '1')}></div>
+        <div className='RO__portfolio-content_shape' onClick={event => handleClick(event, '2')}></div>
+        <div className='RO__portfolio-content_shape' onClick={event => handleClick(event, '3')}></div>
+        <div className='RO__portfolio-content_shape' onClick={event => handleClick(event, '4')}></div>
+        <div className='RO__portfolio-content_shape' onClick={event => handleClick(event, '5')}></div>
+        <div className='RO__portfolio-content_shape' onClick={event => handleClick(event, '6')}></div>
+        <div className='RO__portfolio-content_shape' onClick={event => handleClick(event, '7')}></div>
       </div>
     </div>
   )
