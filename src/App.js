@@ -8,24 +8,18 @@ const App = () => {
   return (
     <Routes>
       <Route path='/' element={
-        <div className='gradient__bg'>
-          <Navbar />
-          <Header />
+        <div className = "App">
+          <div className='gradient__bg'>
+            <Navbar />
+            <Header />
+          </div>
+          <About />
+          <Services />
+          <Portfolio />
+          <Contact />
+          <Footer />
         </div>
       } />
-      
-      <Route path='/' />
-      {/* <div className = "App">
-        <div className='gradient__bg'>
-          <Navbar />
-          <Header />
-        </div>
-        <About />
-        <Services />
-        <Portfolio />
-        <Contact />
-        <Footer />
-      </div> */}
     </Routes>
   )
 }
