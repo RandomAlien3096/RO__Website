@@ -19,7 +19,6 @@ const Contact = () => {
             <button type='button'>Let's start</button>
           </div>
         </div>
-        
       </div>
     </div>
   )

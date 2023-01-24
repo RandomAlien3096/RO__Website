@@ -9,9 +9,9 @@ import CV from '../../assets/files/RafaelOliva_CV.pdf';
 
 const about = () => {
   return (
-    <div className='RO__about' id='about'>
+    <div className='RO__about' id="about">
       <div className='RO__about-title'>
-        <h1>About Me</h1>
+        <h1 id='about'><a href='/about'>About Me</a></h1>
       </div>
       <div className='RO__about-content'>
         <div className='RO__about-content_p'>
