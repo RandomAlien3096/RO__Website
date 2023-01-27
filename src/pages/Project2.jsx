@@ -7,4 +7,4 @@ const Project2 = () => {
   )
 }
 
-export default project2
+export default Project2

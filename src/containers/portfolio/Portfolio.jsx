@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './portfolio.css';
 
 const rand = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
@@ -61,7 +62,11 @@ const Portfolio = () => {
         data-configuration ="1" 
         id='wrapper'
         ref={wrapperRef}  >
-        <div className='RO__portfolio-content_shape' onClick={event => handleClick(event, '1')}></div>
+        <div className='RO__portfolio-content_shape'>
+          <Link onClick={event => handleClick(event, '1')} to = '/project1'>
+            <div></div>
+          </Link>
+        </div>
         <div className='RO__portfolio-content_shape' onClick={event => handleClick(event, '2')}></div>
         <div className='RO__portfolio-content_shape' onClick={event => handleClick(event, '3')}></div>
         <div className='RO__portfolio-content_shape' onClick={event => handleClick(event, '4')}></div>

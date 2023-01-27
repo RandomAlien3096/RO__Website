@@ -3,7 +3,10 @@ import { Routes, Route } from 'react-router-dom';
 
 import { Footer, About, Features, Services, Header, Portfolio, Contact } from './containers';
 import { Article, Brand, Cta, Feature, Navbar } from './components';
+import { Project1, Project2 } from './pages'
+
 import './App.css';
+
 const App = () => {
   return (
     <Routes>
@@ -20,6 +23,8 @@ const App = () => {
           <Footer />
         </div>
       } />
+      <Route path='/project1' element = {<Project1 />} />
+      <Route path='/project2' element = {<Project2 />} />
     </Routes>
   )
 }
