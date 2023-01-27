@@ -62,17 +62,35 @@ const Portfolio = () => {
         data-configuration ="1" 
         id='wrapper'
         ref={wrapperRef}  >
-        <div className='RO__portfolio-content_shape'>
-          <Link onClick={event => handleClick(event, '1')} to = '/project1'>
-            <div></div>
-          </Link>
-        </div>
-        <div className='RO__portfolio-content_shape' onClick={event => handleClick(event, '2')}></div>
-        <div className='RO__portfolio-content_shape' onClick={event => handleClick(event, '3')}></div>
-        <div className='RO__portfolio-content_shape' onClick={event => handleClick(event, '4')}></div>
-        <div className='RO__portfolio-content_shape' onClick={event => handleClick(event, '5')}></div>
-        <div className='RO__portfolio-content_shape' onClick={event => handleClick(event, '6')}></div>
-        <div className='RO__portfolio-content_shape' onClick={event => handleClick(event, '7')}></div>
+        
+        <Link className='RO__portfolio-content_shape' onClick={event => handleClick(event, '1')} to = '/project1'>
+          <div className='RO__portfolio-content_shape'></div>
+        </Link>
+
+        <Link className='RO__portfolio-content_shape' onClick={event => handleClick(event, '2')} to = '/project2'>
+          <div className='RO__portfolio-content_shape'></div>
+        </Link>
+        
+        <Link className='RO__portfolio-content_shape' onClick={event => handleClick(event, '3')} to = '/project3'>
+          <div className='RO__portfolio-content_shape'></div>
+        </Link>
+
+        <Link className='RO__portfolio-content_shape' onClick={event => handleClick(event, '4')} to = '/project4'>
+          <div className='RO__portfolio-content_shape'></div>
+        </Link>
+
+        <Link className='RO__portfolio-content_shape' onClick={event => handleClick(event, '5')} to = '/project5'>
+          <div className='RO__portfolio-content_shape'></div>
+        </Link>
+
+        <Link className='RO__portfolio-content_shape' onClick={event => handleClick(event, '6')} to = '/project6'>
+          <div className='RO__portfolio-content_shape'></div>
+        </Link>
+
+        <Link className='RO__portfolio-content_shape' onClick={event => handleClick(event, '7')} to = '/project7'>
+          <div className='RO__portfolio-content_shape'></div>
+        </Link>
+        
       </div>
     </div>
   )

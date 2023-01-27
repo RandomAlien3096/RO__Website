@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import { Footer, About, Features, Services, Header, Portfolio, Contact } from './containers';
 import { Article, Brand, Cta, Feature, Navbar } from './components';
-import { Project1, Project2 } from './pages'
+import { Project1, Project2, Project3, Project4, Project5, Project6, Project7 } from './pages'
 
 import './App.css';
 
@@ -25,6 +25,11 @@ const App = () => {
       } />
       <Route path='/project1' element = {<Project1 />} />
       <Route path='/project2' element = {<Project2 />} />
+      <Route path='/project3' element = {<Project3 />} />
+      <Route path='/project4' element = {<Project4 />} />
+      <Route path='/project5' element = {<Project5 />} />
+      <Route path='/project6' element = {<Project6 />} />
+      <Route path='/project7' element = {<Project7 />} />
     </Routes>
   )
 }
