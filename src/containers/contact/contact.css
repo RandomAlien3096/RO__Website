@@ -1,7 +1,7 @@
 .RO__contact {
     position: absolute;
     display: grid;
-    top: 300rem;
+    top: 280rem;
     place-items: center;
     height: 300px;
     width: 100vw;
@@ -90,13 +90,10 @@
 
 @media screen and (max-width: 1300px) {
     .RO__contact{
-        top: 285rem;
+        top: 275rem;
     }
 }
 @media screen and (max-width: 880px) {
-    .RO__contact{
-        top: 280rem;
-    }
     .RO__contact-content_shape-title p{
         font-size: 28px;
     }
@@ -108,9 +105,6 @@
     }
 }
 @media screen and (max-width: 740px) {
-    .RO__contact{
-        top: 280rem;
-    }
     .RO__contact-content_shape-title {
         height: 25%;
         margin-top: 10%;

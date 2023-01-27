@@ -5,9 +5,9 @@
     aspect-ratio: 1.623;
     justify-content: center;
     align-items: center;
-    top: 325rem;
+    top: 310rem;
     width: 100vw;
-    height: 350px;
+    height: 330px;
     background-color: #031B34;
 }
 .RO__footer-content_logo {
@@ -51,7 +51,8 @@
 
 @media screen and (max-width: 900px){
     .RO__footer{
-        top:312rem
+        top:300rem;
+        height: 315px;
     }
     .RO__footer-content_links{
         width: 50%;
@@ -59,6 +60,9 @@
 }
 
 @media screen and (max-width: 600px){
+    .RO__footer{
+        height: 290px;
+    }
     .RO__footer-content_logo h1{
         font-size: 26px;
     }
@@ -69,7 +73,7 @@
 
 @media screen and (max-width: 500px){
     .RO__footer{
-        height: 300px;
+        height: 275px;
     }
     .RO__footer-content_links{
         width: 60%;
@@ -78,8 +82,8 @@
 
 @media screen and (max-width: 400px){
     .RO__footer{
-        top: 300rem;
-        height: 280px;
+        top: 295rem;
+        height: 275px;
     }
     .RO__footer-content_links{
         width: 75%;
