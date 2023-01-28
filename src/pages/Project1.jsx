@@ -1,45 +1,34 @@
 import React from 'react';
 import { IpynbRenderer } from 'react-ipynb-renderer';
 import "react-ipynb-renderer/dist/styles/monokai.css"
-import { useEffect, useState } from 'react';
+import CountdownTimer from './CountdownTimer';
+import { useState, useEffect, useMemo } from 'react';
+
 
 import './project1.css';
 import ipynb from './TelstraNotebookCatboost.ipynb';
 
+const SECOND = 1000;
+const MINUTE = SECOND * 60;
+const HOUR = MINUTE * 60;
+const DAY = HOUR * 24;
 
-const useCountdown = (targetDate) => {
-  const countDownDate = new Date(targetDate).getTime();
-
-  const [countDown, setCountDown] = useState(
-    countDownDate - new Date().getTime()
-  );
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCountDown(countDownDate - new Date().getTime());
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, [countDownDate]);
-
-  return getReturnValues(countDown)
-};
-
-const getReturnValues = (countDown) => {
-  // calculate time left
-  const days = Math.floor(countDown / (1000 * 60 * 60 * 24));
-  const hours = Math.floor(
-    (countDown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  const minutes = Math.floor((countDown % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((countDown % (1000 * 60)) / 1000);
-
-  return [days, hours, minutes, seconds];
-};
-
-export { useCountdown };
 
 const Project1 = () => {
+  const deadline = new Date('January, 31, 2023').toString();
+
+  const parsedDeadline = useMemo(() => Date.parse(deadline), [deadline]);
+  const [time, setTime] = useState(parsedDeadline - Date.now());
+
+  useEffect(() => {
+      const interval = setInterval(
+          () => setTime(parsedDeadline - Date.now()),
+          1000,
+      );
+
+      return () => clearInterval(interval);
+  }, []);
+ 
   return (
     <div className='RO__ComingSoon'>
       <div className='RO__ComingSoon-content'>
@@ -47,6 +36,21 @@ const Project1 = () => {
         <h1>Launching Soon this Project</h1>
       </div>
       <div className='RO__ComingSoon-timer'>
+            {Object.entries({
+                Days: time / DAY,
+                Hours: (time / HOUR) % 24,
+                Minutes: (time / MINUTE) % 60,
+                Seconds: (time / SECOND) % 60,
+            }).map(([label, value]) => (
+                <div key={label} className="col-4">
+                    <div className="RO__ComingSoon-timer_box">
+                        <p>{`${Math.floor(value)}`.padStart(2, "0")}</p>
+                        <span className="text">{label}</span>
+                    </div>
+                </div>
+            ))}
+      </div>
+      {/* <div className='RO__ComingSoon-timer'>
         <div className='RO__ComingSoon-timer_Days'>
           <p>00</p>
           <span>Days</span>
@@ -63,11 +67,14 @@ const Project1 = () => {
           <p>00</p>
           <span>Seconds</span>
         </div>
-      </div>
+      </div> */}
       <div className='RO__ComingSoon-button'>
           <button type='button'>Go back to Landingpage</button>
       </div>
+      
+      
     </div>
+    
   );
 }
 
