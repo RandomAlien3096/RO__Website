@@ -1,7 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { IpynbRenderer } from 'react-ipynb-renderer';
 import "react-ipynb-renderer/dist/styles/monokai.css"
-import CountdownTimer from './CountdownTimer';
 import { useState, useEffect, useMemo } from 'react';
 
 
@@ -69,7 +69,9 @@ const Project1 = () => {
         </div>
       </div> */}
       <div className='RO__ComingSoon-button'>
-          <button type='button'>Go back to Landingpage</button>
+        <Link to='/'>
+          <button type='button'>Go back to Landing Page</button>
+        </Link>
       </div>
       
       
