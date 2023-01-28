@@ -70,7 +70,7 @@ const Project1 = () => {
       </div> */}
       <div className='RO__ComingSoon-button'>
         <Link to='/'>
-          <button type='button'>Go back to Landing Page</button>
+          <button type='button'>Back to Landing Page</button>
         </Link>
       </div>
       
