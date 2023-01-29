@@ -1,6 +1,7 @@
 .RO__ComingSoon {
     position: absolute;
     display: flex;
+    aspect-ratio: 1.6180;
     height: 100vh;
     width: 100vw;
     flex-direction: column;
@@ -12,6 +13,7 @@
     flex-direction: column;
     justify-content: center;
     padding-left: 3rem;
+    padding-right: 3rem;
 
     height: 30vh;
     width: 100vw;
@@ -30,10 +32,10 @@
 
 .RO__ComingSoon-timer {
     display: flex;
-    width: 560px;
-    justify-content: space-around;
-    padding-right: 2rem;
-    padding-left: 2rem;
+    width: 530px;
+    justify-content: space-between;
+    padding-right: 3rem;
+    padding-left: 3rem;
 }
 
 .RO__ComingSoon-timer_box {
@@ -72,4 +74,66 @@
     width: 250px;
     border-radius: 30px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 550px){
+    .RO__ComingSoon-content p{
+        font-size: 26px; 
+    }
+    .RO__ComingSoon-content h1{
+        font-size: 34px;
+    }
+    .RO__ComingSoon-timer p{
+        font-size: 26px;
+        font-weight: 500;
+    }
+    .RO__ComingSoon-timer span{
+        font-size: 18px;
+    }
+    .RO__ComingSoon-timer{
+        width: 410px;
+    }
+    .RO__ComingSoon-button{
+        height: 100px;
+    }
+    .RO__ComingSoon-button button{
+        font-size: 15px;
+        height: 50px;
+        width: 220px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .RO__ComingSoon-content{
+        height: 20vh;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .RO__ComingSoon-content p{
+        font-size: 18px; 
+    }
+    .RO__ComingSoon-content h1{
+        font-size: 24px;
+    }
+    .RO__ComingSoon-timer p{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .RO__ComingSoon-timer span{
+        font-size: 12px;
+    }
+    .RO__ComingSoon-timer{
+        padding-left: 2rem;
+        padding-right: 2rem;
+        width: 330px;
+    }
+    .RO__ComingSoon-button{
+        height: 100px;
+        padding-left: 2rem;
+    }
+    .RO__ComingSoon-button button{
+        font-size: 12px;
+        height: 40px;
+        width: 180px;
+    }
 }
