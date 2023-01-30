@@ -1,5 +1,6 @@
 import React from 'react';
 import './contact.css';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   return (
@@ -16,7 +17,9 @@ const Contact = () => {
             <p>The door is always open for a good cup of coffee.</p> 
           </div>
           <div className='RO__contact-content_shape-button'>
-            <button type='button'>Let's start</button>
+            <Link to='/contactForm'>
+              <button type='button'>Let's start</button>
+            </Link>
           </div>
         </div>
       </div>
