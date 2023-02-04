@@ -1,20 +1,25 @@
 .RO__ContactForm{
-    display: grid;
+    display: flex;
     position: absolute;
+    flex-wrap: wrap;
     height: 100vh;
     width: 100vw;
-
-    border: 1px solid red;
 }
 
 .RO__ContactForm-title{
-    border: 1px solid purple;
+    width: 100vw;
+    padding-top: 4rem;
+    padding-left: 4rem;
+    padding-right: 15rem;
+    padding-bottom: 4rem;
+
 }
 
 .RO__ContactForm-title h1{
     font-family: 'Montserrat';
-    font-size: 44px;
+    font-size: 64px;
     font-weight: 500;
+    line-height: 68px;
 }
 
 .RO__ContactForm-title h3{
@@ -22,21 +27,99 @@
     font-size: 35px;
     font-weight: 400;
 }
-
-.RO__ContactForm-description{
-    border: 1px solid pink;
+.RO__ContactForm-content {
+    display: flex;
+    padding: 2rem;
+    justify-content: space-between;
+    width: 100vw;
 }
 
-.RO__ContactForm-form{
+.RO__ContactForm-content_description{
+    width: 410px;
+    padding: 2rem;
+}
+
+.RO__ContactForm-content_description p{
+    font-family: 'Montserrat';
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.RO__ContactForm-content_form{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem;
+    width: 450px;
     height: 500px;
     flex-direction: column;
-
-    border: 1px solid blue;
+    background-color: #00d5d6;
 }
 
-.RO__ContactForm-form_name,
-.RO__ContactForm-form_email,
-.RO__ContactForm-form_info{
-    border: 1px solid cyan;
+.RO__ContactForm-content_form_name,
+.RO__ContactForm-content_form_email {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
+    height: 25%;
+}
+
+.RO__ContactForm-content_form_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
+    height: 40%;
+}
+
+.RO__ContactForm-content_form_info textarea {
+    width: 100%;
+    height: 70%;
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 0 0 0 10px;
+    resize: none;
+    background-color: transparent;
+}
+
+.RO__ContactForm-content_form_email input,
+.RO__ContactForm-content_form_name input {
+    width: 100%;
+    height: 70%;
+    padding-left: 1rem;
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 0 0 0 10px;
+    resize: none;
+    background-color: transparent;
+}
+
+.RO__ContactForm-content_form_nameTitle h5,
+.RO__ContactForm-content_form_emailTitle h5,
+.RO__ContactForm-content_form_infoTitle h5 {
+    width: 100%;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.RO__ContactForm-content_form_button{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    height: 10%;
+}
+
+.RO__ContactForm-content_form_button button {
+    font-family: 'Montserrat';
+    width: 45%;
+    height: 100%;
+    font-size: 18px;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    background-color: black;
 }
