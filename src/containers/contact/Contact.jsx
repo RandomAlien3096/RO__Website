@@ -17,7 +17,7 @@ const Contact = () => {
             <p>The door is always open for a good cup of coffee.</p> 
           </div>
           <div className='RO__contact-content_shape-button'>
-            <Link to='/contactForm'>
+            <Link to='/contactForm' className='RO__contact-content_shape-button_Link'>
               <button type='button'>Let's start</button>
             </Link>
           </div>
