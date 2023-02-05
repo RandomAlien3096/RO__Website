@@ -56,7 +56,7 @@ const about = () => {
         </div>
         <div className='RO__about-more_button'>
           <a href={CV} download='RafaelOliva_cv.pdf'>
-            <button type='button' >More...</button>
+            <button type='button' >Cv</button>
           </a>
         </div>
       </div>
