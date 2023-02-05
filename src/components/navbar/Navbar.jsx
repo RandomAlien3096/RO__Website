@@ -16,7 +16,7 @@ const Menu = () => (
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   return (
-    <div className ="RO__navbar">
+    <div className ="RO__navbar" id='home'>
       <div className='RO__navbar-links'>
         <div className='RO__navbar-links_logo'>
           <img src = {logo} alt = "logo" />

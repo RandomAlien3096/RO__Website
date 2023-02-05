@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import './contactForm.css';
+import { Footer } from '../../containers';
 
 const FORM_ENDPOINT = "";
 
@@ -23,7 +24,7 @@ const ContactForm = () => {
     }
 
   return (
-    <div className='RO__ContactForm'>
+    <div className='RO__ContactForm' id='contactForm'>
         <div className='RO__ContactForm-title'>
             <h3>Contact</h3>
             <h1>I'm here to help you level up</h1>
@@ -34,6 +35,7 @@ const ContactForm = () => {
                     to the next level. Fill in the form to share more 
                     details about the project or your favorite movie. 
                     Either way, I'd love to talk.</p>
+                <p></p>
             </div>
             <form
                 className='RO__ContactForm-content_form'
@@ -76,6 +78,9 @@ const ContactForm = () => {
                 </div>
 
             </form>
+        </div>
+        <div className='RO__ContactForm-footer'>
+            <Footer  />
         </div>
         
     </div>

@@ -64,6 +64,8 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .RO__services-content_cats-DataAnalysis_bar,

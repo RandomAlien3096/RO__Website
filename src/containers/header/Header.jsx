@@ -5,7 +5,7 @@ import Typewriter from 'typewriter-effect';
 
 const Header = () => {
   return (
-    <div className='RO__header section__padding' id="home">
+    <div className='RO__header section__padding' >
       <div className='RO__header-content'>
         <h1 className='content_text-1'>
           I’m 

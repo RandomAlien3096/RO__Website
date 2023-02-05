@@ -77,6 +77,8 @@
     color: #000;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .RO__about-more{

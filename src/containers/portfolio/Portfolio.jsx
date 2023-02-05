@@ -28,6 +28,7 @@ const Portfolio = () => {
     console.log('shape clicked: ' + shapeNum);
   };
 
+
   const wrapperRef = useRef();
   const interval = useRef();
   //const wrapper = document.getElementById("wrapper");

@@ -1,20 +1,18 @@
 .RO__ContactForm{
     display: flex;
     position: absolute;
+    justify-content: flex-start;
     flex-wrap: wrap;
     height: 100vh;
     width: 100vw;
-    padding-left: 20%;
-    padding-right: 20%;
 }
 
 .RO__ContactForm-title{
     width: 100vw;
     padding-top: 4rem;
-    padding-left: 4rem;
+    padding-left: 20vw;
     padding-right: 15rem;
     padding-bottom: 4rem;
-
 }
 
 .RO__ContactForm-title h1{
@@ -33,6 +31,8 @@
 .RO__ContactForm-content {
     display: flex;
     padding: 2rem;
+    padding-left: 19vw;
+    padding-right: 20vw;
     justify-content: space-between;
     width: 100vw;
 }
@@ -55,7 +55,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 2.5rem;
-    width: 520px;
+    width: 540px;
     height: 680px;
     flex-direction: column;
     background-color: #00ffff;
@@ -116,7 +116,7 @@
     border: none;
     border-radius: 10px;
     background-color: #D9D9D9;
-    opacity: 0.3;
+    opacity: 0.8;
     box-shadow: 0 0 0 2px #FF4C4C;
 }
 
@@ -145,4 +145,108 @@
     border: none;
     border-radius: 30px;
     background-color: black;
+    cursor: pointer;
+}
+
+.RO__ContactForm-footer{
+    position: absolute;
+    top: -228rem;
+    width: 100%;
+}
+
+@media  screen and (max-width: 1300px){
+    .RO__ContactForm-title{
+        padding-right: 10rem;
+        padding-left: 12vw;
+    }
+    .RO__ContactForm-content{
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    .RO__ContactForm-content_description{
+        width: 35%;
+    }
+    .RO__ContactForm-content_description p{
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .RO__ContactForm-content_form{
+        width: 60%;
+    }
+}
+
+@media  screen and (max-width: 900px){
+    .RO__ContactForm-title{
+        padding-right: 6rem;
+        padding-left: 2rem;
+    }
+    .RO__ContactForm-content{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .RO__ContactForm-content_description{
+        padding-right: 1rem;
+        padding-left: 0;
+    }
+}
+
+@media  screen and (max-width: 700px){
+    
+    .RO__ContactForm-title{
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 2rem;
+    }
+    .RO__ContactForm-title h1{
+        font-size: 44px;
+        line-height: 52px;
+    }
+    .RO__ContactForm-title h3{
+        font-size: 20px;
+        line-height: 34px;
+    }
+    .RO__ContactForm-content{
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+    .RO__ContactForm-content_description{
+        width: 100%;
+        padding: 2rem;
+        padding-top: 0;
+    }
+    .RO__ContactForm-content_form{
+        width: 90%;
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width:400px){
+    .RO__ContactForm-title{ 
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+    }
+    .RO__ContactForm-title h1{
+        font-size: 36px;
+        line-height: 42px;
+    }
+    .RO__ContactForm-content_description{
+        padding-top: 0;
+    }
+    .RO__ContactForm-content_description p{
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .RO__ContactForm-content_form_nameTitle h5,
+    .RO__ContactForm-content_form_emailTitle h5,
+    .RO__ContactForm-content_form_infoTitle h5,
+    .RO__ContactForm-content_form_name input,
+    .RO__ContactForm-content_form_email input,
+    .RO__ContactForm-content_form_button button{
+        font-size: 14px;
+        line-height: 26px;
+    }
+
 }
