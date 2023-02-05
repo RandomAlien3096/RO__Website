@@ -214,6 +214,17 @@
     }
 }
 
+@media screen and (max-width: 580px){
+    .RO__about-title h1{
+        font-size: 48px;
+        line-height: 45px;
+    }
+    .RO__about-content_p p{
+        font-size: 16px;
+        line-height: 30px;
+    }
+}
+
 @media screen and (max-width: 450px){
     .RO__about{
         top: 60rem;

@@ -125,8 +125,12 @@
         font-size: 80%;
     }
     .RO__contact-content_shape-button button {
-        font-size: 80%;
-        width: 65%;
+        font-size: 85%;
+        width: 75%;
+    }
+    .RO__contact-content_shape-button_Link {
+        width: 100%;
+        height: 90%;
     }
 }
 

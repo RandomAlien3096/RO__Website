@@ -79,6 +79,9 @@
     .RO__footer-content_links{
         width: 60%;
     }
+    .RO__footer-content_logo img {
+        width: 14%;
+    }
 }
 
 @media screen and (max-width: 400px){
@@ -88,5 +91,8 @@
     }
     .RO__footer-content_links{
         width: 75%;
+    }
+    .RO__footer-content_logo img {
+        width: 15%;
     }
 }
