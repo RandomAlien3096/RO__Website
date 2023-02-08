@@ -7,21 +7,27 @@ const FORM_ENDPOINT = "";
 
 
 const ContactForm = () => {
-    const [submitted, setSubmitted] = useState(false);
-    const handleSubmit = () => {
-        setTimeout(() => {
-            setSubmitted(true);
-        }, 100);
+    const [status, setStatus] = useState("Submit");
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus("Sending...");
+        const { name, email, message } = e.target.elements;
+        let details = {
+            name: name.value,
+            email: email.value,
+            message: message.value,
+        };
+        let response = await fetch("http://localhost:3000/contactForm", {
+            method: 'POST',
+            headers: {
+                "Content-type": "application/json;charset=utf-8",
+            },
+            body: JSON.stringify(details),
+        });
+        setStatus("Submit");
+        let result = await response.json();
+        alert(result.status);
     };
-
-    if(submitted){
-        return(
-            <>
-                <h2>Thank you</h2>
-                <div>I'll be in touch soon</div>
-            </>
-        )
-    }
 
   return (
     <div className='RO__ContactForm' id='contactForm'>
@@ -51,6 +57,7 @@ const ContactForm = () => {
                     <input 
                         className='RO_ContactForm-content_form_nameInput'
                         type= 'text'
+                        id='name'
                         name='name' required 
                     />
                 </div>
@@ -61,6 +68,7 @@ const ContactForm = () => {
                     <input
                         className='RO__ContactForm-content_form_emailInput'
                         type='email'
+                        id='email['
                         name='email' required
                     />
                 </div>
@@ -70,11 +78,12 @@ const ContactForm = () => {
                     </div>
                     <textarea
                         className='RO__ContactForm-content_form_infoContent'
-                        name='message' required 
+                        id='message'
+                        name='message' required
                     />
                 </div>
                 <div className='RO__ContactForm-content_form_button'>
-                    <button type='button'>Send</button>
+                    <button type='submit'>{status}</button>
                 </div>
 
             </form>
