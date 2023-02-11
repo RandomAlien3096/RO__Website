@@ -3,31 +3,28 @@ import { useState } from 'react';
 import './contactForm.css';
 import { Footer } from '../../containers';
 
-const FORM_ENDPOINT = "";
-
+import axios from 'axios';
 
 const ContactForm = () => {
-    const [status, setStatus] = useState("Submit");
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setStatus("Sending...");
-        const { name, email, message } = e.target.elements;
-        let details = {
-            name: name.value,
-            email: email.value,
-            message: message.value,
-        };
-        let response = await fetch("http://localhost:3000/contactForm", {
-            method: 'POST',
-            headers: {
-                "Content-type": "application/json;charset=utf-8",
-            },
-            body: JSON.stringify(details),
-        });
-        setStatus("Submit");
-        // let result = await response.json();
-        // alert(result.status);
-    };
+     const [status, setStatus] = useState("Submit");
+     const [recipient_email, setEmail] = useState('');
+     const [name, setName] = useState("");
+     const [message, setMessage] = useState("");
+
+     function sendMail(){
+        if(recipient_email && name && message){
+            axios
+                .post('http://localhost:5000/send_email', {
+                    recipient_email,
+                    name,
+                    message,
+                })
+                .then(() => alert('Message sent succesfuly'))
+                .catch(() => alert('Oops something went wrong'));
+            return;
+        }
+        return alert('Fill in all the fields to continue');
+     };
 
   return (
     <div className='RO__ContactForm' id='contactForm'>
@@ -45,9 +42,6 @@ const ContactForm = () => {
             </div>
             <form
                 className='RO__ContactForm-content_form'
-                action = {FORM_ENDPOINT}
-                onSubmit = {handleSubmit}
-                method = 'POST'
                 target='_blank'
                 >
                 <div className='RO__ContactForm-content_form_name'>
@@ -58,6 +52,7 @@ const ContactForm = () => {
                         className='RO_ContactForm-content_form_nameInput'
                         type= 'text'
                         id='name'
+                        onChange={ (e) => setName(e.target.value)}
                         name='name' required 
                     />
                 </div>
@@ -68,7 +63,8 @@ const ContactForm = () => {
                     <input
                         className='RO__ContactForm-content_form_emailInput'
                         type='email'
-                        id='email['
+                        id='email'
+                        onChange={ (e) => setEmail(e.target.value)}
                         name='email' required
                     />
                 </div>
@@ -79,11 +75,18 @@ const ContactForm = () => {
                     <textarea
                         className='RO__ContactForm-content_form_infoContent'
                         id='message'
+                        onChange={ (e) => setMessage(e.target.value)}
                         name='message' required
                     />
                 </div>
                 <div className='RO__ContactForm-content_form_button'>
-                    <button type='submit'>{status}</button>
+                    <button 
+                        onClick = {() => sendMail()} 
+                        type='submit'
+                    >
+                        {status}
+
+                    </button>
                 </div>
 
             </form>
