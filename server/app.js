@@ -26,7 +26,7 @@ function sendEmail({ recipient_email, name, message }){
             from: 'darkknight-3096@hotmail.com',
             to: 'irvin.rafael.3096@gmail.com',
             subject: 'Test',
-            html: `<p>Name: ${name} </p> <p>Email: ${recipient_email}</p> <p>Message: ${message}</p>`,
+            text: `Name: ${name} \n Email: ${recipient_email} \n Message: ${message}`,
         };
         transporter.sendMail(mail_configs, function(error, info){
             if(error){
@@ -46,7 +46,7 @@ app.get('/', (req, res) => {
 
 app.post("/send_email", (req, res) => {
     sendEmail(req.body)
-        .then((response) => res.send(response.message))
+        .then((response) => res.send(response.message), console.log(req))
         .catch((error) => res.status(500).send(error.message));
 });
 

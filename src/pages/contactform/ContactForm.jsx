@@ -6,8 +6,8 @@ import { Footer } from '../../containers';
 import axios from 'axios';
 
 const ContactForm = () => {
-     const [status, setStatus] = useState("Submit");
-     const [recipient_email, setEmail] = useState('');
+     //const [status, setStatus] = useState("Submit");
+     const [recipient_email, setEmail] = useState("");
      const [name, setName] = useState("");
      const [message, setMessage] = useState("");
 
@@ -84,7 +84,7 @@ const ContactForm = () => {
                         onClick = {() => sendMail()} 
                         type='submit'
                     >
-                        {status}
+                        Submit
 
                     </button>
                 </div>

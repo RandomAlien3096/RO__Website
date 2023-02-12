@@ -15,7 +15,7 @@ const DAY = HOUR * 24;
 
 
 const Project5 = () => {
-  const deadline = new Date('February, 18, 2023').toString();
+  const deadline = new Date('March, 08, 2023').toString();
 
   const parsedDeadline = useMemo(() => Date.parse(deadline), [deadline]);
   const [time, setTime] = useState(parsedDeadline - Date.now());

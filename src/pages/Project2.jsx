@@ -1,27 +1,3 @@
-// import React from 'react';
-// import './project2.css';
-
-// import { useCallback } from "react";
-// import Particles from "react-tsparticles";
-// import { loadFull } from "tsparticles";
-
-// const Project2 = () => {
-//   const particlesInit = useCallback(async engine => {
-//       console.log(engine);
-//       await loadFull(engine);
-//   }, []);
-
-//   const particlesLoaded = useCallback(async container => {
-//       console.log(container);
-//   }, []);
-
-//   return (
-//       <Particles id="tsparticles" url="http://foo.bar/particles.json" init={particlesInit} loaded={particlesLoaded} />
-//     );
-//   }
-
-// export default Project2
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { IpynbRenderer } from 'react-ipynb-renderer';
@@ -39,7 +15,7 @@ const DAY = HOUR * 24;
 
 
 const Project2 = () => {
-  const deadline = new Date('February, 4, 2023').toString();
+  const deadline = new Date('February, 25, 2023').toString();
 
   const parsedDeadline = useMemo(() => Date.parse(deadline), [deadline]);
   const [time, setTime] = useState(parsedDeadline - Date.now());
