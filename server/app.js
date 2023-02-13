@@ -1,3 +1,4 @@
+const { response } = require('express');
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
@@ -8,7 +9,7 @@ app.use(cors());
 app.use(express.json({ limit: '25mb' }));
 app.use(express.urlencoded({ limit: '25mb' }));
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', "*");
+    res.setHeader('Access-Control-Allow-Origin', '*');
     next();
 });
 
@@ -38,15 +39,15 @@ function sendEmail({ recipient_email, name, message }){
     });
 }
 
-app.get('/', (req, res) => {
+app.get('/contactForm', (req, res) => {
     sendEmail()
-        .then((response) => res.send(response.message))
+        .then((response) => res.send(response.message), console.log(response.message))
         .catch((error) => res.status(500).send(error.message));
 });
 
 app.post("/send_email", (req, res) => {
     sendEmail(req.body)
-        .then((response) => res.send(response.message), console.log(req))
+        .then((response) => res.send(response.message))
         .catch((error) => res.status(500).send(error.message));
 });
 

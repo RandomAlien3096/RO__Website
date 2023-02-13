@@ -52,7 +52,7 @@ const ContactForm = () => {
                         className='RO_ContactForm-content_form_nameInput'
                         type= 'text'
                         id='name'
-                        onChange={ (e) => setName(e.target.value)}
+                        onChange={ (e) => setName(e.target.value) }
                         name='name' required 
                     />
                 </div>
@@ -64,7 +64,7 @@ const ContactForm = () => {
                         className='RO__ContactForm-content_form_emailInput'
                         type='email'
                         id='email'
-                        onChange={ (e) => setEmail(e.target.value)}
+                        onChange={ (e) => setEmail(e.target.value) }
                         name='email' required
                     />
                 </div>
@@ -75,7 +75,7 @@ const ContactForm = () => {
                     <textarea
                         className='RO__ContactForm-content_form_infoContent'
                         id='message'
-                        onChange={ (e) => setMessage(e.target.value)}
+                        onChange={ (e) => setMessage(e.target.value) }
                         name='message' required
                     />
                 </div>
