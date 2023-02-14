@@ -1,6 +1,6 @@
 import React from 'react';
 import './contact.css';
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const Contact = () => {
   return (
@@ -17,7 +17,7 @@ const Contact = () => {
             <p>The door is always open for a good cup of coffee.</p> 
           </div>
           <div className='RO__contact-content_shape-button'>
-            <Link to='/contactForm' className='RO__contact-content_shape-button_Link'>
+            <Link to='/contactForm#contactForm' className='RO__contact-content_shape-button_Link'>
               <button type='button'>Let's start</button>
             </Link>
           </div>

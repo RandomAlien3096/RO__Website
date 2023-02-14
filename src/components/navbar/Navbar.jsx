@@ -2,14 +2,19 @@ import React, { useState } from 'react';
 import './navbar.css';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import logo from '../../assets/logo.png';
-import { Link }  from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link' ;
+
 
 const Menu = () => (
   <>
   <p><a href = "#about">About me</a></p>
   <p><a href = "#services">Services</a></p>
   <p><a href = "#portfolio">Portfolio</a></p>
-  <p><a href = "#contact">Contact</a></p>
+  <p>
+    <Link to='/contactForm#contactForm'>
+    Contact
+    </Link>
+  </p>
   </>
 )
 
