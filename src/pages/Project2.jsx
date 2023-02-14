@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { IpynbRenderer } from 'react-ipynb-renderer';
-import "react-ipynb-renderer/dist/styles/monokai.css"
 import { useState, useEffect, useMemo } from 'react';
+// import JupyterViewer from 'react-jupyter-notebook';
+import { JupyterNotebookViewer } from "react-jupyter-notebook-viewer";
 
-
+import notebook from'./01_TelstraNetworkDisruption/TelstraNotebookCatboost.json';
 import './project2.css';
-import ipynb from './TelstraNotebookCatboost.ipynb';
 
 const SECOND = 1000;
 const MINUTE = SECOND * 60;
@@ -30,6 +29,7 @@ const Project2 = () => {
   }, []);
  
   return (
+    <>
     <div className='RO__ComingSoon'>
       <div className='RO__ComingSoon-content'>
         <p>Page is under construction</p>
@@ -50,33 +50,18 @@ const Project2 = () => {
                 </div>
             ))}
       </div>
-      {/* <div className='RO__ComingSoon-timer'>
-        <div className='RO__ComingSoon-timer_Days'>
-          <p>00</p>
-          <span>Days</span>
-        </div>
-        <div className='RO__ComingSoon-timer_Hours'>
-          <p>00</p>
-          <span>Hours</span>
-        </div>
-        <div className='RO__ComingSoon-timer_Minutes'>
-          <p>00</p>
-          <span>Minutes</span>
-        </div>
-        <div className='RO__ComingSoon-timer_Seconds'>
-          <p>00</p>
-          <span>Seconds</span>
-        </div>
-      </div> */}
       <div className='RO__ComingSoon-button'>
         <Link to='/'>
           <button type='button'>Back to Landing Page</button>
         </Link>
       </div>
-      
-      
     </div>
-    
+    {/* <div>
+      <JupyterNotebookViewer
+          filePath='../01_TelstraNetworkDisruption/TelstraNotebookCatboost.ipynb'
+          notebookInputLanguage='python' />
+    </div> */}
+    </>
   );
 }
 

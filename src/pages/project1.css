@@ -79,7 +79,7 @@
 /* ------------------------ Project Telstra Disruption ----------------------- */
 .RO__TND{
     position: absolute;
-    display: block;
+    display: inline-block;
     padding: 3rem;
     width: 100vw;
     padding-top: 50rem;
@@ -187,7 +187,7 @@
     text-decoration: none;
   }
   .RO__TND code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
+  .RO__TND span.smallcaps{font-variant: small-caps;}
   div.columns{display: flex; gap: min(4vw, 1.5em);}
   div.column{flex: auto; overflow-x: auto;}
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -198,25 +198,25 @@
     vertical-align: middle;
   }
 
-  pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
+  .RO__TND pre > code.sourceCode { white-space: pre; position: relative; }
+  .RO__TND  pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+  .RO__TND  pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
+    .RO__TND  code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    .RO__TND div.sourceCode { margin: 1em 0; }
+    .RO__TND  pre.sourceCode { margin: 0; }
     @media screen {
     div.sourceCode { overflow: auto; }
     }
     @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+        .RO__TND  pre > code.sourceCode { white-space: pre-wrap; }
+        .RO__TND  pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
     }
-    pre.numberSource code
+    .RO__TND pre.numberSource code
       { counter-reset: source-line 0; }
-    pre.numberSource code > span
+      .RO__TND pre.numberSource code > span
       { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
+      .RO__TND pre.numberSource code > span > a:first-child::before
       { content: counter(source-line);
         position: relative; left: -1em; text-align: right; vertical-align: baseline;
         border: none; display: inline-block;
@@ -226,10 +226,10 @@
         padding: 0 4px; width: 4em;
         color: #aaaaaa;
       }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+      .RO__TND pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
     
     @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+        .RO__TND pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
     }
     code span.al { color: #ff0000; font-weight: bold; } /* Alert */
     code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */

@@ -14,6 +14,8 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-ipynb-renderer": "^2.0.1",
+    "react-jupyter-notebook": "^0.4.0",
+    "react-jupyter-notebook-viewer": "^1.1.13",
     "react-router-dom": "^6.7.0",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",

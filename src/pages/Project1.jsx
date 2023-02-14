@@ -169,6 +169,8 @@ const Project1 = () => {
           <span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>                            index_col <span class="op">=</span> <span class="st">&#39;id&#39;</span>,</span>
           <span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>                            converters <span class="op">=</span> (<span class="st">&#39;severity_type&#39;</span>:str_to_num))</span></code></pre></div>
         </div>
+        
+
     </div>
     </>
   );

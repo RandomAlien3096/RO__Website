@@ -1,12 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { IpynbRenderer } from 'react-ipynb-renderer';
-import "react-ipynb-renderer/dist/styles/monokai.css"
 import { useState, useEffect, useMemo } from 'react';
 
 
 import './project5.css';
-import ipynb from './TelstraNotebookCatboost.ipynb';
 
 const SECOND = 1000;
 const MINUTE = SECOND * 60;
