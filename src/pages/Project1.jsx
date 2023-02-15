@@ -622,6 +622,30 @@ const Project1 = () => {
         bestIteration = 332<br></br>
         <br></br>
         Shrink model to first 333 iterations.<br></br>
+        &lt;catboost.core.CatBoostClassifier at 0x2b7343dfd00&gt;<br></br>
+      </code>
+    </div>
+
+    <section>
+      <p>Incialmente, a nuestro modelo, se le indico que entrenara con 1000
+      iteraciones. Pero luego de 400 iteraciones, como marca arriba, este tuvo
+      overfitting. Por lo cual, recorto el modelo a solo 333 iteraciones.</p>
+      <p>Ahora que tenemos nuestro modelo ya entrenado, utilizaremos la
+      funcion predict() para poder predecir los valores con el conjunto de
+      datos de validacion que en este caso, sera el 25% de valores de nuestro
+      train.csv Mientras que nuestra funcion predict_proba() nos dara la
+      probabilidad de cada uno de los puntos dados.</p>
+    </section>
+
+    <div className='RO__TND-code'>
+      <code>
+        <span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">#predicts the actual label or class over the evaluation data set (gives us the final choice)</span></span><br></br>
+        <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>preds_class <span class="op">=</span> model.predict(eval_dataset) </span><br></br>
+        <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span><br></br>
+        <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co">#get predicted probabilities for each class (gives us the probabilities of each choice option that it had)</span></span><br></br>
+        <span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>preds_proba <span class="op">=</span> model.predict_proba(eval_dataset)</span><br></br>
+        <span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dt">&#39;Probabilities of each Label&#39;</span>)</span><br></br>
+        <span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(preds_proba)</span><br></br>
       </code>
     </div>
 
