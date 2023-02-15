@@ -80,16 +80,29 @@
 .RO__TND{
     position: absolute;
     display: inline-block;
-    padding: 3rem;
+    padding: 3.5rem;
     width: 100vw;
     padding-top: 50rem;
     font-family: 'Montserrat';
 }
+
+.RO__TND-code{
+  width: 70vw;
+  height: auto;
+  background-color: #aaaaaa;
+  
+}
 .RO__TND h1 {
-    font-size: 1.8em;
+    font-size: 2em;
+    font-weight: 400;
   }
+.RO__TND h3{
+  font-size: 1.3em;
+  font-weight: 400;
+}
 .RO__TND p {
     margin: 1em 0;
+    font-size: 1em;
   }
 .RO__TND a {
     color: #1a1a1a;
@@ -111,7 +124,7 @@
     font-weight: normal;
   }
   .RO__TND ol, ul {
-    padding-left: 1.7em;
+    padding-left: 1.8em;
     margin-top: 1em;
   }
   .RO__TND li > ol, li > ul {
@@ -229,7 +242,7 @@
       .RO__TND pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
     
     @media screen {
-        .RO__TND pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+         pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
     }
     code span.al { color: #ff0000; font-weight: bold; } /* Alert */
     code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
