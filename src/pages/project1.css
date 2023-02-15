@@ -84,6 +84,8 @@
     width: 100vw;
     padding-top: 100vh;
     font-family: 'Montserrat';
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .RO__TND-code{

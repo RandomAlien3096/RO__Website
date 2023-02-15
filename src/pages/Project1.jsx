@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect, useMemo } from 'react';
 import fault_severity from './01_TelstraNetworkDisruption/images/fault_severity.png';
 import heatmap from './01_TelstraNetworkDisruption/images/heatmap.png';
+import location from './01_TelstraNetworkDisruption/images/location_plot.png';
 
 
 import './project1.css';
@@ -499,26 +500,131 @@ const Project1 = () => {
     <div className='RO__TND-code'>
       <code>
         <span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">15</span>,<span class="dv">15</span>))</span><br></br>
-        <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&quot;Scatter plot Location v ID&quot;</span>)</span><br></br>
-        <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>ax.scatter(df.loc[df.fault_severity.isnull(),<span class="st">&#39;location&#39;</span>],</span><br></br>
-        <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>           df.loc[df.fault_severity.isnull()].index, alpha<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="st">&#39;k&#39;</span>, s<span class="op">=</span><span class="dv">2</span>)</span><br></br>
+        <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="dt">&quot;Scatter plot Location v ID&quot;</span>)</span><br></br>
+        <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>ax.scatter(df.loc[df.fault_severity.isnull(),<span class="dt">&#39;location&#39;</span>],</span><br></br>
+        <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>           df.loc[df.fault_severity.isnull()].index, alpha<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="dt">&#39;k&#39;</span>, s<span class="op">=</span><span class="dv">2</span>)</span><br></br>
         <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span><br></br>
-        <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>ax.scatter(df.loc[df.fault_severity<span class="op">==</span><span class="dv">0</span>,<span class="st">&#39;location&#39;</span>],</span><br></br>
-        <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>           df.loc[df.fault_severity<span class="op">==</span><span class="dv">0</span>].index, alpha<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="st">&#39;g&#39;</span>)</span><br></br>
+        <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>ax.scatter(df.loc[df.fault_severity<span class="op">==</span><span class="dv">0</span>,<span class="dt">&#39;location&#39;</span>],</span><br></br>
+        <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>           df.loc[df.fault_severity<span class="op">==</span><span class="dv">0</span>].index, alpha<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="dt">&#39;g&#39;</span>)</span><br></br>
         <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span><br></br>
-        <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>ax.scatter(df.loc[df.fault_severity<span class="op">==</span><span class="dv">1</span>,<span class="st">&#39;location&#39;</span>],</span><br></br>
-        <span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>           df.loc[df.fault_severity<span class="op">==</span><span class="dv">1</span>].index, alpha<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="st">&#39;y&#39;</span>)</span><br></br>
+        <span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>ax.scatter(df.loc[df.fault_severity<span class="op">==</span><span class="dv">1</span>,<span class="dt">&#39;location&#39;</span>],</span><br></br>
+        <span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>           df.loc[df.fault_severity<span class="op">==</span><span class="dv">1</span>].index, alpha<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="dt">&#39;y&#39;</span>)</span><br></br>
         <span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a></span><br></br>
-        <span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>ax.scatter(df.loc[df.fault_severity<span class="op">==</span><span class="dv">2</span>,<span class="st">&#39;location&#39;</span>], </span><br></br>
-        <span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>           df.loc[df.fault_severity<span class="op">==</span><span class="dv">2</span>].index, alpha<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="st">&#39;r&#39;</span>)</span><br></br>
+        <span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>ax.scatter(df.loc[df.fault_severity<span class="op">==</span><span class="dv">2</span>,<span class="dt">&#39;location&#39;</span>], </span><br></br>
+        <span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>           df.loc[df.fault_severity<span class="op">==</span><span class="dv">2</span>].index, alpha<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="dt">&#39;r&#39;</span>)</span><br></br>
         <span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a></span><br></br>
         <span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>ax.set_xlim((<span class="op">-</span><span class="dv">20</span>,<span class="dv">1150</span>))</span><br></br>
         <span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>ax.set_ylim((<span class="dv">0</span>,<span class="dv">19000</span>))</span><br></br>
-        <span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">&#39;Location&#39;</span>)</span><br></br>
-        <span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">&#39;ID&#39;</span>)<span class="op">;</span></span><br></br>
+        <span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="dt">&#39;Location&#39;</span>)</span><br></br>
+        <span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="dt">&#39;ID&#39;</span>)<span class="op">;</span></span><br></br>
       </code>
     </div>
     
+    <div className='RO__TND-img'>
+      <img src={ location } />
+    </div>
+
+    <section>
+      <p>Ya vista la grafica de dispersion, podemos notar una tendencia. Entre
+      mayor sea el numero de la ubicacion, las fallas se hacen mas propensas y
+      aumentan su severidad. Se puede asumir que, entre mayor sea el numero de
+      la ubicacion, esta se encontra mas lejos. Y que por igual, que cada uno
+      de las ubicaciones, dependiendo de su numero, se encuentran en orden y
+      en cercania relativa al valor dado. A partir de ello, podemos plantear
+      una hipotesis con nuestra matriz de correlacion; La severidad y cantidad
+      de las fallas en la red de TELSTRA sera directamente proporcional a la
+      ubicacion y distancia que estas tengan.</p><br></br>
+    </section>
+
+    <section>
+      <h3>Modelado</h3>
+      <hr />
+      <p>Debido a la naturalidad categorica de nuestro complejo de datos, es
+      necesario, ya sea, procesar profundamente nuestro set de datos o
+      utilizar un algoritmo de machine learning capaz de poder procesar esta
+      informacion. Dado esto, se propuso utilizar el algoritmo open-source
+      llamado "CatBoost". El cual es un algoritmo bastante versatil y
+      flexible. Donde tiene la capacidad de manejar una gran variedad de tipo
+      de datos sin ningun problema proveyendo soluciones fuera de lo
+      convencional para apoyar con los problemas dados comunmente en el
+      analisis de negocios y big data.</p>
+      <p>El objetivo ahora sera desplegar el algoritmo CatBoost de forma
+      correcta. Para ello, nececitamos iniciar con el entrenamiento
+      supervisado del complejo de datos ya procesado. Con ello utilizaremos el
+      complejo de datos "train" donde utilizaremos el 75% de sus datos para
+      entrenar al algoritmo y el 25% seran utilizados para validar el
+      entrenamiento y simular a su vez como este se comportara si es dado un
+      set de datos no antes vistos.</p>
+    </section>
+
+    <div className='RO__TND-code'>
+      <code>
+        <span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Splitting X(data in array) and y (index of data used)</span></span><br></br>
+        <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span><br></br>
+        <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> train_4[[<span class="dt">&#39;id&#39;</span>, <span class="dt">&#39;location&#39;</span>, <span class="dt">&#39;severity_type&#39;</span>, <span class="dt">&#39;resource_type&#39;</span>,</span><br></br>
+        <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>       <span class="dt">&#39;log_feature&#39;</span>, <span class="dt">&#39;volume&#39;</span>, <span class="dt">&#39;event_type&#39;</span>]]</span><br></br>
+        <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> train_4.fault_severity</span><br></br>
+        <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a> </span><br></br>
+        <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co">#divide the training set into train/validation set with 25% set aside for validation. </span></span><br></br>
+        <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span><br></br>
+        <span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span><br></br>
+        <span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>X_train, X_test, y_train, y_test <span class="op">=</span> train_test_split(X, y, test_size<span class="op">=</span><span class="fl">0.25</span>, random_state<span class="op">=</span><span class="dv">101</span>)</span><br></br>
+      </code>
+    </div>
+
+    <section>
+      <p>Ahora, actualizaremos los parametros del algoritmo para poder hacer
+      uso de la naturaleza categorica del mismo y utilizarlo en su mejor
+      capacidad para mejores resultados.</p>
+    </section>
+
+    <div className='RO__TND-code'>
+      <code>
+        <span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">#using pool to make the training and validation sets</span></span><br></br>
+        <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>train_dataset <span class="op">=</span> Pool(data<span class="op">=</span>X_train,</span><br></br>
+        <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>                     label<span class="op">=</span>y_train,</span><br></br>
+        <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>                     cat_features<span class="op">=</span>categorical_features_indices)</span><br></br>
+        <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span><br></br>
+        <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>eval_dataset <span class="op">=</span> Pool(data<span class="op">=</span>X_test,</span><br></br>
+        <span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>                    label<span class="op">=</span>y_test,</span><br></br>
+        <span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>                    cat_features<span class="op">=</span>categorical_features_indices)</span><br></br>
+        <span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span><br></br>
+        <span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="co">#initialize the catboost classifier</span></span><br></br>
+        <span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> CatBoostClassifier(iterations<span class="op">=</span><span class="dv">1000</span>,</span><br></br>
+        <span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>                           learning_rate<span class="op">=</span><span class="dv">1</span>,</span><br></br>
+        <span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>                           depth<span class="op">=</span><span class="dv">2</span>,</span><br></br>
+        <span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>                           loss_function<span class="op">=</span><span class="dt">&#39;MultiClass&#39;</span>,</span><br></br>
+        <span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>                           random_seed<span class="op">=</span><span class="dv">3</span>,</span><br></br>
+        <span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>                           bagging_temperature<span class="op">=</span><span class="dv">22</span>,</span><br></br>
+        <span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>                           od_type<span class="op">=</span><span class="dt">&#39;Iter&#39;</span>,</span><br></br>
+        <span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>                           metric_period<span class="op">=</span><span class="dv">50</span>,</span><br></br>
+        <span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>                           od_wait<span class="op">=</span><span class="dv">100</span>)</span><br></br>
+        <span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a><span class="co">#Fit model</span></span><br></br>
+        <span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>model.fit(train_dataset, eval_set<span class="op">=</span> eval_dataset, plot<span class="op">=</span> <span class="va">True</span>)</span><br></br>
+      </code>
+    </div>
+
+    <div className='RO__TND-print'>
+      <code>
+        Warning: Overfitting detector is active, thus evaluation metric is calculated on every iteration. &#39;metric_period&#39; is ignored for evaluation metric. <br></br>
+        0:	learn: 0.8097011	test: 0.8232279	best: 0.8232279 (0)	total: 98.8ms	remaining: 1m 38s<br></br>
+        50:	learn: 0.6891822	test: 0.7014301	best: 0.7011246 (48)	total: 164ms	remaining: 3.05s<br></br>
+        100:	learn: 0.6651755	test: 0.6883462	best: 0.6883462 (100)	total: 224ms	remaining: 1.99s<br></br>
+        150:	learn: 0.6478698	test: 0.6820732	best: 0.6796182 (146)	total: 282ms	remaining: 1.58s<br></br>
+        200:	learn: 0.6357514	test: 0.6749089	best: 0.6735488 (193)	total: 340ms	remaining: 1.35s<br></br>
+        250:	learn: 0.6246436	test: 0.6744368	best: 0.6735488 (193)	total: 402ms	remaining: 1.2s<br></br>
+        300:	learn: 0.6168495	test: 0.6715840	best: 0.6712311 (299)	total: 465ms	remaining: 1.08s<br></br>
+        350:	learn: 0.6057613	test: 0.6733312	best: 0.6697978 (332)	total: 525ms	remaining: 971ms<br></br>
+        400:	learn: 0.5983205	test: 0.6720923	best: 0.6697978 (332)	total: 586ms	remaining: 875ms<br></br>
+        Stopped by overfitting detector  (100 iterations wait)<br></br>
+        <br></br>
+        bestTest = 0.6697978062<br></br>
+        bestIteration = 332<br></br>
+        <br></br>
+        Shrink model to first 333 iterations.<br></br>
+      </code>
+    </div>
+
     </div>
     </>
   );
