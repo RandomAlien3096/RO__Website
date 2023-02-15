@@ -114,29 +114,316 @@ const Project1 = () => {
       
       <div className='RO__TND-code'>
         <code>
-        <span className='ss'>%</span><span className='im'>matplotlib</span> inline<br></br>
-        <span className='co'>#Seccion de importacion de librerias utilizadas en el transcurso del proyecto</span><br></br>
-          <span className='im'>import</span> numpy <span className='im'>as</span> np<br></br>
-          <span className='im'>import</span> pandas <span className='im'>as</span> pd<br></br>
-          <span className='im'>import</span> os<br></br>
-          <span className='im'>import</span> seaborn <span className='im'>as</span> sns<br></br>
-          <span className='im'>import</span> matplotlib.pyplot <span className='im'>as</span> plt<br></br>
-          plt.rcParams[<span class="dt">'figure.dpi'</span>]<span className='op'>=</span><span class="dv">300</span><br></br>
-          <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
-          <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
-          <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> RandomForestClassifier</span>
-          <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> LabelEncoder</span>
-          <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> metrics</span>
-          <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> catboost <span class="im">import</span> CatBoostClassifier, Pool</span>
-          <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>sns.set_style(<span class="dt">&quot;whitegrid&quot;</span>)</span>
-          <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-          <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
-          <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="dt">&#39;ignore&#39;</span>)
-          </span>
-        
+          <span className='ss'>%</span><span className='im'>matplotlib</span> inline<br></br>
+          <span className='co'>#Seccion de importacion de librerias utilizadas en el transcurso del proyecto</span><br></br>
+            <span className='im'>import</span> numpy <span className='im'>as</span> np<br></br>
+            <span className='im'>import</span> pandas <span className='im'>as</span> pd<br></br>
+            <span className='im'>import</span> os<br></br>
+            <span className='im'>import</span> seaborn <span className='im'>as</span> sns<br></br>
+            <span className='im'>import</span> matplotlib.pyplot <span className='im'>as</span> plt<br></br>
+            plt.rcParams[<span className="dt">'figure.dpi'</span>]<span className='op'>=</span><span className="dv">300</span><br></br>
+            <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span className="im">from</span> sklearn.model_selection <span className="im">import</span> train_test_split</span>
+            <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span className="im">from</span> sklearn.preprocessing <span className="im">import</span> StandardScaler</span>
+            <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span className="im">from</span> sklearn.ensemble <span className="im">import</span> RandomForestClassifier</span>
+            <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span className="im">from</span> sklearn.preprocessing <span className="im">import</span> LabelEncoder</span>
+            <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span className="im">from</span> sklearn <span className="im">import</span> metrics</span>
+            <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span className="im">from</span> catboost <span className="im">import</span> CatBoostClassifier, Pool</span>
+            <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>sns.set_style(<span className="dt">&quot;whitegrid&quot;</span>)</span>
+            <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span className="im">import</span> matplotlib.pyplot <span className="im">as</span> plt</span>
+            <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span className="im">import</span> warnings</span>
+            <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span className="dt">&#39;ignore&#39;</span>)
+            </span>
+        </code>
+      </div>
+      <div className='RO__TND-code'>
+        <code>
+          <span className="co">#------------------Cargando conjuto de datos------------------</span><br></br>
+          datadir <span className="op">=</span> <span className="dt">&#39;data&#39;</span><br></br>
+          <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span className="kw">def</span> str_to_num(string):</span><br></br>
+          <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span className="cf">return</span> <span className="bu">int</span>(string.split(<span className="dt">&quot; &quot;</span>)[<span className="dv">1</span>])    <span className="co">#after the split returns the num on the string</span></span><br></br>
+          <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span><br></br>
+          <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span className="co">#loading test.csv file</span></span><br></br>
+          <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>test <span className="op">=</span> pd.read_csv(<span className="dt">&#39;test.csv&#39;</span>, </span><br></br>
+          <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>                   converters <span className="op">=</span> <span className="dt">(&#39;location&#39;)</span>:str_to_num)</span><br></br>
+          <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span><br></br>
+          <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span className="co">#loading train.csv file</span></span><br></br>
+          <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>train <span className="op">=</span> pd.read_csv(<span className="dt">&#39;train.csv&#39;</span>,</span><br></br>
+          <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>                   converters <span className="op">=</span> (<span className="dt">&#39;location&#39;</span>:str_to_num))</span><br></br>
+          <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span><br></br>
+          <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span className="co">#loading event_type.csv file</span></span><br></br>
+          <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>event_type <span className="op">=</span> pd.read_csv(<span className="dt">&#39;event_type.csv&#39;</span>, </span><br></br>
+          <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>                         converters <span className="op">=</span> (<span className="dt">&#39;event_type&#39;</span>:str_to_num))</span><br></br>
+          <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span><br></br>
+          <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span className="co">#loading log_feature.csv file</span></span><br></br>
+          <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>log_failure <span className="op">=</span> pd.read_csv(<span className="dt">&#39;log_feature.csv&#39;</span>, </span><br></br>
+          <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>                          converters <span className="op">=</span> (<span className="dt">&#39;log_feature&#39;</span>:str_to_num))</span><br></br>
+          <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span><br></br>
+          <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span className="co">#loading resource_type.csv file</span></span><br></br>
+          <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>resource_type <span className="op">=</span> pd.read_csv(<span className="dt">&#39;resource_type.csv&#39;</span>, </span><br></br>
+          <span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>                            converters <span className="op">=</span> (<span className="dt">&#39;resource_type&#39;</span>:str_to_num))</span><br></br>
+          <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span><br></br>
+          <span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span className="co">#loading severity_type.csv file</span></span><br></br>
+          <span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>severity_type <span className="op">=</span> pd.read_csv(<span className="dt">&#39;severity_type.csv&#39;</span>, </span><br></br>
+          <span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>                            index_col <span className="op">=</span> <span className="dt">&#39;id&#39;</span>,</span><br></br>
+          <span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>                            converters <span className="op">=</span> (<span className="dt">&#39;severity_type&#39;</span>:str_to_num))  <br></br>
+        </code>
+      </div> 
+      <div className='RO__TND-code'>
+        <code>
+          <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span className="bu">print</span>(<span className="dt">&quot;The size of the test data set is: </span><span className="sc">{}</span><span className="ch">\n</span><span className="dt">&quot;</span>.<span className="bu">format</span>(test.shape))</span><br></br>
+          <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span className="bu">print</span>(<span className="dt">&quot;The size of the train data set is: </span><span className="sc">{}</span><span className="ch">\n</span><span className="dt">&quot;</span>.<span className="bu">format</span>(train.shape))</span><br></br>
+          <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span className="bu">print</span>(<span className="dt">&quot;The size of the events data set is: </span><span className="sc">{}</span><span className="ch">\n</span><span className="dt">&quot;</span>.<span className="bu">format</span>(event_type.shape))</span><br></br>
+          <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span className="bu">print</span>(<span className="dt">&quot;The size of the log feautures data set is: </span><span className="sc">{}</span><span className="ch">\n</span><span className="dt">&quot;</span>.<span className="bu">format</span>(log_failure.shape))</span><br></br>
+          <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span className="bu">print</span>(<span className="dt">&quot;The size of the resource data set is: </span><span className="sc">{}</span><span className="ch">\n</span><span className="dt">&quot;</span>.<span className="bu">format</span>(resource_type.shape))</span><br></br>
+          <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span className="bu">print</span>(<span className="dt">&quot;The size of the severity type data set is: </span><span className="sc">{}</span><span className="ch">\n</span><span className="dt">&quot;</span>.<span className="bu">format</span>(severity_type.shape))</span><br></br>
+          <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span><br></br>
+          <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span className="bu">print</span>(<span className="dt">&quot;Headers of train data set&quot;</span>)</span><br></br>
+          <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>train.head()</span><br></br>
+        </code>
+      </div>
+
+      <div className='RO__TND-print'>
+        <code>
+          The size of the test data set is: (11171, 2)<br></br>
+          
+          The size of the train data set is: (7381, 3)<br></br>
+
+          The size of the events data set is: (31170, 2)<br></br>
+
+          The size of the log feautures data set is: (58671, 3)<br></br>
+
+          The size of the resource data set is: (21076, 2)<br></br>
+
+          The size of the severity type data set is: (18552, 1)<br></br>
+
+          Headers of train data set<br></br>
         </code>
       </div>
         
+      <div className='RO__TND-table'>
+        <table border={1} className='dataframe'>
+          <thead>
+            <tr >
+            <th></th>
+            <th>id</th>
+            <th>location</th>
+            <th>fault_severity</th>
+          </tr>
+          </thead>
+        <tbody>
+        <tr>
+          <th>0</th>
+          <td>14121</td>
+          <td>118</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th>1</th>
+          <td>9320</td>
+          <td>91</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td>14394</td>
+          <td>152</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td>8218</td>
+          <td>931</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td>14804</td>
+          <td>120</td>
+          <td>0</td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
+
+    <div className='RO__TND-code'>
+    <code>
+    <span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span className="co">#Revisando los headers del conjunto de datos de test</span></span><br></br>
+    <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span className="bu">print</span>(<span className="dt">&quot;Headers of test data set&quot;</span>)</span><br></br>
+    <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>test.head()</span><br></br>
+    </code>
+    </div>
+    
+    <div className='RO__TND-print'>
+      <code>
+        Headers of test data set
+      </code>
+    </div>
+
+    <div className='RO__TND-table'>
+      <table border="1" className="dataframe">
+        <thead>
+          <tr>
+            <th></th>
+            <th>id</th>
+            <th>location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>0</th>
+            <td>11066</td>
+            <td>481</td>
+          </tr>
+          <tr>
+            <th>1</th>
+            <td>18000</td>
+            <td>962</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>16964</td>
+            <td>491</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>4795</td>
+            <td>532</td>
+          </tr>
+          <tr>
+            <th>4</th>
+            <td>3392</td>
+            <td>600</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    
+    <section>
+    <p>Uniremos los conjuntos de datos a excepcion de test.csv para poder
+    procesarlos en conjunto y tenerlos en una sola tabla.</p>
+    </section>
+
+    <div className='RO__TND-code'>
+      <code>
+        <span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>train_1 <span className="op">=</span> train.merge(severity_type, how <span className="op">=</span> <span className="dt">&#39;left&#39;</span>, left_on<span className="op">=</span><span className="dt">&#39;id&#39;</span>, right_on<span className="op">=</span><span className="dt">&#39;id&#39;</span>)</span><br></br>
+        <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>train_2 <span className="op">=</span> train_1.merge(resource_type, how <span className="op">=</span> <span className="dt">&#39;left&#39;</span>, left_on<span className="op">=</span><span className="dt">&#39;id&#39;</span>, right_on<span className="op">=</span><span className="dt">&#39;id&#39;</span>)</span><br></br>
+        <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>train_3 <span className="op">=</span> train_2.merge(log_failure, how <span className="op">=</span> <span className="dt">&#39;left&#39;</span>, left_on<span className="op">=</span><span className="dt">&#39;id&#39;</span>, right_on<span className="op">=</span><span className="dt">&#39;id&#39;</span>)</span><br></br>
+        <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>train_4 <span className="op">=</span> train_3.merge(event_type, how <span className="op">=</span> <span className="dt">&#39;left&#39;</span>, left_on<span className="op">=</span><span className="dt">&#39;id&#39;</span>, right_on<span className="op">=</span><span className="dt">&#39;id&#39;</span>)</span><br></br>
+        <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span className="co">#checking the head after merging</span></span><br></br>
+        <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span><br></br>
+        <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span className="bu">print</span>(<span className="dt">&quot;The size of the train dataset is: </span><span className="sc">{}</span><span className="dt"> &quot;</span>.<span className="bu">format</span>(train_4.shape))</span><br></br>
+        <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span><br></br>
+        <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span className="bu">print</span>(<span className="dt">&quot;Deleting duplicates in data set...&quot;</span>)</span><br></br>
+        <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>train_4.drop_duplicates(subset<span className="op">=</span> <span className="dt">&#39;id&#39;</span>, keep<span className="op">=</span> <span className="dt">&#39;first&#39;</span>, inplace <span className="op">=</span> <span className="va">True</span>)</span><br></br>
+        <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span><br></br>
+        <span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span className="co">#checking the shape of training file after dropping duplicate records</span></span><br></br>
+        <span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span className="bu">print</span>(<span className="dt">&quot;The size of the train dataset is now: </span><span className="sc">{}</span><span className="dt"> &quot;</span>.<span className="bu">format</span>(train_4.shape))</span><br></br>
+        <span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>train_4.head()</span><br></br>
+      </code>
+    </div>
+    
+    <div className='RO__TND-print'>
+      <code>
+        The size of the train dataset is: (61839, 8) <br></br>
+        Deleting duplicates in data set...<br></br>
+        The size of the train dataset is now: (7381, 8) <br></br>
+      </code>
+    </div>
+
+    <div className='RO__TND-table'>
+      <table border="1" className="dataframe">
+        <thead>
+          <tr>
+            <th></th>
+            <th>id</th>
+            <th>location</th>
+            <th>fault_severity</th>
+            <th>severity_type</th>
+            <th>resource_type</th>
+            <th>log_feature</th>
+            <th>volume</th>
+            <th>event_type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>0</th>
+            <td>14121</td>
+            <td>118</td>
+            <td>1</td>
+            <td>2</td>
+            <td>2</td>
+            <td>312</td>
+            <td>19</td>
+            <td>34</td>
+          </tr>
+          <tr>
+            <th>4</th>
+            <td>9320</td>
+            <td>91</td>
+            <td>0</td>
+            <td>2</td>
+            <td>2</td>
+            <td>315</td>
+            <td>200</td>
+            <td>34</td>
+          </tr>
+          <tr>
+            <th>8</th>
+            <td>14394</td>
+            <td>152</td>
+            <td>1</td>
+            <td>2</td>
+            <td>2</td>
+            <td>221</td>
+            <td>1</td>
+            <td>35</td>
+          </tr>
+          <tr>
+            <th>12</th>
+            <td>8218</td>
+            <td>931</td>
+            <td>1</td>
+            <td>1</td>
+            <td>8</td>
+            <td>80</td>
+            <td>9</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <th>18</th>
+            <td>14804</td>
+            <td>120</td>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>134</td>
+            <td>1</td>
+            <td>34</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section>
+      <p>Ahora que ya tenemos todos nuestros datos en un solo lugar, podemos
+      iniciar visualizando nuestros datos para ver, tentativamente, las
+      tendencias del comportamiento de los mismos.</p>
+    </section>
+
+    <div className='RO__TND-code'>
+      <code>
+        <span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span className="co">#Ilustrando la cantidad de fallas en train dataset de cada tipo</span></span><br></br>
+        <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span><br></br>
+        <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize <span className="op">=</span> (<span className="dv">8</span>,<span className="dv">6</span>))</span><br></br>
+        <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>ax <span className="op">=</span> sns.countplot(train_4[<span className="dt">&#39;fault_severity&#39;</span>])</span><br></br>
+        <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span className="cf">for</span> i <span className="kw">in</span> ax.patches:</span><br></br>
+        <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    ax.annotate(<span className="dt">&#39;</span><span className="sc">(:.1f)</span><span className="dt">&#39;</span>.<span className="bu">format</span>(i.get_height()), (i.get_x()<span className="op">+</span> <span className="fl">0.25</span>, i.get_height() <span className="op">+</span> <span className="fl">0.1</span>))</span><br></br>
+        <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>plt.title(<span className="dt">&quot;Count of fault_severity&quot;</span>)</span><br></br>
+        <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span><br></br>
+      </code>
+    </div>
 
     </div>
     </>
