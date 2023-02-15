@@ -82,7 +82,7 @@
     display: inline-block;
     padding: 7vw;
     width: 100vw;
-    padding-top: 50rem;
+    padding-top: 100vh;
     font-family: 'Montserrat';
 }
 
@@ -144,8 +144,8 @@ table.dataframe{
 .RO__TND a:visited {
     color: #1a1a1a;
   }
-.RO__TND img {
-    max-width: 100%;
+.RO__TND-img img {
+    max-width: 90%;
   }
   .RO__TND h1, h2, h3, h4, h5, h6 {
     margin-top: 1.4em;
