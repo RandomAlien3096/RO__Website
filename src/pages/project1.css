@@ -1,6 +1,6 @@
 .RO__ComingSoon {
     position: absolute;
-    display: flex;
+    display: none;
     aspect-ratio: 1.6180;
     height: 100vh;
     width: 100vw;
@@ -82,7 +82,7 @@
     display: inline-block;
     padding: 7vw;
     width: 100vw;
-    padding-top: 100vh;
+    padding-top: 0;
     font-family: 'Montserrat';
     text-align: justify;
     text-justify: inter-word;
@@ -131,6 +131,7 @@ table.dataframe{
 .RO__TND h1 {
     font-size: 2em;
     font-weight: 400;
+    text-align: start;
   }
 .RO__TND h3{
   font-size: 1.3em;
@@ -333,6 +334,21 @@ table.dataframe{
         font-size: 15px;
         height: 50px;
         width: 220px;
+    }
+    .RO__TND{
+      font-size: 80%;
+    }
+    .RO__TND-code{
+      margin: 3vw;
+      width: 80vw;
+    }
+    .RO__TND-print{
+      width: 80vw;
+      margin: 3vw;
+    }
+    .RO__TND-table{
+      width: 80vw;
+      margin: 3vw;
     }
 }
 
