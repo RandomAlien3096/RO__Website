@@ -16,7 +16,7 @@ const Footer = () => {
         <h1>Rafael Oliva</h1>
       </div>
       <div className='RO__footer-content_links'>
-        <Link to='/contactForm#contactForm'>
+        <Link to='/contactForm'>
           <p>Contact</p>
         </Link>
         <div className='RO__footer-content_links-bar'></div>

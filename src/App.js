@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import { Footer, About, Features, Services, Header, Portfolio, Contact } from './containers';
-import { Article, Brand, Cta, Feature, Navbar } from './components';
+import { Article, Brand, Cta, Feature, Navbar, ScrollToTop } from './components';
 import { Project1, Project2, Project3, Project4, Project5, Project6, Project7 } from './pages'
 import { ContactForm } from './pages/contactform';
 
@@ -11,6 +11,7 @@ import './App.css';
 const App = () => {
   return (
     <Routes>
+      
       <Route path='/' element={
         <div className = "App">
           <div className='gradient__bg'>

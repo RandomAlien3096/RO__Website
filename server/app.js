@@ -52,5 +52,5 @@ app.post("/send_email", (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`nodemailerProject is listening at http://localhost:${port}`);
+    console.log(`nodemailerProject is listening at https://rafaeloliva.me:${port}`);
 }); 

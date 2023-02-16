@@ -14,7 +14,7 @@ const ContactForm = () => {
      function sendMail(){
         if(recipient_email && name && message){
             axios
-                .post('http://localhost:5000/send_email', {
+                .post('https://rafaeloliva.me/send_email', {
                     recipient_email,
                     name,
                     message,

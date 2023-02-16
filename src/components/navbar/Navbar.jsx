@@ -11,7 +11,7 @@ const Menu = () => (
   <p><a href = "#services">Services</a></p>
   <p><a href = "#portfolio">Portfolio</a></p>
   <p>
-    <Link to='/contactForm#contactForm'>
+    <Link to='/contactForm'>
     Contact
     </Link>
   </p>
