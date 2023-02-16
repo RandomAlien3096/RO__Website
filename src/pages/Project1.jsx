@@ -649,6 +649,45 @@ const Project1 = () => {
       </code>
     </div>
 
+    <div className='RO__TND-print'>
+      <code>
+      Probabilities of each Label<br></br>
+      [[6.34695909e-01 3.42714092e-01 2.25899984e-02]<br></br>
+      [8.30100770e-01 1.42077653e-01 2.78215777e-02]<br></br>
+      [4.01349383e-01 1.49938543e-01 4.48712074e-01]<br></br>
+      ...<br></br>
+      [3.20211371e-01 8.93100493e-02 5.90478580e-01]<br></br>
+      [9.06275128e-01 9.34559188e-02 2.68953024e-04]<br></br>
+      [3.85959137e-01 2.72217943e-01 3.41822920e-01]]<br></br>
+      </code>
+    </div>
+
+    <section>
+      <p>Ya que tenemos nuestro modelo entrenado y evaluado, es hora de
+      implementar este a nuestro archivo test.cvs. Esto para poder predecir la
+      severidad de las fallas dependiendo de la ubicacion. Crearemos nuestro
+      conjunto de datos de test.csv</p>
+    </section>
+
+    <div className='RO__TND-code'>
+      <code>
+        <span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dt">&quot;The shape of the test data set without merging is: </span><span class="sc">{}</span><span class="dt">&quot;</span>.<span class="bu">format</span>(test.shape))</span><br></br>
+        <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span><br></br>
+        <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>test_1 <span class="op">=</span> test.merge(severity_type, how <span class="op">=</span> <span class="dt">&#39;left&#39;</span>, left_on<span class="op">=</span><span class="dt">&#39;id&#39;</span>, right_on<span class="op">=</span><span class="dt">&#39;id&#39;</span>)</span><br></br>
+        <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>test_2 <span class="op">=</span> test_1.merge(resource_type, how <span class="op">=</span> <span class="dt">&#39;left&#39;</span>, left_on<span class="op">=</span><span class="dt">&#39;id&#39;</span>, right_on<span class="op">=</span><span class="dt">&#39;id&#39;</span>)</span><br></br>
+        <span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>test_3 <span class="op">=</span> test_2.merge(log_failure, how <span class="op">=</span> <span class="dt">&#39;left&#39;</span>, left_on<span class="op">=</span><span class="dt">&#39;id&#39;</span>, right_on<span class="op">=</span><span class="dt">&#39;id&#39;</span>)</span><br></br>
+        <span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>test_4 <span class="op">=</span> test_3.merge(event_type, how <span class="op">=</span> <span class="dt">&#39;left&#39;</span>, left_on<span class="op">=</span><span class="dt">&#39;id&#39;</span>, right_on<span class="op">=</span><span class="dt">&#39;id&#39;</span>)</span><br></br>
+        <span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a></span><br></br>
+        <span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="co">#removing the duplicates.</span></span><br></br>
+        <span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>test_4.drop_duplicates(subset<span class="op">=</span> <span class="dt">&#39;id&#39;</span>, keep<span class="op">=</span> <span class="dt">&#39;first&#39;</span>, inplace <span class="op">=</span> <span class="va">True</span>)</span><br></br>
+        <span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a> </span><br></br>
+        <span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="co">#checking for any null values. </span></span><br></br>
+        <span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>test_4.isnull().<span class="bu">sum</span>()</span><br></br>
+        <span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a></span><br></br>
+        <span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dt">&quot;The shape of the merged test dataset is: </span><span class="sc">{}</span><span class="dt">&quot;</span>.<span class="bu">format</span>(test_4.shape))</span><br></br>
+      </code>
+    </div>
+
     </div>
     </>
   );
