@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo } from 'react';
 import fault_severity from './01_TelstraNetworkDisruption/images/fault_severity.png';
 import heatmap from './01_TelstraNetworkDisruption/images/heatmap.png';
 import location from './01_TelstraNetworkDisruption/images/location_plot.png';
+import finalPlot from './01_TelstraNetworkDisruption/images/final_location_plot.png';
 
 
 import './project1.css';
@@ -686,6 +687,315 @@ const Project1 = () => {
         <span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a></span><br></br>
         <span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dt">&quot;The shape of the merged test dataset is: </span><span class="sc">{}</span><span class="dt">&quot;</span>.<span class="bu">format</span>(test_4.shape))</span><br></br>
       </code>
+    </div>
+
+    <div className='RO__TND-print'>
+      <code>
+        The shape of the test data set without merging is: (11171, 2)<br></br>
+        The shape of the merged test dataset is: (11171, 7)<br></br>
+      </code>
+    </div>
+
+    <section>
+      <p>Ahora utilizaremos el modelo en el nuevo conjunto de datos para poder
+      predecir la severidad de fallas y en donde estas sucederan.</p>
+    </section>
+
+    <div className='RO__TND-code'>
+      <code>
+        <span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>predict_class <span class="op">=</span> model.predict(test_4)</span><br></br>
+        <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>prediction_class_df <span class="op">=</span> pd.DataFrame(predict_class, </span><br></br>
+        <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>                                   columns <span class="op">=</span> [<span class="dt">&#39;fault_severity&#39;</span>])</span><br></br>
+        <span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a></span><br></br>
+        <span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>prediction_catboost <span class="op">=</span> pd.concat([test[[<span class="dt">&#39;id&#39;</span>,<span class="dt">&#39;location&#39;</span>]], prediction_class_df],axis <span class="op">=</span> <span class="dv">1</span>)</span><br></br>
+        <span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>prediction_catboost.to_csv(<span class="dt">&#39;prediction.csv&#39;</span>, index <span class="op">=</span> <span class="va">False</span>, header <span class="op">=</span> <span class="va">True</span>)</span><br></br>
+        <span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>prediction_catboost.head(<span class="dv">15</span>)</span><br></br>
+      </code>
+    </div>
+
+    <div className='RO__TND-table'>
+      <table border="1" class="dataframe">
+        <thead>
+          <tr>
+            <th></th>
+            <th>id</th>
+            <th>location</th>
+            <th>fault_severity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>0</th>
+            <td>11066</td>
+            <td>481</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th>1</th>
+            <td>18000</td>
+            <td>962</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>16964</td>
+            <td>491</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>4795</td>
+            <td>532</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th>4</th>
+            <td>3392</td>
+            <td>600</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th>5</th>
+            <td>3795</td>
+            <td>794</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th>6</th>
+            <td>2881</td>
+            <td>375</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th>7</th>
+            <td>1903</td>
+            <td>638</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th>8</th>
+            <td>5245</td>
+            <td>690</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th>9</th>
+            <td>6726</td>
+            <td>893</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th>10</th>
+            <td>1311</td>
+            <td>418</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th>11</th>
+            <td>15795</td>
+            <td>320</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th>12</th>
+            <td>4315</td>
+            <td>1013</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th>13</th>
+            <td>3393</td>
+            <td>931</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <th>14</th>
+            <td>6764</td>
+            <td>707</td>
+            <td>0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div className='RO__TND-code'>
+      <code>
+        <span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>predict_test <span class="op">=</span> model.predict_proba(test_4) <span class="co">#using the trained catboost model to get the probabilities of the choices</span></span><br></br>
+        <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dt">&quot;The shape of the prediction test dataset is now: </span><span class="sc">{}</span><span class="dt">&quot;</span>.<span class="bu">format</span>(predict_test.shape))</span><br></br>
+        <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span><br></br>
+        <span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>pred_df <span class="op">=</span> pd.DataFrame(predict_test, </span><br></br>
+        <span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>                       columns <span class="op">=</span> [<span class="dt">&#39;predict_0&#39;</span>,<span class="dt">&#39;predict_1&#39;</span>, <span class="dt">&#39;predict_2&#39;</span>])</span><br></br>
+        <span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dt">&quot;The shape of the prediction data frame is now: </span><span class="sc">{}</span><span class="dt">&quot;</span>.<span class="bu">format</span>(pred_df.shape))</span><br></br>
+        <span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a></span><br></br>
+        <span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>submission_cat <span class="op">=</span> pd.concat([test[[<span class="dt">&#39;id&#39;</span>]],pred_df],axis<span class="op">=</span><span class="dv">1</span>)</span><br></br>
+        <span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>submission_cat.to_csv(<span class="dt">&#39;sub_cat_1.csv&#39;</span>,index<span class="op">=</span><span class="va">False</span>,header<span class="op">=</span><span class="va">True</span>)</span><br></br>
+        <span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>submission_cat.head(<span class="dv">15</span>)</span><br></br>
+      </code>
+    </div>
+
+    <div className='RO__TND-print'>
+      <code>
+        The shape of the prediction test dataset is now: (11171, 3)<br></br>
+        The shape of the prediction data frame is now: (11171, 3)<br></br>
+      </code>
+    </div>
+
+    <div className='RO__TND-table'>
+      <table border="1" class="dataframe">
+        <thead>
+          <tr>
+            <th></th>
+            <th>id</th>
+            <th>predict_0</th>
+            <th>predict_1</th>
+            <th>predict_2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>0</th>
+            <td>11066</td>
+            <td>0.994028</td>
+            <td>0.004516</td>
+            <td>0.001456</td>
+          </tr>
+          <tr>
+            <th>1</th>
+            <td>18000</td>
+            <td>0.321017</td>
+            <td>0.174778</td>
+            <td>0.504204</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>16964</td>
+            <td>0.986801</td>
+            <td>0.010605</td>
+            <td>0.002594</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>4795</td>
+            <td>0.851619</td>
+            <td>0.147910</td>
+            <td>0.000471</td>
+          </tr>
+          <tr>
+            <th>4</th>
+            <td>3392</td>
+            <td>0.632463</td>
+            <td>0.145794</td>
+            <td>0.221744</td>
+          </tr>
+          <tr>
+            <th>5</th>
+            <td>3795</td>
+            <td>0.563807</td>
+            <td>0.390033</td>
+            <td>0.046161</td>
+          </tr>
+          <tr>
+            <th>6</th>
+            <td>2881</td>
+            <td>0.797273</td>
+            <td>0.202510</td>
+            <td>0.000216</td>
+          </tr>
+          <tr>
+            <th>7</th>
+            <td>1903</td>
+            <td>0.615593</td>
+            <td>0.061395</td>
+            <td>0.323012</td>
+          </tr>
+          <tr>
+            <th>8</th>
+            <td>5245</td>
+            <td>0.737178</td>
+            <td>0.238249</td>
+            <td>0.024573</td>
+          </tr>
+          <tr>
+            <th>9</th>
+            <td>6726</td>
+            <td>0.870761</td>
+            <td>0.129025</td>
+            <td>0.000214</td>
+          </tr>
+          <tr>
+            <th>10</th>
+            <td>1311</td>
+            <td>0.556050</td>
+            <td>0.443908</td>
+            <td>0.000042</td>
+          </tr>
+          <tr>
+            <th>11</th>
+            <td>15795</td>
+            <td>0.690187</td>
+            <td>0.309802</td>
+            <td>0.000011</td>
+          </tr>
+          <tr>
+            <th>12</th>
+            <td>4315</td>
+            <td>0.763102</td>
+            <td>0.171295</td>
+            <td>0.065602</td>
+          </tr>
+          <tr>
+            <th>13</th>
+            <td>3393</td>
+            <td>0.484671</td>
+            <td>0.351055</td>
+            <td>0.164274</td>
+          </tr>
+          <tr>
+            <th>14</th>
+            <td>6764</td>
+            <td>0.615090</td>
+            <td>0.383304</td>
+            <td>0.001606</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section>
+      <p>Luego de esto podemos visualizar los resultados finales en la grafica
+      de dispersion donde se puede apreciar los datos resultantes del archivo
+      generado en csv.</p>
+    </section>
+
+    <div className='RO__TND-code'>
+      <code>
+        <span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">#loading test.csv file</span></span><br></br>
+        <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>prediction_plot <span class="op">=</span> pd.read_csv(<span class="dt">&#39;prediction.csv&#39;</span>, </span><br></br>
+        <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>                        index_col <span class="op">=</span> <span class="dt">&#39;id&#39;</span>)</span><br></br>
+        <span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a></span><br></br>
+        <span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">15</span>,<span class="dv">15</span>))</span><br></br>
+        <span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="dt">&quot;Scatter plot Location v ID&quot;</span>)</span><br></br>
+        <span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>ax.scatter(prediction_catboost.loc[prediction_catboost.fault_severity.isnull(), <span class="dt">&#39;location&#39;</span>],</span><br></br>
+        <span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>           prediction_catboost.loc[prediction_catboost.fault_severity.isnull()].index, alpha<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="dt">&#39;k&#39;</span>, s<span class="op">=</span><span class="dv">2</span>)</span><br></br>
+        <span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a></span><br></br>
+        <span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>ax.scatter(prediction_catboost.loc[prediction_catboost.fault_severity<span class="op">==</span><span class="dv">0</span>, <span class="dt">&#39;location&#39;</span>],</span><br></br>
+        <span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>           prediction_catboost.loc[prediction_catboost.fault_severity<span class="op">==</span><span class="dv">0</span>].index, alpha<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="dt">&#39;g&#39;</span>)</span><br></br>
+        <span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a></span><br></br>
+        <span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>ax.scatter(prediction_catboost.loc[prediction_catboost.fault_severity<span class="op">==</span><span class="dv">1</span>, <span class="dt">&#39;location&#39;</span>],</span><br></br>
+        <span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>           prediction_catboost.loc[prediction_catboost.fault_severity<span class="op">==</span><span class="dv">1</span>].index, alpha<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="dt">&#39;y&#39;</span>)</span><br></br>
+        <span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a></span><br></br>
+        <span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a>ax.scatter(prediction_catboost.loc[prediction_catboost.fault_severity<span class="op">==</span><span class="dv">2</span>, <span class="dt">&#39;location&#39;</span>],</span><br></br>
+        <span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a>           prediction_catboost.loc[prediction_catboost.fault_severity<span class="op">==</span><span class="dv">2</span>].index, alpha<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="dt">&#39;r&#39;</span>)</span><br></br>
+        <span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a></span><br></br>
+        <span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a>ax.set_xlim((<span class="op">-</span><span class="dv">20</span>,<span class="dv">1150</span>))</span><br></br>
+        <span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a>ax.set_ylim((<span class="dv">0</span>,<span class="dv">11500</span>))</span><br></br>
+        <span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="dt">&#39;Location&#39;</span>)</span><br></br>
+        <span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="dt">&#39;ID&#39;</span>)<span class="op">;</span></span><br></br>
+      </code>
+    </div>
+
+    <div className='RO__TND-img'>
+    <img src={finalPlot} />
     </div>
 
     </div>
