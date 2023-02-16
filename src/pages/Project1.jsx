@@ -5,6 +5,7 @@ import fault_severity from './01_TelstraNetworkDisruption/images/fault_severity.
 import heatmap from './01_TelstraNetworkDisruption/images/heatmap.png';
 import location from './01_TelstraNetworkDisruption/images/location_plot.png';
 import finalPlot from './01_TelstraNetworkDisruption/images/final_location_plot.png';
+import kaggle from './01_TelstraNetworkDisruption/images/Kaggle_Telstra_SC.png';
 
 
 import './project1.css';
@@ -962,6 +963,19 @@ const Project1 = () => {
     </div>
 
     <section>
+      <h3>Evaluacion</h3>
+      <hr />
+      <p>Apartir del archivo creado se subio a kaggle para obtener una
+      puntuacion para la evaluacion requerida solo para terminos de esta
+      activad. En este caso el resultado con nuestro modelo con el algoritmo
+      CatBoost fue el siguiente:</p>
+    </section>
+
+    <div className='RO__TND-img'>
+      <img src={kaggle} />
+    </div>
+
+    <section>
       <p>Luego de esto podemos visualizar los resultados finales en la grafica
       de dispersion donde se puede apreciar los datos resultantes del archivo
       generado en csv.</p>
@@ -995,8 +1009,66 @@ const Project1 = () => {
     </div>
 
     <div className='RO__TND-img'>
-    <img src={finalPlot} />
+      <img src={finalPlot} />
     </div>
+
+    <section>
+      <h3>Despliegue</h3>
+      <hr />
+      <p>En esta fase, evaluaremos el peso, o mas bien, la importancia de cada
+      una de las caracteristicas utilizadas para el entrenamiento de nuestro
+      modelo. Ya que, esto nos permitira ver que mas se requiere para poder
+      mejorar el modelo</p>
+    </section>
+
+    <div className='RO__TND-code'>
+      <code>
+        <span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>model.get_feature_importance()</span>
+      </code>
+    </div>
+
+    <div className='RO__TND-print'>
+      <code>
+      array([ 6.3250055 , 22.46957826, 11.11821714, 12.5966741 , 16.14897793,
+       21.25928377, 10.08226331])
+      </code>
+    </div>
+
+    <section>
+      <p>Esta funcion nos da a conocer el porcentaje de relevancia de cada una
+      de las caracteristicas utilizadas. Donde:</p>
+      <ul style={{ listStyleType: 'disc' }}>
+        <li>id = 6.32%</li>
+        <li>location = 22.50%</li>
+        <li>severity_type = 11.12%</li>
+        <li>resource_type = 12.60%</li>
+        <li>log_feature = 16.15%</li>
+        <li>volume = 21.26%</li>
+        <li>event_type = 10.08%</li>
+      </ul>
+    </section>
+
+    <section>
+      <p>Estos resultados nos dan a conocer dos cosas:</p>
+      <ul style={{ listStyleType: 'disc' }}>
+        <li><p>Primeramente, que la ubicacion si es el factor y la
+        caracteristica mas relevante de este proyecto. Por lo cual, Telstra
+        tendra que indagar e investigar sus nodos de conexiones fisicas. Para
+        poder determinar si hay perdidas de paquetes en la transmision de
+        informacion dada la decadencia en tramos largos de paquetes,
+        caracteristicas climaticas en ciertas regiones de australia.</p></li>
+
+        <li><p>Segundamente, los otros dos factores importantes del modelo
+        fueron; volumen y en especifico, log_feature. Log_feature, y volume,
+        existen en el mismo archivo, lo cual es un indicativo que van desde el
+        inicio, relacionados. Por igual, el detalle de log_feature nos logra
+        hacer entender que debe de exisitir algo mas haya que no logramos ver a
+        simple vista en este modelo. Algo que tenga que ver con el historial del
+        tiempo de cada uno de estos errores. Saber esto, nos podra permitir
+        conocer como mejorar el modelo y por ende, tenga un entrenamiento mas
+        duradero y de resultados mas precisos.</p></li>
+      </ul>
+    </section>
 
     </div>
     </>
