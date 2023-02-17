@@ -1,4 +1,10 @@
-.RO__ComingSoon {
+.RO__Navbar img{
+  display: none;
+}
+
+
+
+.RO__ComingSoonP1 {
     position: absolute;
     display: none !important;
     aspect-ratio: 1.6180;

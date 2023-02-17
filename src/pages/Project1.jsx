@@ -7,7 +7,7 @@ import location from './01_TelstraNetworkDisruption/images/location_plot.png';
 import finalPlot from './01_TelstraNetworkDisruption/images/final_location_plot.png';
 import kaggle from './01_TelstraNetworkDisruption/images/Kaggle_Telstra_SC.png';
 
-
+import { Navbar } from '../components';
 import './project1.css';
 
 const SECOND = 1000;
@@ -33,7 +33,11 @@ const Project1 = () => {
  
   return (
     <>
-    <div className='RO__ComingSoon'>
+    <div className='RO__Navbar'>
+      <Navbar />
+    </div>
+
+    <div className='RO__ComingSoonP1'>
       <div className='RO__ComingSoon-content'>
         <p>Page is under construction</p>
         <h1>Launching Soon this Project</h1>
