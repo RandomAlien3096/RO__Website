@@ -81,6 +81,51 @@
 .RO__navbar-menu_container p {
     margin: 1rem 0;
 }
+/* -------------- -------------------------------  */
+.RO__navbar-menu2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+    font-family: 'Montserrat';
+    border: 1px solid cyan;
+}
+
+.RO__navbar-menu2 button{
+    background-color: #fff;
+}
+
+.RO__navbar-menu2_trigger{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 9%;
+    width: 150px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 22px;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+
+.RO__navbar-menu2_dropdown{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    width: 180px;
+    height: 250px;
+    background-color: #fff;
+    font-size: 18px;
+    border: 1px solid purple;
+}
+
+.RO__navbar-menu2_dropdown-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid red;
+}
+
 
 @media screen and (max-width: 1050px) {
     .RO__navbar-links_container{

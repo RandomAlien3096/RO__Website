@@ -61,12 +61,12 @@ const Navbar = () => {
           </div>
         )}
       </div> */}
-      <div className='RO__navbar-menu'>
-        <button type='button' className='RO__navbar-menu_trigger' onClick={() => setOpen(!open)}>
-          <h3>Menu <RiMenu3Line /></h3>
+      <div className='RO__navbar-menu2'>
+        <button type='button' className='RO__navbar-menu2_trigger' onClick={() => setOpen(!open)}>
+          <h3>Menu </h3><RiMenu3Line />
         </button>
-        <div className={`RO__navbar-menu_dropdown ${open? 'active' : 'inactive'}`}>
-          <div className='RO__navbar-menu_container-links'>
+        <div className={`RO__navbar-menu2_dropdown ${open? 'active' : 'inactive'}`}>
+          <div className='RO__navbar-menu2_dropdown-links'>
             <Menu />
           </div>
         </div>
