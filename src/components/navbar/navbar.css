@@ -4,7 +4,7 @@
     width: 100%;
     padding: 2rem 3rem; 
     position: fixed;
-    z-index: 1;
+    z-index: 2;
 }
 
 .RO__navbar-links {
@@ -87,7 +87,7 @@
 /* -------------- -------------------------------  */
 .RO__navbar-menu2{
     position: absolute;
-    right: 30px;
+    right: 6vw;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -168,11 +168,17 @@
     .RO__navbar-links_logo{
         margin-left: 1.5rem;
     }
+    .RO__navbar-menu2{
+        right: 6vw;
+    }
 }
 
 @media screen and (max-width: 700px) {
     .RO__navbar-links_logo{
         margin-left: 0;
+    }
+    .RO__navbar-menu2{
+        right: 4.5vw;
     }
 }
 
@@ -194,6 +200,9 @@
 
     .RO__navbar-menu_container p{
         font-size: 18px;
+    }
+    .RO__navbar-menu2{
+        right: 2vw;
     }
 
 }

@@ -57,7 +57,7 @@ let menuRef = useRef();
     return() => {
       document.removeEventListener("mousedown", handler);
     }
-  })
+  });
 
   return (
     <div className ="RO__navbar" id='home'>
