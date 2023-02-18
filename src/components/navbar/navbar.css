@@ -4,7 +4,7 @@
     width: 100%;
     padding: 2rem 3rem; 
     position: fixed;
-    z-index: 2;
+    z-index: 1;
 }
 
 .RO__navbar-links {
@@ -60,6 +60,9 @@
     cursor: pointer;
 }
 
+.RO__navbar-links_container svg{
+    display: none;
+}
 
 .RO__navbar-menu_container {
     display: flex;
@@ -83,7 +86,9 @@
 }
 /* -------------- -------------------------------  */
 .RO__navbar-menu2{
-    display: flex;
+    position: absolute;
+    right: 30px;
+    display: none;
     flex-direction: column;
     align-items: center;
     width: 180px;
@@ -144,6 +149,9 @@
 
 
 @media screen and (max-width: 1050px) {
+    .RO__navbar-menu2{
+        display: flex;
+    }
     .RO__navbar-links_container{
         display: none;
     }

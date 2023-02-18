@@ -25,7 +25,6 @@ const Footer = () => {
         <Link to='/#services'>
           <p>Services</p>
         </Link>
-        
       </div>
       </div>
     </div>

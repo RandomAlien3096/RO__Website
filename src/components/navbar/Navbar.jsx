@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './navbar.css';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import { HiUser, HiOutlineCubeTransparent, HiPuzzle, HiOutlinePaperAirplane } from 'react-icons/hi';
@@ -43,6 +43,22 @@ const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [ open, setOpen ] = useState(false);
 
+let menuRef = useRef();
+
+  useEffect(() => {
+    let handler = (e) =>{
+      if(!menuRef.current.contains(e.target)){
+        setOpen(false);
+        console.log(menuRef.current);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+
+    return() => {
+      document.removeEventListener("mousedown", handler);
+    }
+  })
+
   return (
     <div className ="RO__navbar" id='home'>
       <div className='RO__navbar-links'>
@@ -69,7 +85,7 @@ const Navbar = () => {
           </div>
         )}
       </div> */}
-      <div className='RO__navbar-menu2'>
+      <div className='RO__navbar-menu2' ref={menuRef}>
         <button type='button' className='RO__navbar-menu2_trigger' onClick={() => setOpen(!open)}>
           <h3>Menu </h3><RiMenu3Line />
         </button>
