@@ -88,7 +88,6 @@
     align-items: center;
     width: 180px;
     font-family: 'Montserrat';
-    border: 1px solid cyan;
 }
 
 .RO__navbar-menu2 button{
@@ -116,15 +115,18 @@
     height: 250px;
     background-color: #fff;
     font-size: 18px;
-    border: 1px solid purple;
+    border: 2px solid #000;
+    border-radius: 15px;
 }
 
 .RO__navbar-menu2_dropdown-links{
-    display: flex;
-    flex-direction: column;
+    display: grid;
     justify-content: space-around;
-    border: 1px solid red;
+    align-content: space-around;
+    width: 130px;
+    grid-template-columns: 30% 70%;
 }
+
 
 
 @media screen and (max-width: 1050px) {

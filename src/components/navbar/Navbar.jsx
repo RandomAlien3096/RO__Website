@@ -1,31 +1,38 @@
 import React, { useState } from 'react';
 import './navbar.css';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
+import { HiUser, HiOutlineCubeTransparent, HiPuzzle, HiOutlinePaperAirplane } from 'react-icons/hi';
 import logo from '../../assets/logo.png';
 import { HashLink as Link } from 'react-router-hash-link' ;
 
 
 const Menu = () => (
   <>
+  <HiUser />
   <p>
     <Link to='/#about'>
       About Me
     </Link>
   </p>
   {/* <p><a href = "#about">About me</a></p> */}
+  
+  <HiOutlineCubeTransparent />
   <p>
     <Link to='/#services'>
       Services
     </Link>
   </p>
+  <HiPuzzle />
   <p>
     <Link to='/#portfolio'>
       Portfolio
     </Link>
   </p>
+
+  <HiOutlinePaperAirplane />
   <p>
     <Link to='/contactForm'>
-    Contact
+      Contact
     </Link>
   </p>
   </>
