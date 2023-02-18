@@ -8,7 +8,8 @@ import { HashLink as Link } from 'react-router-hash-link' ;
 
 const Menu = () => (
   <>
-  <HiUser />
+
+  <Link to='/#about'><HiUser /></Link>
   <p>
     <Link to='/#about'>
       About Me
@@ -16,20 +17,20 @@ const Menu = () => (
   </p>
   {/* <p><a href = "#about">About me</a></p> */}
   
-  <HiOutlineCubeTransparent />
+  <Link to='/#services'><HiOutlineCubeTransparent /></Link>
   <p>
     <Link to='/#services'>
       Services
     </Link>
   </p>
-  <HiPuzzle />
+  <Link to='/#portfolio'><HiPuzzle /></Link>
   <p>
     <Link to='/#portfolio'>
       Portfolio
     </Link>
   </p>
 
-  <HiOutlinePaperAirplane />
+  <Link to='/contactForm'><HiOutlinePaperAirplane /></Link>
   <p>
     <Link to='/contactForm'>
       Contact

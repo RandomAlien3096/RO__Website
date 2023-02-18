@@ -119,10 +119,24 @@
     border-radius: 15px;
 }
 
+.RO__navbar-menu2_dropdown.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: 500ms ease;
+}
+
+.RO__navbar-menu2_dropdown.inactive{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-30px);
+    transition: 500ms ease;
+}
+
 .RO__navbar-menu2_dropdown-links{
     display: grid;
-    justify-content: space-around;
     align-content: space-around;
+    align-items: center;
     width: 130px;
     grid-template-columns: 30% 70%;
 }
