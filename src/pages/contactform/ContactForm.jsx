@@ -28,6 +28,7 @@ const ContactForm = () => {
              console.log(result.text);
              console.log("message sent");
              alert("Message sent succesfully");
+             window.location.reload(false);
          }, (error) => {
              console.log(error.text);
              alert("Oops, something went wrong");
