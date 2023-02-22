@@ -42,7 +42,6 @@ const ContactForm = () => {
             </div>
             <form
                 className='RO__ContactForm-content_form'
-                target='_blank'
                 >
                 <div className='RO__ContactForm-content_form_name'>
                     <div className='RO__ContactForm-content_form_nameTitle'>
