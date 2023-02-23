@@ -1,11 +1,11 @@
 import React from 'react';
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 import './contactForm.css';
 import { Footer } from '../../containers';
 
 import emailjs from '@emailjs/browser';
 
-import axios from 'axios';
+// import axios from 'axios';
 
 const ContactForm = () => {
      //const [status, setStatus] = useState("Submit");
@@ -28,7 +28,7 @@ const ContactForm = () => {
              console.log(result.text);
              console.log("message sent");
              alert("Message sent succesfully");
-             window.location.reload(false);
+            //  window.location.reload(false);
          }, (error) => {
              console.log(error.text);
              alert("Oops, something went wrong");
