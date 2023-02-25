@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './navbar.css';
-import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
+import { RiMenu3Line } from 'react-icons/ri';
 import { HiUser, HiOutlineCubeTransparent, HiPuzzle, HiOutlinePaperAirplane } from 'react-icons/hi';
 import logo from '../../assets/logo.png';
 import { HashLink as Link } from 'react-router-hash-link' ;

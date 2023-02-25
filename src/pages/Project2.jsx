@@ -28,6 +28,31 @@ const Project2 = () => {
       return () => clearInterval(interval);
   }, []);
  
+  //---------------------------------------------------------------------
+  document.addEventListener('DOMContentLoaded', function() {
+    var btns = document.querySelectorAll('.btn-6');
+  
+    btns.forEach(function(btn) {
+      btn.addEventListener('mouseenter', function(e) {
+        var parentOffset = this.getBoundingClientRect(),
+            relX = e.pageX - parentOffset.left,
+            relY = e.pageY - parentOffset.top;
+        this.querySelector('span').style.top = relY + 'px';
+        this.querySelector('span').style.left = relX + 'px';
+      });
+  
+      btn.addEventListener('mouseout', function(e) {
+        var parentOffset = this.getBoundingClientRect(),
+            relX = e.pageX - parentOffset.left,
+            relY = e.pageY - parentOffset.top;
+        this.querySelector('span').style.top = relY + 'px';
+        this.querySelector('span').style.left = relX + 'px';
+      });
+    });
+  });
+
+  //---------------------------------------------------------------------
+
   return (
     <>
     <div className='RO__ComingSoon'>
@@ -56,11 +81,21 @@ const Project2 = () => {
         </Link>
       </div>
     </div>
-    {/* <div>
-      <JupyterNotebookViewer
-          filePath='../01_TelstraNetworkDisruption/TelstraNotebookCatboost.ipynb'
-          notebookInputLanguage='python' />
-    </div> */}
+    
+    {/* ------------------------------------------------------------- */}
+
+    <div class="wrap">
+      <a class="btn" href="#">Position Aware<span></span></a>
+      <a class="btn" href="#"><span>Alternate</span></a>
+      <a class="btn" href="#">Smoosh</a>
+      <a class="btn" href="#"><span>Vertical Overlap</span></a>
+      <a class="btn" href="#"><span>Horizontal Overlap</span></a>
+      <a class="btn" href="#">Collision</a>
+    </div>
+
+    {/* ------------------------------------------------------------- */}
+    
+
     </>
   );
 }
