@@ -93,6 +93,8 @@
     align-items: center;
     width: 180px;
     font-family: 'Montserrat';
+
+    border: 1px solid cyan;
 }
 
 .RO__navbar-menu2 button{
@@ -113,27 +115,10 @@
     border-radius: 30px;
     overflow: hidden;
 }
-/* ----------------------------ripple effect-------------------- */
-.RO__navbar-menu2_trigger::before{
-    content: '';
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #009FE3;
-    transition: width 0.5s, height 0.5s;
-}
 
 .RO__navbar-menu2_trigger h3{
-    position: relative; 
-    z-index: 2;
-}
-
-.RO__navbar-menu2_trigger:hover::before{
-    width: 300px;
-    height: 300px;
+    font-family: 'Montserrat';
+    border: 1px solid red;
 }
 
 .RO__navbar-menu2_dropdown{

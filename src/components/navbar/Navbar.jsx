@@ -87,7 +87,7 @@ let menuRef = useRef();
       </div> */}
       <div className='RO__navbar-menu2' ref={menuRef}>
         <button type='button' className='RO__navbar-menu2_trigger' onClick={() => setOpen(!open)}>
-          <h3>Menu </h3><RiMenu3Line />
+          <h3>Menu</h3><RiMenu3Line />
         </button>
         <div className={`RO__navbar-menu2_dropdown ${open? 'active' : 'inactive'}`}>
           <div className='RO__navbar-menu2_dropdown-links'>
