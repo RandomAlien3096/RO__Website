@@ -72,19 +72,6 @@ let menuRef = useRef();
           <Menu />
         </div>
       </div>
-      {/* <div className='RO__navbar-menu'>
-        {toggleMenu
-          ? <RiCloseLine ClassName='CloseLine' color="#000000" size={27} onClick={() => setToggleMenu(false)} />
-          : <RiMenu3Line ClassName='MenuLine' color='#000000' size={27} onClick={() => setToggleMenu(true)} />
-        }
-        {toggleMenu && (
-          <div className='RO__navbar-menu_container'>
-            <div className='RO__navbar-menu_container-links'>
-              <Menu  />
-            </div>
-          </div>
-        )}
-      </div> */}
       <div className='RO__navbar-menu2' ref={menuRef}>
         <button type='button' className='RO__navbar-menu2_trigger' onClick={() => setOpen(!open)}>
           <h3>Menu </h3><RiMenu3Line />
