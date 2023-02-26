@@ -29,27 +29,34 @@ const Project2 = () => {
   }, []);
  
   //---------------------------------------------------------------------
-  document.addEventListener('DOMContentLoaded', function() {
-    var btns = document.querySelectorAll('.btn-6');
+
+  // useEffect(() => {
+  //   const btn = document.querySelector('.btn');
+  //   btn.onmousemove = function(e){
+  //     const x = e.pageX - btn.offsetLeft;
+  //     const y = e.pageY - btn.offsetTop;
+
+  //     btn.style.setProperty('--x', x + 'px');
+  //     btn.style.setProperty('--y', y + 'px');
+  //   }
+  // })
+
+  function MyButton() {
+    useEffect(() => {
+      const btn = document.querySelector('.btn');
+      const handleMouseMove = (e) => {
+        const x = e.pageX - btn.offsetLeft;
+        const y = e.pageY - btn.offsetTop;
+        btn.style.setProperty('--x', x + 'px');
+        btn.style.setProperty('--y', y + 'px');
+      };
   
-    btns.forEach(function(btn) {
-      btn.addEventListener('mouseenter', function(e) {
-        var parentOffset = this.getBoundingClientRect(),
-            relX = e.pageX - parentOffset.left,
-            relY = e.pageY - parentOffset.top;
-        this.querySelector('span').style.top = relY + 'px';
-        this.querySelector('span').style.left = relX + 'px';
-      });
-  
-      btn.addEventListener('mouseout', function(e) {
-        var parentOffset = this.getBoundingClientRect(),
-            relX = e.pageX - parentOffset.left,
-            relY = e.pageY - parentOffset.top;
-        this.querySelector('span').style.top = relY + 'px';
-        this.querySelector('span').style.left = relX + 'px';
-      });
-    });
-  });
+      btn.addEventListener('mousemove', handleMouseMove);
+      return () => {
+        btn.removeEventListener('mousemove', handleMouseMove);
+      };
+    }, []);
+  }
 
   //---------------------------------------------------------------------
 
