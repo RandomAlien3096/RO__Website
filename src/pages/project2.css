@@ -76,7 +76,7 @@
     cursor: pointer;
 }
 
-/* --------------------------------------------------------------- */
+/* -----------------------------buttons----------------------------- */
 :root {
     --btn-width: 250px;
     --btn-height: 80px;
@@ -110,34 +110,32 @@
 
     border: 2px solid cyan;
 }
-
+/* -----------------------------Position Aware------------------------ */
 .btn:nth-child(1){
     color: #009FE3;
     border: 2px solid rgb(0, 159, 227);
-    
+    position: relative;   
+    overflow: hidden;
 }
 
-.btn:nth-child(1) span{
-    display: block;
+.btn:nth-child(1)::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;    
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    background-color: rgba(0, 159, 227, 0.4);
-    transition: width 0.4s ease-in-out, height 0.4s;
-    transform: translate(-50%, -50%);
-    z-index: -1;
+    background-color: #D9D9D9;
+    transition: width 0.5s, height 0.5s;
 }
 
-.btn:nth-child(1):hover{
-    color: rgba(0, 159, 227, 0.80);
+.btn:nth-child(1):hover::before{
+    width: 300px;
+    height: 300px;
 }
 
-.btn:nth-child(1):hover span{
-    size: 225%, 225%;
-}
-
-.btn:nth-child(1):active {
-    background-color: #009FE3;
-}
-
+/*---------------------------------------------------------------------*/
 
 .btn:nth-child(2){
     color: #A0D9F6;
