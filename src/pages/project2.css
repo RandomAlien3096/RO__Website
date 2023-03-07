@@ -116,13 +116,20 @@
     border: 2px solid rgb(0, 159, 227);
     position: relative;   
     overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.btn:nth-child(1) span {
+    position: relative;
+    z-index: 2;
 }
 
 .btn:nth-child(1)::before{
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;    
+    top: var(--y);
+    left: var(--x);    
     width: 20px;
     height: 20px;
     border-radius: 50%;

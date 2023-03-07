@@ -92,7 +92,7 @@ const Project2 = () => {
     {/* ------------------------------------------------------------- */}
 
     <div class="wrap">
-      <a class="btn" href="#">Position Aware<span></span></a>
+      <a class="btn" href="#"><span>Position Aware</span></a>
       <a class="btn" href="#"><span>Alternate</span></a>
       <a class="btn" href="#">Smoosh</a>
       <a class="btn" href="#"><span>Vertical Overlap</span></a>
