@@ -63,7 +63,7 @@ let menuRef = useRef();
     <div className ="RO__navbar" id='home'>
       <div className='RO__navbar-links'>
         <div className='RO__navbar-links_logo'>
-          <img src = {logo} alt = "logo" />
+          <img src = {logo} alt = "logo" id='logo'/>
           <div className='RO__navbar-rafael'>
             <p><a href='#header'>Rafael Oliva</a></p>
           </div>

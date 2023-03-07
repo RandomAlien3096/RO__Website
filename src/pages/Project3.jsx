@@ -32,6 +32,9 @@ const Project3 = () => {
  
   return (
   <>
+    <div className='RO__Navbar'>
+      <Navbar />
+    </div>
     <div className='RO__ComingSoon'>
       <div className='RO__ComingSoon-content'>
         <p>Page is under construction</p>
@@ -79,9 +82,15 @@ const Project3 = () => {
             ),
           }
         ]}>
-
         </ParallaxBanner>
       </div>
+    </div>
+    <div className='RO__Overlap'>
+      <Parallax
+        translateY={[-50, 50]}
+        translateX={[-40, 20]}>
+        {/* <Svg svg={circle} />      */}
+      </Parallax>
     </div>
     <div className='RO__ContactForm-footer'>
         <Footer  />

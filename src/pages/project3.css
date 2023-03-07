@@ -1,3 +1,11 @@
+#logo{
+    display: flex;
+}
+
+.RO__navbar-menu2 button{
+    background-color: transparent;
+}
+
 .RO__ComingSoon {
     position: absolute;
     display: none !important;
@@ -76,6 +84,7 @@
     cursor: pointer;
 }
 
+
 /* --------------------------------------------------------------- */
 .RO__Parallax{
     display: flex;
@@ -92,22 +101,6 @@
     height: 70vh;
     width: 55vw;
     border: 12px solid #333;
-}
-
-.RO__Parallax_background-title{
-    display: flex;
-    position: absolute;
-    align-items: center;
-    height: 100%;
-}
-
-.RO__Parallax_background-title h1{
-    text-align: center;
-    font-family: 'Montserrat';
-    font-weight: 500;
-    font-size: 90px;
-    z-index: 3;
-    color: #fff;
 }
 
 .RO__Parallax_foreground{
