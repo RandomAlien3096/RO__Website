@@ -94,32 +94,45 @@
     border: 12px solid #333;
 }
 
-/* .RO__Parallax_background img{
-    position: absolute;
-    height: 600px;
-    width: auto;
-} */
-
 .RO__Parallax_background-title{
     display: flex;
     position: absolute;
     align-items: center;
     height: 100%;
-    z-index: 999999;
 }
 
 .RO__Parallax_background-title h1{
     text-align: center;
     font-family: 'Montserrat';
-    font-weight: 600;
+    font-weight: 500;
     font-size: 90px;
     z-index: 3;
     color: #fff;
 }
 
 .RO__Parallax_foreground{
+    display: flex;
     position: relative;
-    z-index: 1;
+    height: 75vh;
+    width: 70vw;
+}
+
+.RO__Parallax_foreground-title{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    margin-left: 20%;
+    height: 100%;
+    width: 60%;
+}
+
+.RO__Parallax_foreground-title h1{
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 164px;
+    z-index: 3;
+    color: #fff;
 }
 
 

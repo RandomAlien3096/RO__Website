@@ -7,6 +7,7 @@ import tree from '../assets/Guatemala/tree.png';
 import './project3.css';
 import { Parallax, ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 import { Footer } from '../containers';
+import { Navbar } from '../components';
 
 const SECOND = 1000;
 const MINUTE = SECOND * 60;
@@ -59,29 +60,28 @@ const Project3 = () => {
     </div>
     <div className='RO__Parallax'>
       <div className='RO__Parallax_background'>
-        {/* <ParallaxBanner>
-          <ParallaxBannerLayer speed={-30}>
-            <img src={textil} />
-          </ParallaxBannerLayer>
-        </ParallaxBanner> */}
         <ParallaxBanner 
           layers={[
-            { image: textil, speed: -30},
-            { image: tree, speed: 0},
-            {
-              speed: -15,
-              children: (
-                <div className='RO__Parallax_background-title'>
-                  <h1>RAFAEL OLIVA</h1>  
-                </div>
-              ),
-            }
+            { image: textil, speed: -30}
           ]}>
         </ParallaxBanner>
       </div>
-      {/* <div className='RO__Parallax_foreground'>
-        <img src={tree} />
-      </div> */}
+      <div className='RO__Parallax_foreground'>
+        <ParallaxBanner 
+        layers={[
+          {image: tree, speed: -5},
+          {
+            speed: -15,
+            children: (
+              <div className='RO__Parallax_foreground-title'>
+                  <h1>R A F A E L</h1>  
+              </div>
+            ),
+          }
+        ]}>
+
+        </ParallaxBanner>
+      </div>
     </div>
     <div className='RO__ContactForm-footer'>
         <Footer  />
