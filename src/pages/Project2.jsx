@@ -1,10 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState, useEffect, useMemo } from 'react';
-// import JupyterViewer from 'react-jupyter-notebook';
-import { JupyterNotebookViewer } from "react-jupyter-notebook-viewer";
 
-import notebook from'./01_TelstraNetworkDisruption/TelstraNotebookCatboost.json';
 import './project2.css';
 
 const SECOND = 1000;
@@ -27,6 +24,32 @@ const Project2 = () => {
 
       return () => clearInterval(interval);
   }, []);
+
+
+//----------------------------- Position Aware --------------------------
+// document.addEventListener('DOMContentLoaded', function() {
+//   var btns = document.querySelectorAll('.btn-6');
+
+//   btns.forEach(function(btn) {
+//     btn.addEventListener('mouseenter', function(e) {
+//       var parentOffset = this.getBoundingClientRect(),
+//           relX = e.pageX - parentOffset.left,
+//           relY = e.pageY - parentOffset.top;
+//       this.querySelector('span').style.top = relY + 'px';
+//       this.querySelector('span').style.left = relX + 'px';
+//     });
+
+//     btn.addEventListener('mouseout', function(e) {
+//       var parentOffset = this.getBoundingClientRect(),
+//           relX = e.pageX - parentOffset.left,
+//           relY = e.pageY - parentOffset.top;
+//       this.querySelector('span').style.top = relY + 'px';
+//       this.querySelector('span').style.left = relX + 'px';
+//     });
+//   });
+// });
+//-----------------------------------------------------------------------
+
  
   //---------------------------------------------------------------------
 
@@ -87,22 +110,8 @@ const Project2 = () => {
           <button type='button'>Back to Landing Page</button>
         </Link>
       </div>
-    </div>
     
-    {/* ------------------------------------------------------------- */}
-
-    <div class="wrap">
-      <a class="btn" href="#"><span>Position Aware</span></a>
-      <a class="btn" href="#"><span>Alternate</span></a>
-      <a class="btn" href="#">Smoosh</a>
-      <a class="btn" href="#"><span>Vertical Overlap</span></a>
-      <a class="btn" href="#"><span>Horizontal Overlap</span></a>
-      <a class="btn" href="#">Collision</a>
-    </div>
-
-    {/* ------------------------------------------------------------- */}
-    
-
+   
     </>
   );
 }

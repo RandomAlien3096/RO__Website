@@ -1,30 +1,55 @@
 import React from 'react';
-import { useState } from 'react';
+import { useRef } from 'react';
 import './contactForm.css';
 import { Footer } from '../../containers';
 
-import axios from 'axios';
+import emailjs from '@emailjs/browser';
+
+// import axios from 'axios';
 
 const ContactForm = () => {
      //const [status, setStatus] = useState("Submit");
-     const [recipient_email, setEmail] = useState("");
-     const [name, setName] = useState("");
-     const [message, setMessage] = useState("");
+    //  const [recipient_email, setEmail] = useState("");
+    //  const [name, setName] = useState("");
+    //  const [message, setMessage] = useState("");
 
-     function sendMail(){
-        if(recipient_email && name && message){
-            axios
-                .post('http://localhost:5000/send_email', {
-                    recipient_email,
-                    name,
-                    message,
-                })
-                .then(() => alert('Message sent succesfuly'))
-                .catch(() => alert('Oops something went wrong'));
-            return;
-        }
-        return alert('Fill in all the fields to continue');
+// ----------------------------Emailjs----------------------------
+     const form = useRef();
+
+     const sendEmail = (e) => {
+       e.preventDefault();
+   
+       emailjs.sendForm('service_ebesa9d', 
+                        'template_846mobc', 
+                        form.current, 
+                        '1oviDjIxcKzRsgPPd')
+
+         .then((result) => {
+             console.log(result.text);
+             console.log("message sent");
+             alert("Message sent succesfully");
+             window.location.reload(false);
+         }, (error) => {
+             console.log(error.text);
+             alert("Oops, something went wrong");
+         });
      };
+// ----------------------------------------------------------------
+
+    //  function sendMail(){
+    //     if(recipient_email && name && message){
+    //         axios
+    //             .post('http://localhost:5000/send_email', {
+    //                 recipient_email,
+    //                 name,
+    //                 message,
+    //             })
+    //             .then(() => alert('Message sent succesfuly'))
+    //             .catch(() => alert('Oops something went wrong'));
+    //         return;
+    //     }
+    //     return alert('Fill in all the fields to continue');
+    //  };
 
   return (
     <div className='RO__ContactForm' id='contactForm'>
@@ -42,7 +67,8 @@ const ContactForm = () => {
             </div>
             <form
                 className='RO__ContactForm-content_form'
-                target='_blank'
+                ref={form}
+                onSubmit={sendEmail}
                 >
                 <div className='RO__ContactForm-content_form_name'>
                     <div className='RO__ContactForm-content_form_nameTitle'>
@@ -51,9 +77,9 @@ const ContactForm = () => {
                     <input 
                         className='RO_ContactForm-content_form_nameInput'
                         type= 'text'
-                        id='name'
-                        onChange={ (e) => setName(e.target.value) }
-                        name='name' required 
+                        id='user_name'
+                        // onChange={ (e) => setName(e.target.value) }
+                        name='user_name' required 
                     />
                 </div>
                 <div className='RO__ContactForm-content_form_email'>
@@ -63,9 +89,9 @@ const ContactForm = () => {
                     <input
                         className='RO__ContactForm-content_form_emailInput'
                         type='email'
-                        id='email'
-                        onChange={ (e) => setEmail(e.target.value) }
-                        name='email' required
+                        id='user_email'
+                        // onChange={ (e) => setEmail(e.target.value) }
+                        name='user_email' required
                     />
                 </div>
                 <div className='RO__ContactForm-content_form_info'>
@@ -75,14 +101,15 @@ const ContactForm = () => {
                     <textarea
                         className='RO__ContactForm-content_form_infoContent'
                         id='message'
-                        onChange={ (e) => setMessage(e.target.value) }
+                        // onChange={ (e) => setMessage(e.target.value) }
                         name='message' required
                     />
                 </div>
                 <div className='RO__ContactForm-content_form_button'>
                     <button 
-                        onClick = {() => sendMail()} 
+                        // onClick = {() => sendMail()} 
                         type='submit'
+                        value='send'
                     >
                         Submit
 
