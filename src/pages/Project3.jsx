@@ -6,6 +6,8 @@ import tree from '../assets/Guatemala/tree.png';
 
 import './project3.css';
 import { Parallax, ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
+import { transform } from '@svgr/core';
+
 import { Footer } from '../containers';
 import { Navbar } from '../components';
 
@@ -29,6 +31,7 @@ const Project3 = () => {
 
       return () => clearInterval(interval);
   }, []);
+
  
   return (
   <>
@@ -89,7 +92,10 @@ const Project3 = () => {
       <Parallax
         translateY={[-50, 50]}
         translateX={[-40, 20]}>
-        {/* <Svg svg={circle} />      */}
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 550 550" enable-background="new 0 0 550 550" xml:space="preserve">
+          <circle fill="url(#dot-pattern)" cx="275" cy="275" r="250"/>
+        </svg>
       </Parallax>
     </div>
     <div className='RO__ContactForm-footer'>

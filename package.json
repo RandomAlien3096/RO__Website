@@ -31,7 +31,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "start-server": "node server/index.js",
-    "start-app": "npm run build && npm run start-server"
+    "start-app": "npm run build && npm run start-server",
+    "svgr": "svgr --icon --title-prop --replace-attr-values '#FFFFFF=currentColor' -d src/icons src/assets"
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +53,9 @@
     ]
   },
   "devDependencies": {
+    "@svgr/cli": "^6.5.1",
+    "@svgr/core": "^6.5.1",
+    "rimraf": "^4.3.1",
     "tsparticles": "^2.8.0"
   }
 }
