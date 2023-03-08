@@ -86,7 +86,7 @@
 
 
 /* --------------------------------------------------------------- */
-.RO__Parallax{
+/* .RO__Parallax{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,7 +148,7 @@
     position: relative;
     height: 35vh;
     width: 35vh;
-}
+} */
 
 /* -------------------------------------------------------------- */
 .RO__Overlapfooter{

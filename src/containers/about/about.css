@@ -1,12 +1,44 @@
 
 .RO__about{
-    display: inline;
+    /* display: inline; */
     width: 100%;
-    position: absolute;
-    top: 66rem;
+    position: relative;
+    z-index: 1;
     padding-left: 3rem;
     padding-bottom: 3rem;
+    background: #176468;
 }
+
+/* --------------SKEW BACKGROUND-------------- */
+
+.RO__about::before{
+    content: '';
+    display: block;
+    height: 125%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: -15rem;
+    left: 0;
+    background: inherit;
+    transform: skew(0, -6deg);
+    transform-origin: top left;
+}
+
+.RO__about::after{
+    content: '';
+    display: block;
+    height: 125%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: -15rem;
+    left: 0;
+    background: inherit;
+    transform: skew(0, -6deg);
+    transform-origin: bottom right;
+}
+/* ------------------------------------------------------------------- */
 
 .RO__about-title{
     align-items: center;
@@ -17,9 +49,9 @@
 .RO__about-title h1{
     font-family: "Montserrat";
     font-size: 64px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 78px;
-    color: #000;
+    color: #34b4bb;
 }
 
 .RO__about-content{
@@ -27,6 +59,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    border: 1px solid yellow;
 }
 
 .RO__about-content_p{
@@ -71,10 +104,10 @@
 
 .RO__about-content_p p{
     font-family: "Montserrat";
-    font-size: 28px;
-    font-weight: 400;
+    font-size: 21px;
+    font-weight: 300;
     line-height: 34px;
-    color: #000;
+    color: #cac1c1;
     margin-top: 1rem;
     margin-bottom: 1rem;
     text-align: justify;
