@@ -6,8 +6,10 @@ import tree from '../assets/Guatemala/tree.png';
 
 import './project3.css';
 import { Parallax, ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
-import { transform } from '@svgr/core';
 
+import { Circle } from '../icons';
+import { CircleRings } from '../icons';
+import { DottedRadial } from '../icons';
 import { Footer } from '../containers';
 import { Navbar } from '../components';
 
@@ -31,7 +33,6 @@ const Project3 = () => {
 
       return () => clearInterval(interval);
   }, []);
-
  
   return (
   <>
@@ -77,7 +78,7 @@ const Project3 = () => {
         layers={[
           {image: tree, speed: -5},
           {
-            speed: -15,
+            speed: -7,
             children: (
               <div className='RO__Parallax_foreground-title'>
                   <h1>R A F A E L</h1>  
@@ -91,14 +92,16 @@ const Project3 = () => {
     <div className='RO__Overlap'>
       <Parallax
         translateY={[-50, 50]}
-        translateX={[-40, 20]}>
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          viewBox="0 0 550 550" enable-background="new 0 0 550 550" xml:space="preserve">
-          <circle fill="url(#dot-pattern)" cx="275" cy="275" r="250"/>
-        </svg>
+        translateX={[-10, 90]}>
+        <Circle className='RO__Overlap-Circle' />
+      </Parallax>
+      <Parallax 
+        translateY={[-50, 50]}
+        translateX={[10, -90]}>
+        <CircleRings className='RO__Overlap-circleRings' />
       </Parallax>
     </div>
-    <div className='RO__ContactForm-footer'>
+    <div className='RO__Overlapfooter'>
         <Footer  />
     </div>
   </>
