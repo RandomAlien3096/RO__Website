@@ -40,17 +40,30 @@ const about = () => {
               needs. </p>
         </div>
         <div className='RO__about-content_icons'>
-          <Parallax className='RO__about-content_icons-wrapper'>
+          <Parallax className='RO__about-content_icons-wrapper' 
+            translateY={[-70, 60]}
+            rotateY={[0,360]}>
             <NarrowTriangle className='RO__about-content_icons-triangle' />
             <div className='RO__about-content_icons-roundrect'></div>
           </Parallax>
 
-          <Parallax className='RO__about-content_icons-wrapper'>
+          <Parallax className='RO__about-content_icons-wrapper'
+            speed={20}
+            rotateY={[0,360]}>
             <NarrowTriangle className='RO__about-content_icons-triangle' />
             <div className='RO__about-content_icons-roundrect'></div>
           </Parallax>
 
-          <Parallax className='RO__about-content_icons-wrapper'>
+          <Parallax className='RO__about-content_icons-wrapper'
+            translateY={[-80, 80]}
+            rotateY={[0,360]}>
+            <NarrowTriangle className='RO__about-content_icons-triangle' />
+            <div className='RO__about-content_icons-roundrect'></div>
+          </Parallax>
+
+          <Parallax className='RO__about-content_icons-wrapper'
+            rotateY={[0,360]}
+            speed={15}>
             <NarrowTriangle className='RO__about-content_icons-triangle' />
             <div className='RO__about-content_icons-roundrect'></div>
           </Parallax>
@@ -78,7 +91,7 @@ const about = () => {
         </div>
         <div className='RO__about-more_button'>
           <a href={CV} download='RafaelOliva_cv.pdf'>
-            <button type='button' >Cv</button>
+            <button type='button' >Download CV</button>
           </a>
         </div>
       </div>

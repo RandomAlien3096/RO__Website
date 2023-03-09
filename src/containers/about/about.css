@@ -44,6 +44,7 @@
 .RO__about-title{
     align-items: center;
     margin: 3rem;
+    padding-left: 20%;
     position: relative;
 }
 
@@ -57,19 +58,18 @@
 
 .RO__about-content{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     position: relative;
     height: 60vh;
     width: 100%;
-    border: 1px solid yellow;
+    padding-left: 20%;
+    padding-right: 10%;
 }
 
 .RO__about-content_p{
-    margin: 3rem;
     width: 400px;
     height: auto;
-    border: 1px solid red;
 }
 
 .RO__about-content_p p{
@@ -84,23 +84,21 @@
     text-justify: inter-word;
 }
 
-/* -------------------------------------Parallax Effect---------------------------- */
+/* ---------------------------------Parallax Effect---------------------------- */
 
 .RO__about-content_icons{
     display: flex;
     height: 100%;
     width: 50%;
-    border: 1px solid red;
 }
 
 .RO__about-content_icons-wrapper:nth-child(1){
     display: flex;
-    position: absolute;
+    position: relative;
     flex-direction: column;
     align-items: center;
-    right: 0;
+    left: 80%;
     height: 20vh;
-    border: 1px solid white;
 }
 .RO__about-content_icons-wrapper:nth-child(1)
  > 
@@ -119,29 +117,114 @@
     border-radius: 40px;
     background-color: white;
 }
+
+
+.RO__about-content_icons-wrapper:nth-child(2){
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    right: 10%;
+    top: 20%;
+    height: 20vh;
+}
+.RO__about-content_icons-wrapper:nth-child(2)
+ > 
+.RO__about-content_icons-triangle{
+    fill: #34b4bb;
+    height: 60%;
+    width: 60%;
+}
+.RO__about-content_icons-wrapper:nth-child(2)
+>
+.RO__about-content_icons-roundrect{
+    position: absolute;
+    top: 40%;
+    height: 20%;
+    width: 15%;
+    border-radius: 40px;
+    background-color: #ffffff;
+}
+
+
+.RO__about-content_icons-wrapper:nth-child(3){
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    left: 20%;
+    top: 50%;
+    height: 20vh;
+}
+.RO__about-content_icons-wrapper:nth-child(3)
+ > 
+.RO__about-content_icons-triangle{
+    fill: #34b4bb;
+    height: 60%;
+    width: 60%;
+}
+.RO__about-content_icons-wrapper:nth-child(3)
+>
+.RO__about-content_icons-roundrect{
+    position: absolute;
+    top: 40%;
+    height: 20%;
+    width: 15%;
+    border-radius: 40px;
+    background-color: #fff;
+}
+
+
+.RO__about-content_icons-wrapper:nth-child(4){
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    right: 20%;
+    top: 60%;
+    height: 20vh;
+}
+.RO__about-content_icons-wrapper:nth-child(4)
+ > 
+.RO__about-content_icons-triangle{
+    fill: #34b4bb;
+    height: 60%;
+    width: 60%;
+}
+.RO__about-content_icons-wrapper:nth-child(4)
+>
+.RO__about-content_icons-roundrect{
+    position: absolute;
+    top: 40%;
+    height: 20%;
+    width: 15%;
+    border-radius: 40px;
+    background-color: #fff;
+}
 /* -------------------------------------------------------------------------------- */
 .RO__about-more{
     display: flex;
+    flex-direction: column;
     position: relative;
     margin: 0 auto;
-    justify-content: center;
-    width: 80%;
-    height: 345px;
-    background-color: #1f8186;
-    border-radius: 12px;
     margin-top: 6rem;
+    justify-content: space-around;
+    width: 500px;
+    height: 180px;
+    padding: 3rem;
+    background-color: #1f8186;
 }
 
 .RO__about-more_quote{
-    position: absolute;
-    margin: 3rem;
+    position: relative;
+    margin-bottom: 1rem;
 }
 
 .RO__about-more_quote p {
     font-family: "Montserrat";
-    font-weight: 500;
-    font-size: 44px;
-    line-height: 54px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
     color: #cac1c1;
     display: flex;
     align-items: center;
@@ -150,11 +233,11 @@
 
 .RO__about-more_button{
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
-    margin-top: 15rem;
     width: 100%;
-    height: 20%;
+    height: auto;
 }
 
 .RO__about-more_button button,
@@ -163,11 +246,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 500;
-    font-size: 40px;
+    font-weight: 400;
+    font-size: 18px;
     border: 0;
-    width: 220px;
-    height: 85px;
+    width: 200px;
+    height: 60px;
     border-radius: 40px;
     color: #cac1c1;
     background-color: #333;
@@ -190,23 +273,22 @@
 @media screen and (max-width: 1160px){
     .RO__about-more_quote p,
     .RO__about-more_button button{
-        font-size: 34px;
-        font-weight: 400;
+        font-size: 18px;
+        font-weight: 300;
     }
 }
 
 @media screen and (max-width: 940px){
     .RO__about-more{
-        height: 280px;
-        margin-top: 9rem;
+        height: 220px;
     }
     .RO__about-more_quote p,
     .RO__about-more_button button{
-        font-size: 28px;
+        font-size: 21px;
         line-height: 36px;
     }
     .RO__about-more_button{
-        margin: 12rem auto;
+        margin: 9rem auto;
     }
 }
 
