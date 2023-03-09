@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './navbar.css';
-import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
+import { RiMenu3Line } from 'react-icons/ri';
 import { HiUser, HiOutlineCubeTransparent, HiPuzzle, HiOutlinePaperAirplane } from 'react-icons/hi';
 import logo from '../../assets/logo.png';
 import { HashLink as Link } from 'react-router-hash-link' ;
@@ -63,7 +63,7 @@ let menuRef = useRef();
     <div className ="RO__navbar" id='home'>
       <div className='RO__navbar-links'>
         <div className='RO__navbar-links_logo'>
-          <img src = {logo} alt = "logo" />
+          <img src = {logo} alt = "logo" id='logo'/>
           <div className='RO__navbar-rafael'>
             <p><a href='#header'>Rafael Oliva</a></p>
           </div>
@@ -72,19 +72,6 @@ let menuRef = useRef();
           <Menu />
         </div>
       </div>
-      {/* <div className='RO__navbar-menu'>
-        {toggleMenu
-          ? <RiCloseLine ClassName='CloseLine' color="#000000" size={27} onClick={() => setToggleMenu(false)} />
-          : <RiMenu3Line ClassName='MenuLine' color='#000000' size={27} onClick={() => setToggleMenu(true)} />
-        }
-        {toggleMenu && (
-          <div className='RO__navbar-menu_container'>
-            <div className='RO__navbar-menu_container-links'>
-              <Menu  />
-            </div>
-          </div>
-        )}
-      </div> */}
       <div className='RO__navbar-menu2' ref={menuRef}>
         <button type='button' className='RO__navbar-menu2_trigger' onClick={() => setOpen(!open)}>
           <h3>Menu</h3><RiMenu3Line />

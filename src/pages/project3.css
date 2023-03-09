@@ -1,6 +1,14 @@
+#logo{
+    display: flex;
+}
+
+.RO__navbar-menu2 button{
+    background-color: transparent;
+}
+
 .RO__ComingSoon {
     position: absolute;
-    display: flex;
+    display: none !important;
     aspect-ratio: 1.6180;
     height: 100vh;
     width: 100vw;
@@ -74,6 +82,79 @@
     width: 250px;
     border-radius: 30px;
     cursor: pointer;
+}
+
+
+/* --------------------------------------------------------------- */
+/* .RO__Parallax{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    background-color: #D9D9D9;
+}
+
+.RO__Parallax_background{
+    display: flex;
+    position: absolute;
+    height: 70vh;
+    width: 55vw;
+    border: 12px solid #333;
+}
+
+.RO__Parallax_foreground{
+    display: flex;
+    position: relative;
+    height: 75vh;
+    width: 70vw;
+}
+
+.RO__Parallax_foreground-title{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    margin-left: 20%;
+    height: 100%;
+    width: 60%;
+}
+
+.RO__Parallax_foreground-title h1{
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 164px;
+    z-index: 3;
+    color: #fff;
+}
+
+.RO__Overlap{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #D9D9D9;
+}
+
+.RO__Overlap-Circle{
+    display: flex;
+    position: relative;
+    height: 35vh;
+    width: 35vh;
+}
+
+.RO__Overlap-circleRings{
+    position: relative;
+    height: 35vh;
+    width: 35vh;
+} */
+
+/* -------------------------------------------------------------- */
+.RO__Overlapfooter{
+    display: flex;
+    position: absolute;
+    top: -205rem;
 }
 
 @media screen and (max-width: 550px){

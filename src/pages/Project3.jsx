@@ -1,9 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useState, useEffect, useMemo } from 'react';
-
+import textil from '../assets/Guatemala/textil2.jpg';
+import tree from '../assets/Guatemala/tree.png';
 
 import './project3.css';
+import { Parallax, ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
+
+import { Circle } from '../icons';
+import { CircleRings } from '../icons';
+import { DottedRadial } from '../icons';
+import { Footer } from '../containers';
+import { Navbar } from '../components';
 
 const SECOND = 1000;
 const MINUTE = SECOND * 60;
@@ -27,6 +35,10 @@ const Project3 = () => {
   }, []);
  
   return (
+  <>
+    <div className='RO__Navbar'>
+      <Navbar />
+    </div>
     <div className='RO__ComingSoon'>
       <div className='RO__ComingSoon-content'>
         <p>Page is under construction</p>
@@ -47,34 +59,53 @@ const Project3 = () => {
                 </div>
             ))}
       </div>
-      {/* <div className='RO__ComingSoon-timer'>
-        <div className='RO__ComingSoon-timer_Days'>
-          <p>00</p>
-          <span>Days</span>
-        </div>
-        <div className='RO__ComingSoon-timer_Hours'>
-          <p>00</p>
-          <span>Hours</span>
-        </div>
-        <div className='RO__ComingSoon-timer_Minutes'>
-          <p>00</p>
-          <span>Minutes</span>
-        </div>
-        <div className='RO__ComingSoon-timer_Seconds'>
-          <p>00</p>
-          <span>Seconds</span>
-        </div>
-      </div> */}
       <div className='RO__ComingSoon-button'>
         <Link to='/'>
           <button type='button'>Back to Landing Page</button>
         </Link>
       </div>
-      
-      
     </div>
-    
+    <div className='RO__Parallax'>
+      <div className='RO__Parallax_background'>
+        <ParallaxBanner 
+          layers={[
+            { image: textil, speed: -30}
+          ]}>
+        </ParallaxBanner>
+      </div>
+      <div className='RO__Parallax_foreground'>
+        <ParallaxBanner 
+        layers={[
+          {image: tree, speed: -5},
+          {
+            speed: -7,
+            children: (
+              <div className='RO__Parallax_foreground-title'>
+                  <h1>R A F A E L</h1>  
+              </div>
+            ),
+          }
+        ]}>
+        </ParallaxBanner>
+      </div>
+    </div>
+    <div className='RO__Overlap'>
+      <Parallax
+        translateY={[-50, 50]}
+        translateX={[-10, 90]}>
+        <Circle className='RO__Overlap-Circle' />
+      </Parallax>
+      <Parallax 
+        translateY={[-50, 50]}
+        translateX={[10, -90]}>
+        <CircleRings className='RO__Overlap-circleRings' />
+      </Parallax>
+    </div>
+    <div className='RO__Overlapfooter'>
+        <Footer  />
+    </div>
+  </>
   );
-}
+};
 
 export default Project3

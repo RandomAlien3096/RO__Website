@@ -51,6 +51,38 @@ const Project2 = () => {
 //-----------------------------------------------------------------------
 
  
+  //---------------------------------------------------------------------
+
+  // useEffect(() => {
+  //   const btn = document.querySelector('.btn');
+  //   btn.onmousemove = function(e){
+  //     const x = e.pageX - btn.offsetLeft;
+  //     const y = e.pageY - btn.offsetTop;
+
+  //     btn.style.setProperty('--x', x + 'px');
+  //     btn.style.setProperty('--y', y + 'px');
+  //   }
+  // })
+
+  function MyButton() {
+    useEffect(() => {
+      const btn = document.querySelector('.btn');
+      const handleMouseMove = (e) => {
+        const x = e.pageX - btn.offsetLeft;
+        const y = e.pageY - btn.offsetTop;
+        btn.style.setProperty('--x', x + 'px');
+        btn.style.setProperty('--y', y + 'px');
+      };
+  
+      btn.addEventListener('mousemove', handleMouseMove);
+      return () => {
+        btn.removeEventListener('mousemove', handleMouseMove);
+      };
+    }, []);
+  }
+
+  //---------------------------------------------------------------------
+
   return (
     <>
     <div className='RO__ComingSoon'>
@@ -78,18 +110,8 @@ const Project2 = () => {
           <button type='button'>Back to Landing Page</button>
         </Link>
       </div>
-    </div>
-{/* -----------------------Button Project------------------------ */}
-    {/* <div class="wrap">
-    <a class="btn-6" href="#">Position Aware<span></span></a>
-    <a class="btn-7" href="#"><span>Alternate</span></a>
-    <a class="btn-8" href="#">Smoosh</a>
-    <a class="btn-9" href="#"><span>Vertical Overlap</span></a>
-    <a class="btn-10" href="#"><span>Horizontal Overlap</span></a>
-    <a class="btn-11" href="#">Collision</a>
-  </div> */}
-
-{/* ------------------------------------------------------------ */}
+    
+   
     </>
   );
 }
