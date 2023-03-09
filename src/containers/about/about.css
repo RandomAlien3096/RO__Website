@@ -60,7 +60,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    height: auto;
+    height: 60vh;
     width: 100%;
     border: 1px solid yellow;
 }
@@ -70,47 +70,6 @@
     width: 400px;
     height: auto;
     border: 1px solid red;
-}
-
-.RO__about-content_img-1{
-    position: absolute;
-    width: 542px;
-    height: 542px;
-    left: 65%;
-    transform: scale(1.5,1.5);
-}
-
-.RO__about-content_img-2{
-    position: absolute;
-    margin-bottom: 1rem;
-    width: 542px;
-    height: 542px;
-    left: 65.8%;
-    transform: rotate(-20deg) scale(1.5);
-}
-
-.RO__about-content_img-3{
-    position: absolute;
-    margin-bottom: 1.2rem;
-    width: 542px;
-    height: 542px;
-    left: 66.2%;
-    transform: rotate(-40deg) scale(1.5);
-}
-
-.RO__about-content_img-4{
-    position: absolute;
-    margin-bottom: 4rem;
-    width: 640px;
-    height: 531px;
-    left: 62%;
-}
-
-.RO__about-content_img-1,
-.RO__about-content_img-2,
-.RO__about-content_img-3,
-.RO__about-content_img-4{
-    display: none;
 }
 
 .RO__about-content_p p{
@@ -125,6 +84,42 @@
     text-justify: inter-word;
 }
 
+/* -------------------------------------Parallax Effect---------------------------- */
+
+.RO__about-content_icons{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    border: 1px solid red;
+}
+
+.RO__about-content_icons-wrapper:nth-child(1){
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    right: 0;
+    height: 20vh;
+    border: 1px solid white;
+}
+.RO__about-content_icons-wrapper:nth-child(1)
+ > 
+.RO__about-content_icons-triangle{
+    fill: #34b4bb;
+    height: 60%;
+    width: 60%;
+}
+.RO__about-content_icons-wrapper:nth-child(1)
+>
+.RO__about-content_icons-roundrect{
+    position: absolute;
+    top: 40%;
+    height: 20%;
+    width: 15%;
+    border-radius: 40px;
+    background-color: white;
+}
+/* -------------------------------------------------------------------------------- */
 .RO__about-more{
     display: flex;
     position: relative;

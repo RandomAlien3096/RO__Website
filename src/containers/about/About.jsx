@@ -1,9 +1,12 @@
 import React from 'react';
+import { Parallax } from 'react-scroll-parallax';
 import './about.css';
-import t_four from '../../assets/triangles/4-t.png';
-import t_two from '../../assets/triangles/2-t.png';
-import t_three from '../../assets/triangles/3-t.png';
-import astronaut from '../../assets/astronaut.png';
+// import t_four from '../../assets/triangles/4-t.png';
+// import t_two from '../../assets/triangles/2-t.png';
+// import t_three from '../../assets/triangles/3-t.png';
+// import astronaut from '../../assets/astronaut.png';
+
+import { NarrowTriangle } from '../../icons';
 
 import CV from '../../assets/files/RafaelOliva_CV.pdf';
 
@@ -36,6 +39,25 @@ const about = () => {
               of the line website, custom made for your 
               needs. </p>
         </div>
+        <div className='RO__about-content_icons'>
+          <Parallax className='RO__about-content_icons-wrapper'>
+            <NarrowTriangle className='RO__about-content_icons-triangle' />
+            <div className='RO__about-content_icons-roundrect'></div>
+          </Parallax>
+
+          <Parallax className='RO__about-content_icons-wrapper'>
+            <NarrowTriangle className='RO__about-content_icons-triangle' />
+            <div className='RO__about-content_icons-roundrect'></div>
+          </Parallax>
+
+          <Parallax className='RO__about-content_icons-wrapper'>
+            <NarrowTriangle className='RO__about-content_icons-triangle' />
+            <div className='RO__about-content_icons-roundrect'></div>
+          </Parallax>
+
+        </div>
+        {/* ----------------ASTRONAUT NOT IN USE ANYMORE-----------
+        
         <div className='RO__about-content_img-1'>
           <img src = {t_four} alt = "4th triangle" />
         </div>
@@ -47,7 +69,7 @@ const about = () => {
         </div>
         <div className='RO__about-content_img-4'>
           <img src = {astronaut} alt = "astronaut" />
-        </div>
+        </div> */}
       </div>
       <div className='RO__about-more'>
         <div className='RO__about-more_quote'>
