@@ -110,8 +110,7 @@ const Project2 = () => {
           <button type='button'>Back to Landing Page</button>
         </Link>
       </div>
-    
-   
+      </div>
     </>
   );
 }

@@ -92,8 +92,6 @@
     align-items: center;
     width: 180px;
     font-family: 'Montserrat';
-
-    border: 1px solid cyan;
 }
 
 .RO__navbar-menu2 button{
@@ -117,7 +115,7 @@
 
 .RO__navbar-menu2_trigger h3{
     font-family: 'Montserrat';
-    border: 1px solid red;
+    position: relative;
 }
 
 .RO__navbar-menu2_dropdown{
