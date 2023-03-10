@@ -114,7 +114,8 @@
 .RO__services-card_content-subtitles_word{
     opacity: 1;
     transform: translateY(0%);
-    transition: opacity 0ms, transform 200ms cubic-bezier(.90, .06, .15, .90);
+    transition: opacity 0ms, 
+                transform 200ms cubic-bezier(.90, .06, .15, .90);
 }
 
 .RO__services-card::before{
@@ -161,7 +162,6 @@
     font-size: 6vmin;
 }
 .RO__services-card_content-subtitles{
-    opacity: 0;
     font-size: 3vmin;
     margin-top: 2vmin;
 }
