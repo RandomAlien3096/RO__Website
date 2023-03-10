@@ -1,9 +1,26 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
 import './services.css';
 import build_one from '../../assets/build1.png';
-import build_two from '../../assets/build2.png';
 
 const Services = () => {
+
+    const [text, setText] = useState("Get more value with you data with prediction models and machine learning techniques. Visualize and have a better understanding of the data that you have.");
+    
+    useEffect(() => {
+      const subtitle = document.getElementsByClassName("RO__services-card_content-subtitles")[0];
+      const words = text.split(" ");
+      words.forEach((word, index) => {
+        const span = document.createElement("span");
+        span.innerHTML = `${word} `;
+        span.classList.add("RO__services-card_content-subtitle_word");
+        span.style.transitionDelay = `${index * 40}ms`;
+        subtitle.appendChild(span);
+      });
+    }, [text]);
+
+ 
+
   return (
     <div className='RO__services' id='services'>
       <div className='RO__services-title'>
@@ -49,19 +66,17 @@ const Services = () => {
           <img src = {build_one} alt = "visual representation for services" />
         </div>
       </div>
+
       {/* ------------------------Cards---------------------- */}
       <div className='RO__services-card'>
         <div className='RO__services-card_content'>
           <h3 className='RO__services-card_content-title'>Data Analysis</h3>
           <h4 className='RO__services-card_content-subtitles'>
-            Get more value with you data with prediction models and machine 
-            learning techniques. Visualize and have a better understanding 
-            of the data that you have.
           </h4>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Services

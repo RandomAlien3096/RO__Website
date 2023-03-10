@@ -107,6 +107,7 @@
     background-position: -10% 0%;
 }
 
+
 .RO__services-card:hover > 
 .RO__services-card_content >
 .RO__services-card_content-subtitles >
@@ -140,7 +141,9 @@
     background: radial-gradient(rgba(0, 0, 0, 0.2) 8%, transparent 8%);
     background-position: 0% 0%;
     background-size: 5vmin 5vmin;
-    height: 100%;
+    height: calc(100% - 10vmin);
+    padding: 5vmin;
+    position: relative;
     transition: background-position 350ms ease;
     width: 100%;
     z-index: 2;
@@ -152,17 +155,34 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     margin: 0px;
+    transition: color 250ms ease;
 }
 .RO__services-card_content-title{
     font-size: 6vmin;
 }
 .RO__services-card_content-subtitles{
+    opacity: 0;
     font-size: 3vmin;
     margin-top: 2vmin;
 }
 
+.RO__services-card:hover >
+.RO__services-card_content>
+.RO__services-card_content-title,
+.RO__services-card:hover >
+.RO__services-card_content>
+.RO__services-card_content-subtitles{
+    color: white;
+}
 
-
+.RO__services-card_content-subtitles_word{
+    display: inline-block;
+    margin: 0vmin 0.3vmin;
+    opacity: 0;
+    position: relative;
+    transform: translateY(40%);
+    transition: none;
+}
 
 /*------------------------------------------------------------------*/
 
