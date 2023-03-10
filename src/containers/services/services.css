@@ -3,19 +3,19 @@
     flex-wrap: wrap;
     width: 100%;
     position: absolute;
-    top: 150rem;
+    padding: 3rem;
+    padding-top: 12rem;
 }
 
 .RO__services-title{
     width: 100%;
     margin: 3rem;
-    margin-left: 10%;
-    margin-right: 10%;
+    padding-left: 20%;
 }
 
 .RO__services-title h1{
     font-family: "Montserrat";
-    font-weight: 600;
+    font-weight: 400;
     font-size: 64px;
     line-height: 78px;
 }

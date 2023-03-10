@@ -49,6 +49,13 @@ const Services = () => {
           <img src = {build_one} alt = "visual representation for services" />
         </div>
       </div>
+      {/* ------------------------Cards---------------------- */}
+      <div className='RO__services-card'>
+        <div className='RO__services-card_content'>
+          <h3 className='RO__services-card-title'>Data Analysis</h3>
+          <h4 className='RO__serces-card_content-subtitles'></h4>
+        </div>
+      </div>
     </div>
   )
 }
