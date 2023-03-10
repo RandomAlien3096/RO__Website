@@ -81,6 +81,91 @@
     align-self: center;
 }
 
+/* --------------------------------Cards--------------------------- */
+:root {
+    --border: rgb(3, 169, 244);
+    
+    --g1: rgb(98, 0, 234);
+    --g2: rgb(236, 64, 122);
+    --g3: rgb(253, 216, 53);
+  }
+
+.RO__services-card{
+    aspect-ratio: 1/1.6;
+    border: 0.5vmin solid var(--border);
+    cursor: pointer;
+    position: relative;
+    width: 56vmin;
+}
+
+.RO__services-card:hover::before{
+    background-position: 100% 100%;
+    transform: scale(1.08, 1.03);
+}
+
+.RO__services-card:hover > .RO__services-card_content{
+    background-position: -10% 0%;
+}
+
+.RO__services-card:hover > 
+.RO__services-card_content >
+.RO__services-card_content-subtitles >
+.RO__services-card_content-subtitles_word{
+    opacity: 1;
+    transform: translateY(0%);
+    transition: opacity 0ms, transform 200ms cubic-bezier(.90, .06, .15, .90);
+}
+
+.RO__services-card::before{
+    background: linear-gradient(
+                                130deg, 
+                                transparent 0% 33%, 
+                                var(--g1) 66%,
+                                var(--g2) 83.5%,
+                                var(--g3) 100%
+                                );
+    background-position: 0% 0%;
+    background-size: 300% 300%;
+    content: "";
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    transition: background-position 350ms ease, transform 350ms ease;
+    z-index: 1;
+}
+
+.RO__services-card_content{
+    background: radial-gradient(rgba(0, 0, 0, 0.2) 8%, transparent 8%);
+    background-position: 0% 0%;
+    background-size: 5vmin 5vmin;
+    height: 100%;
+    transition: background-position 350ms ease;
+    width: 100%;
+    z-index: 2;
+}
+
+.RO__services-card_content-title,
+.RO__services-card_content-subtitles{
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin: 0px;
+}
+.RO__services-card_content-title{
+    font-size: 6vmin;
+}
+.RO__services-card_content-subtitles{
+    font-size: 3vmin;
+    margin-top: 2vmin;
+}
+
+
+
+
+/*------------------------------------------------------------------*/
+
 @media screen and (max-width: 1300px){
     .RO__services-content_img{
         display: none;

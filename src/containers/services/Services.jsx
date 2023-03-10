@@ -52,8 +52,12 @@ const Services = () => {
       {/* ------------------------Cards---------------------- */}
       <div className='RO__services-card'>
         <div className='RO__services-card_content'>
-          <h3 className='RO__services-card-title'>Data Analysis</h3>
-          <h4 className='RO__serces-card_content-subtitles'></h4>
+          <h3 className='RO__services-card_content-title'>Data Analysis</h3>
+          <h4 className='RO__services-card_content-subtitles'>
+            Get more value with you data with prediction models and machine 
+            learning techniques. Visualize and have a better understanding 
+            of the data that you have.
+          </h4>
         </div>
       </div>
     </div>
