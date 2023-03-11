@@ -43,14 +43,14 @@
 
 .RO__about-title{
     align-items: center;
-    margin: 3rem;
+    margin: 3vmin;
     padding-left: 20%;
     position: relative;
 }
 
 .RO__about-title h1{
     font-family: "Montserrat";
-    font-size: 64px;
+    font-size: 9vmin;
     font-weight: 400;
     line-height: 78px;
     color: #34b4bb;
@@ -70,11 +70,12 @@
 .RO__about-content_p{
     width: 400px;
     height: auto;
+    margin-top: 4vmin;
 }
 
 .RO__about-content_p p{
     font-family: "Montserrat";
-    font-size: 18px;
+    font-size: 2vmin;
     font-weight: 300;
     line-height: 28px;
     color: #cac1c1;
@@ -217,13 +218,13 @@
 
 .RO__about-more_quote{
     position: relative;
-    margin-bottom: 1rem;
+    margin-bottom: 1vmin;
 }
 
 .RO__about-more_quote p {
     font-family: "Montserrat";
     font-weight: 400;
-    font-size: 18px;
+    font-size: 2vmin;
     line-height: 34px;
     color: #cac1c1;
     display: flex;
@@ -247,7 +248,7 @@
     justify-content: center;
     align-items: center;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 2vmin;
     border: 0;
     width: 200px;
     height: 60px;
@@ -258,127 +259,61 @@
 }
 
 @media screen and (max-width: 1630px){
-    .RO__about-content_img-1,
-    .RO__about-content_img-2,
-    .RO__about-content_img-3,
-    .RO__about-content_img-4{
-        display: none;
-    }
+    
     .RO__about-content_p{
         width: 420px;
         height: auto;
     }
 }
 
-@media screen and (max-width: 1160px){
-    .RO__about-more_quote p,
-    .RO__about-more_button button{
-        font-size: 18px;
-        font-weight: 300;
-    }
-}
-
-@media screen and (max-width: 940px){
-    .RO__about-more{
-        height: 220px;
-    }
-    .RO__about-more_quote p,
-    .RO__about-more_button button{
-        font-size: 21px;
-        line-height: 36px;
-    }
-    .RO__about-more_button{
-        margin: 9rem auto;
-    }
-}
-
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 580px){
     .RO__about{
-        padding: 0;
-        padding-bottom: 3rem;
+        padding: 6vmin;
     }
     .RO__about-title{
-        margin: 0;
-        margin-left: 10%;
+        display: flex;
+        padding: 0;
+        justify-content: center;
     }
-    .RO__about-title h1{
-        font-size: 50px;
-    }
-    .RO__about-content_p{
-        width: 600px;
-    }
-    .RO__about-content_p p{
-        font-size: 20px;
-    }
-    .RO__about-more{
-        margin-top: 3rem;
-        height: 250px;
-    }
-    .RO__about-more_quote{
-        margin-top: 7%;
-    }
-
-    .RO__about-more_button button,
-    .RO__about-more_button a{
-        width: 150px;
-    }
-
-    .RO__about-more_quote p,
-    .RO__about-more_button button{
-        font-size: 22px;
-        line-height: 30px;
-    }
-    .RO__about-more_button{
-        margin: 10.5rem auto;
-    }
-}
-
-@media screen and (max-width: 580px){
-    .RO__about-title h1{
-        font-size: 48px;
-        line-height: 45px;
+    .RO__about-content{
+        display: flex;
+        justify-content: center;
+        padding: 0%;
+        padding-left: 6vmin;
+        padding-right: 6vmin;
     }
     .RO__about-content_p p{
-        font-size: 16px;
-        line-height: 30px;
+        font-size: 3vmin;
     }
+   .RO__about-content_icons{
+        display: none;
+   }
+   .RO__about-more_quote p{
+        font-size: 3vmin;
+   }
+   .RO__about-more_button button,
+   .RO__about-more_button a{
+        width: 35vmin;
+        height: 12vmin;
+        font-size: 3vmin;
+   }
+   .RO__about-more{
+        padding: 2vmin;
+        width: 80vmin;
+        height: 40vmin;
+   }
 }
 
 @media screen and (max-width: 450px){
-    .RO__about{
-        top: 60rem;
+    
+    .RO__about::after{
+        height: 140%;
     }
-    .RO__about-title h1{
-        font-size: 45px;
-        line-height: 45px;
-    }
-    .RO__about-content_p p{
-        font-size: 18px;
-        line-height: 30px;
-    }
-    .RO__about-more_quote{
-        margin-top: 10%;
-    }
-    .RO__about-more_button button,
-    .RO__about-more_button a{
-        width: 120px;
-        height: 50px;
-    }
-    .RO__about-more_quote p,
-    .RO__about-more_button button{
-        font-size: 18px;
-        line-height: 30px;
+    .RO__about-more{
+        margin-top: 6vmin;
     }
 }
 
 @media screen and (max-width: 390px){
-    .RO__about-more_quote p,
-    .RO__about-more_button button{
-        font-size: 18px;
-        line-height: 24px;
-    }
-    .RO__about-more_quote{
-        margin: 1.5rem;
-        margin-top: 10%;
-    }
+    
 }

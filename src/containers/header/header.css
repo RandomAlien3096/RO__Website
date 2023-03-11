@@ -50,7 +50,6 @@
     position: relative;
     height: 75vmin;
     width: 70vmin;
-    border: 1px solid cyan;
 }
 
 .RO__Parallax_foreground-title{
@@ -60,7 +59,6 @@
     margin-left: 20vmin;
     height: 100%;
     width: 30vmin;
-    border: 1px solid black;
 }
 
 .RO__Parallax_foreground-title h1{
@@ -77,21 +75,21 @@
     position: relative;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 80vmin;
     z-index: 3;
 }
 
 .RO__Overlap-Circle{
     display: flex;
     position: relative;
-    height: 35vh;
-    width: 35vh;
+    height: 35vmin;
+    width: 35vmin;
 }
 
 .RO__Overlap-circleRings{
     position: relative;
-    height: 35vh;
-    width: 35vh;
+    height: 35vmin;
+    width: 35vmin;
 }
 
 /* -------------------------------------------------------------- */
