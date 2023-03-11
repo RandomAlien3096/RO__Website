@@ -149,8 +149,8 @@
 }
 
 .RO__ContactForm-footer{
-    position: absolute;
-    top: -228rem;
+    margin-top: 12vmin;
+    position: relative;
     width: 100%;
 }
 
