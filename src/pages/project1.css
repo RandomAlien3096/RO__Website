@@ -86,6 +86,7 @@
 .RO__TND{
     position: absolute;
     display: inline-block;
+    margin-top: 12vmin;
     padding: 7vw;
     width: 100vw;
     padding-top: 0;
