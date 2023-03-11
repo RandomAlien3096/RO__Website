@@ -2,6 +2,7 @@ import React from 'react';
 import { useRef } from 'react';
 import './contactForm.css';
 import { Footer } from '../../containers';
+import { Navbar } from '../../components';
 
 import emailjs from '@emailjs/browser';
 
@@ -52,6 +53,10 @@ const ContactForm = () => {
     //  };
 
   return (
+    <>
+    <div className='RO__COntactForm-Navbar'>
+        <Navbar />
+    </div>
     <div className='RO__ContactForm' id='contactForm'>
         <div className='RO__ContactForm-title'>
             <h3>Contact</h3>
@@ -121,8 +126,8 @@ const ContactForm = () => {
         <div className='RO__ContactForm-footer'>
             <Footer  />
         </div>
-        
     </div>
+    </>
   );
 }
 

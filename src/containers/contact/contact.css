@@ -136,6 +136,7 @@
         flex-direction: column;
         width: 90%;
         height: 350px;
+        margin-bottom: 12vmin;
     }
     .RO__contact-content_text{
         width: 80%;

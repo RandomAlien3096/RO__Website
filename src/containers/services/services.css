@@ -128,3 +128,47 @@
 }
 
 /*------------------------------------------------------------------*/
+
+@media screen and (max-width: 640px){
+    .RO__services-wrapper{
+        display: flex;
+        justify-content: center;
+        height: auto;
+        width: 100vw;
+        z-index: 1;
+    }
+    .RO__services-wrapper:hover >
+    .RO__services-card::before{
+        background-position: 100% 100%;
+        transform: scale(1.08, 1.03);
+    }
+
+    .RO__services-wrapper:hover >
+    .RO__services-card > 
+    .RO__services-card_content{
+        background-position: -10% 0%;
+    }
+
+    .RO__services-wrapper:hover >
+    .RO__services-card > 
+    .RO__services-card_content >
+    .RO__services-card_content-subtitles >
+    .RO__services-card_content-subtitles_word{
+        opacity: 1;
+        transform: translateY(0%);
+        transition: opacity 0ms, 
+                    transform 200ms cubic-bezier(.90, .06, .15, .90);
+    }
+
+    .RO__services-wrapper:hover >
+    .RO__services-card >
+    .RO__services-card_content>
+    .RO__services-card_content-title,
+    .RO__services-wrapper:hover >
+    .RO__services-card >
+    .RO__services-card_content>
+    .RO__services-card_content-subtitles{
+        color: white;
+    }
+
+}

@@ -25,6 +25,11 @@
     display: flex;
     flex-direction: row;
 }
+
+.RO__navbar-links_container svg{
+    display: none;
+}
+
 .RO__navbar-links_container p,
 .RO__navbar-menu_container p,
 .RO__navbar-rafael p {
@@ -87,12 +92,15 @@
     visibility: visible;
     transform: translateY(0);
     transition: 500ms ease;
+    z-index: 4;
 }
 .RO__navbar-menu2_dropdown.inactive{
     opacity: 0;
-    visibility: hidden;
+    display: none;
+    /* visibility: hidden; */
     transform: translateY(-30px);
     transition: 500ms ease;
+    z-index: -3;
 }
 .RO__navbar-menu2_dropdown-links{
     display: grid;
@@ -136,6 +144,7 @@
         right: 4.5vw;
     }
 }
+
 @media screen and (max-width: 550px) {
     .RO__navbar{
         padding: 1rem 1rem;
