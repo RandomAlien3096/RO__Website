@@ -163,8 +163,3 @@
     border-radius: 6rem;
 }
 
-@media screen and (max-width: 800px){
-    .RO__portfolio{
-        top: 205rem;
-    }
-}
