@@ -1,11 +1,11 @@
 .RO__contact {
-    position: absolute;
     display: grid;
-    top: 280rem;
     place-items: center;
+    position: relative;
     height: 300px;
     width: 100vw;
     padding: 2%;
+    margin-bottom: 6vmin;
 }
 
 .RO__contact-content {
@@ -93,11 +93,7 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 1300px) {
-    .RO__contact{
-        top: 275rem;
-    }
-}
+
 @media screen and (max-width: 880px) {
     .RO__contact-content_shape-title p{
         font-size: 28px;
@@ -135,9 +131,7 @@
 }
 
 @media screen and (max-width: 560px) {
-    .RO__contact{
-        top: 270rem;
-    }
+    
     .RO__contact-content{
         flex-direction: column;
         width: 90%;

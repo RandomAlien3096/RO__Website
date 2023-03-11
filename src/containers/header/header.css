@@ -48,24 +48,26 @@
 .RO__Parallax_foreground{
     display: flex;
     position: relative;
-    height: 75vh;
-    width: 35vw;
+    height: 75vmin;
+    width: 70vmin;
+    border: 1px solid cyan;
 }
 
 .RO__Parallax_foreground-title{
     display: flex;
     position: absolute;
     align-items: center;
-    margin-left: 20%;
+    margin-left: 20vmin;
     height: 100%;
-    width: 60%;
+    width: 30vmin;
+    border: 1px solid black;
 }
 
 .RO__Parallax_foreground-title h1{
     text-align: center;
     font-family: 'Montserrat';
     font-weight: 400;
-    font-size: 164px;
+    font-size: 16vmin;
     z-index: 3;
     color: #fff;
 }
@@ -120,9 +122,6 @@
         font-size: 70px;
         font-weight: 600;
         line-height: 80px;
-    }
-    .RO__Parallax_foreground{
-        width: 70vw;
     }
 }
 
