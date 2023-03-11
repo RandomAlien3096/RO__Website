@@ -51,7 +51,6 @@
 
 @media screen and (max-width: 900px){
     .RO__footer{
-        top:300rem;
         height: 315px;
     }
     .RO__footer-content_links{
@@ -85,7 +84,6 @@
 
 @media screen and (max-width: 400px){
     .RO__footer{
-        top: 295rem;
         height: 275px;
     }
     .RO__footer-content_links{
