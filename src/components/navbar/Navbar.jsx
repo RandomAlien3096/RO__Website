@@ -12,7 +12,8 @@ const Menu = () => (
   <Link to='/#about'><HiUser /></Link>
   <p>
     <Link to='/#about'>
-      About Me
+      {/* About Me */}
+      Sobre Mi
     </Link>
   </p>
   {/* <p><a href = "#about">About me</a></p> */}
@@ -20,20 +21,23 @@ const Menu = () => (
   <Link to='/#services'><HiOutlineCubeTransparent /></Link>
   <p>
     <Link to='/#services'>
-      Services
+      {/* Services */}
+      Servicios
     </Link>
   </p>
   <Link to='/#portfolio'><HiPuzzle /></Link>
   <p>
     <Link to='/#portfolio'>
-      Portfolio
+      {/* Portfolio */}
+      Portafolio
     </Link>
   </p>
 
   <Link to='/contactForm'><HiOutlinePaperAirplane /></Link>
   <p>
     <Link to='/contactForm'>
-      Contact
+      {/* Contact */}
+      Contacto
     </Link>
   </p>
   </>
