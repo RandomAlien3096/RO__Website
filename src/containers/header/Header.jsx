@@ -3,8 +3,9 @@ import './header.css';
 
 import Typewriter from 'typewriter-effect';
 // ------------NEW STYLE----------------
-import { Parallax, ParallaxBanner } from 'react-scroll-parallax';
+import { Parallax, ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 
+import video_bg from '../../assets/bg_video1.mp4';
 import textil from '../../assets/Guatemala/textil2.jpg';
 import tree from '../../assets/Guatemala/tree.png';
 import { Circle } from '../../icons';
@@ -35,18 +36,21 @@ const Header = () => {
     </div>
     <div className='RO__Parallax'>
       <div className='RO__Parallax_background'>
-        <ParallaxBanner 
+        {/* <ParallaxBanner 
           layers={[
             { image: textil, speed: -30}
           ]}>
-        </ParallaxBanner>
+        </ParallaxBanner> */}
+        <video 
+          src = {video_bg} autoPlay loop 
+          className='RO__Parallax_foreground-video'/> 
       </div>
       <div className='RO__Parallax_foreground'>
         <ParallaxBanner 
         layers={[
-          {image: tree, speed: -5},
+          ,
           {
-            speed: -7,
+            speed: -15,
             children: (
               <div className='RO__Parallax_foreground-title'>
                   <h1>R A F A E L</h1>  
@@ -54,7 +58,8 @@ const Header = () => {
             ),
           }
         ]}>
-        </ParallaxBanner>
+        </ParallaxBanner> 
+        
       </div>
     </div>
     <div className='RO__Overlap'>
