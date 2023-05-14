@@ -43,6 +43,7 @@
     position: absolute;
     height: 70vh;
     width: 55vw;
+    border-radius: 35px;
     /* border: 12px solid #333; */
     overflow: hidden;
 }
