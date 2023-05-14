@@ -43,7 +43,7 @@ const about = () => {
               por estrategia, análisis de datos y óptimos
               resultados en mis proyectos.</p>
 
-              <p>He pasado más de 3 años de experiencia
+              <p>He pasado más de 4 años de experiencia
               como analista de datos y científico de datos
               buscando responder las preguntas de nadie
               ha preguntado todavía. Además, para poder expresar 
@@ -59,7 +59,7 @@ const about = () => {
               sitio web de alta calidad, hecho a la medida para tus
               necesidades. </p>
         </div>
-        <div className='RO__about-content_icons'>
+        {/* <div className='RO__about-content_icons'>
           <Parallax className='RO__about-content_icons-wrapper' 
             translateY={[-70, 60]}
             rotateY={[0,360]}>
@@ -88,21 +88,8 @@ const about = () => {
             <div className='RO__about-content_icons-roundrect'></div>
           </Parallax>
 
-        </div>
-        {/* ----------------ASTRONAUT NOT IN USE ANYMORE-----------
-        
-        <div className='RO__about-content_img-1'>
-          <img src = {t_four} alt = "4th triangle" />
-        </div>
-        <div className='RO__about-content_img-2'>
-          <img src = {t_two} alt = "2nd triangle" />
-        </div>
-        <div className='RO__about-content_img-3'>
-          <img src = {t_three} alt = "3rd triangle" />
-        </div>
-        <div className='RO__about-content_img-4'>
-          <img src = {astronaut} alt = "astronaut" />
         </div> */}
+      
       </div>
       <div className='RO__about-more'>
         <div className='RO__about-more_quote'>
