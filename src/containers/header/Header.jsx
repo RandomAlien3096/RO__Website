@@ -40,7 +40,8 @@ const Header = () => {
           className='RO__Parallax_foreground-video'
           autoPlay loop muted
         >
-          <source src = {video_bg}  type = 'video/mp4/' />
+          <source src = {video_bg}  type = 'video/mp4' />
+          <source src = {video_bg}  type = 'video/ogg' />
         </video>  
       </div>
       <div className='RO__Parallax_foreground'>
