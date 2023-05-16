@@ -5,7 +5,7 @@ import Typewriter from 'typewriter-effect';
 // ------------NEW STYLE----------------
 import { Parallax, ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 
-import video_bg from '../../assets/bg_video1.mp4';
+import video_bg from '../../assets/Videos/bg_video1.mp4';
 import textil from '../../assets/Guatemala/textil2.jpg';
 import tree from '../../assets/Guatemala/tree.png';
 import { Circle } from '../../icons';
@@ -37,10 +37,11 @@ const Header = () => {
     <div className='RO__Parallax'>
       <div className='RO__Parallax_background'>
         <video 
-          src = {video_bg} autoPlay loop 
           className='RO__Parallax_foreground-video'
-          type = 'video/mp4/'
-        /> 
+          autoPlay loop muted
+        >
+          <source src = {video_bg}  type = 'video/mp4/' />
+        </video>  
       </div>
       <div className='RO__Parallax_foreground'>
         <ParallaxBanner 
