@@ -36,14 +36,11 @@ const Header = () => {
     </div>
     <div className='RO__Parallax'>
       <div className='RO__Parallax_background'>
-        {/* <ParallaxBanner 
-          layers={[
-            { image: textil, speed: -30}
-          ]}>
-        </ParallaxBanner> */}
         <video 
           src = {video_bg} autoPlay loop 
-          className='RO__Parallax_foreground-video'/> 
+          className='RO__Parallax_foreground-video'
+          type = 'video/mp4/'
+        /> 
       </div>
       <div className='RO__Parallax_foreground'>
         <ParallaxBanner 
