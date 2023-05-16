@@ -20,7 +20,6 @@ const Header = () => {
           I’m 
         </h1>
         <div className='content_text-effect'>
-          
           <Typewriter 
             options={{
               strings: ['an Engineer', 'a Data Scientist', 'a Web Developer'],
@@ -36,6 +35,7 @@ const Header = () => {
     </div>
     <div className='RO__Parallax'>
       <div className='RO__Parallax_background'>
+        <div className='RO__Parallax_background-overlay'></div>
         <video 
           className='RO__Parallax_foreground-video'
           autoPlay loop muted
