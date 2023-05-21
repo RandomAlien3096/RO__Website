@@ -3,6 +3,7 @@ import './footer.css';
 import logoGold from '../../assets/logo_gold.png';
 // import { Link } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link' ;
+import { Maps } from '../../components';
 
 const Footer = () => {
   return (

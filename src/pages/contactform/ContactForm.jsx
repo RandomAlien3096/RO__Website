@@ -6,14 +6,8 @@ import { Navbar } from '../../components';
 
 import emailjs from '@emailjs/browser';
 
-// import axios from 'axios';
 
 const ContactForm = () => {
-     //const [status, setStatus] = useState("Submit");
-    //  const [recipient_email, setEmail] = useState("");
-    //  const [name, setName] = useState("");
-    //  const [message, setMessage] = useState("");
-
 // ----------------------------Emailjs----------------------------
      const form = useRef();
 
@@ -35,23 +29,6 @@ const ContactForm = () => {
              alert("Oops, something went wrong");
          });
      };
-// ----------------------------------------------------------------
-
-    //  function sendMail(){
-    //     if(recipient_email && name && message){
-    //         axios
-    //             .post('http://localhost:5000/send_email', {
-    //                 recipient_email,
-    //                 name,
-    //                 message,
-    //             })
-    //             .then(() => alert('Message sent succesfuly'))
-    //             .catch(() => alert('Oops something went wrong'));
-    //         return;
-    //     }
-    //     return alert('Fill in all the fields to continue');
-    //  };
-
   return (
     <>
     <div className='RO__COntactForm-Navbar'>
