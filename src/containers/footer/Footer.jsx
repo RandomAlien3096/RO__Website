@@ -9,24 +9,27 @@ const Footer = () => {
   return (
     <div className='RO__footer' id='footer'>
       <div className='RO__footer-content'>
-      <div className='RO__footer-content_logo'>
-        <Link className='RO__footer-content_logo' to='/#home'>
-          <img src= {logoGold} alt='logo in gold' />  
-        </Link>
-        
-        <h1>Rafael Oliva</h1>
-      </div>
-      <div className='RO__footer-content_links'>
-        <Link to='/contactForm'>
-          <p>Contact</p>
-        </Link>
-        <div className='RO__footer-content_links-bar'></div>
-        <p>Social</p>
-        <div className='RO__footer-content_links-bar'></div>
-        <Link to='/#services'>
-          <p>Services</p>
-        </Link>
-      </div>
+        <div className='RO__footer-content_maps'>
+          <Maps />
+        </div>
+        <div className='RO__footer-content_logo'>
+          <Link className='RO__footer-content_logo' to='/#home'>
+            <img src= {logoGold} alt='logo in gold' />  
+          </Link>
+          
+          <h1>Rafael Oliva</h1>
+        </div>
+        <div className='RO__footer-content_links'>
+          <Link to='/contactForm'>
+            <p>Contact</p>
+          </Link>
+          <div className='RO__footer-content_links-bar'></div>
+          <p>Social</p>
+          <div className='RO__footer-content_links-bar'></div>
+          <Link to='/#services'>
+            <p>Services</p>
+          </Link>
+        </div>
       </div>
     </div>
   )

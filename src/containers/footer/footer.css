@@ -10,6 +10,9 @@
     margin-top: 20vmin;
     background-color: #11171d;
 }
+.RO__footer-content_maps {
+    display: flex;
+}
 .RO__footer-content_logo {
     display: flex;
     flex-direction: column;
