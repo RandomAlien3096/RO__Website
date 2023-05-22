@@ -4,8 +4,13 @@
     width: 100%;
     padding: 2rem 3rem; 
     position: fixed;
-    z-index: 2;
+    z-index: 4;
 }
+
+/* .RO__navbar.active {
+    background: rgba(16, 16, 16, 0.75);
+} */
+
 .RO__navbar-links {
     flex: 1;
     display: flex;
@@ -42,6 +47,12 @@
     margin: 0 1rem;
     cursor: pointer;
 }
+
+/* .RO__navbar-links_container.active p,
+.RO__navbar-menu_container.active p,
+.RO__navbar-rafael.active p {
+    color: #D9D9D9;
+} */
 
 /* -------------- -------------------------------  */
 .RO__navbar-menu2{

@@ -46,6 +46,7 @@ const Menu = () => (
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [ open, setOpen ] = useState(false);
+  const [navbar, setNavbar] = useState(false);
 
 let menuRef = useRef();
 
@@ -63,8 +64,20 @@ let menuRef = useRef();
     }
   });
 
+  const changeBackground = () => {
+    //console.log(window.scrollY)
+    if (window.scrollY >= 80){
+      setNavbar(true)
+    }
+    else{
+      setNavbar(false)
+    }
+  }
+
+  window.addEventListener('scroll', changeBackground);
+
   return (
-    <div className ="RO__navbar" id='home'>
+    <div className = {navbar ? 'RO__navbar active' : 'RO__navbar'} id='home'>
       <div className='RO__navbar-links'>
         <div className='RO__navbar-links_logo'>
           <img src = {logo} alt = "logo" id='logo'/>
@@ -72,7 +85,7 @@ let menuRef = useRef();
             <p><a href='#header'>Rafael Oliva</a></p>
           </div>
         </div>
-        <div className='RO__navbar-links_container'>
+        <div className={navbar ? 'RO__navbar-links_container active' : 'RO__navbar-links_container'}>
           <Menu />
         </div>
       </div>
