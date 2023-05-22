@@ -60,18 +60,14 @@
 }
 
 @media screen and (max-width: 900px){
-    .RO__footer{
-        height: 315px;
-    }
+    
     .RO__footer-content_links{
         width: 50%;
     }
 }
 
 @media screen and (max-width: 600px){
-    .RO__footer{
-        height: 290px;
-    }
+    
     .RO__footer-content_logo h1{
         font-size: 26px;
     }
@@ -81,9 +77,7 @@
 }
 
 @media screen and (max-width: 500px){
-    .RO__footer{
-        height: 275px;
-    }
+    
     .RO__footer-content_links{
         width: 60%;
     }
@@ -94,7 +88,6 @@
 
 @media screen and (max-width: 400px){
     .RO__footer{
-        height: 275px;
         margin-top: 35vmin;
     }
     .RO__footer-content_links{

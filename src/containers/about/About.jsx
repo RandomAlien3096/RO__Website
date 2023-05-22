@@ -1,11 +1,6 @@
 import React from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import './about.css';
-// import t_four from '../../assets/triangles/4-t.png';
-// import t_two from '../../assets/triangles/2-t.png';
-// import t_three from '../../assets/triangles/3-t.png';
-// import astronaut from '../../assets/astronaut.png';
-
 import { NarrowTriangle } from '../../icons';
 
 import CV from '../../assets/files/RafaelOliva_CV.pdf';
@@ -18,26 +13,6 @@ const about = () => {
       </div>
       <div className='RO__about-content'>
         <div className='RO__about-content_p'>
-          {/* <p>My name is Rafael. I am a Mechatronics 
-            engineer based in Guatemala City driven 
-            by strategy, data analysis and optimal 
-            results in my projects.</p>
-
-          <p>I have spent my 3+ years of experience 
-            as a data analyst and a data scientist 
-            looking to answer the questions nobody 
-            has asked yet. As well, to redraw the 
-            data studied with my front end developer 
-            skills so we have a better comprehension 
-            of what we have.</p>
-
-            <p>I’m here to help you develop your 
-              company to understand it’s past, present 
-              and to give you an idea how to better 
-              develop your future. As well, to get a 
-              greater reach to new customers with a top 
-              of the line website, custom made for your 
-              needs. </p> */}
               <p>Mi nombre es Rafael. Soy Ingeniero Mecatronico 
               en la ciudad de Guatemala. Donde soy impulsado
               por estrategia, análisis de datos y óptimos
@@ -59,36 +34,6 @@ const about = () => {
               sitio web de alta calidad, hecho a la medida para tus
               necesidades. </p>
         </div>
-        {/* <div className='RO__about-content_icons'>
-          <Parallax className='RO__about-content_icons-wrapper' 
-            translateY={[-70, 60]}
-            rotateY={[0,360]}>
-            <NarrowTriangle className='RO__about-content_icons-triangle' />
-            <div className='RO__about-content_icons-roundrect'></div>
-          </Parallax>
-
-          <Parallax className='RO__about-content_icons-wrapper'
-            speed={20}
-            rotateY={[0,360]}>
-            <NarrowTriangle className='RO__about-content_icons-triangle' />
-            <div className='RO__about-content_icons-roundrect'></div>
-          </Parallax>
-
-          <Parallax className='RO__about-content_icons-wrapper'
-            translateY={[-80, 80]}
-            rotateY={[0,360]}>
-            <NarrowTriangle className='RO__about-content_icons-triangle' />
-            <div className='RO__about-content_icons-roundrect'></div>
-          </Parallax>
-
-          <Parallax className='RO__about-content_icons-wrapper'
-            rotateY={[0,360]}
-            speed={15}>
-            <NarrowTriangle className='RO__about-content_icons-triangle' />
-            <div className='RO__about-content_icons-roundrect'></div>
-          </Parallax>
-
-        </div> */}
       
       </div>
       <div className='RO__about-more'>

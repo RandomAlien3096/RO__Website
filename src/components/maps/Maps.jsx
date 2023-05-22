@@ -22,6 +22,9 @@ function Map() {
   return (
     <div className='RO__map-container'>
       <GoogleMap 
+        options={{
+          styles: [{ stylers: [{ 'saturation': 25 }, { 'gamma': 0.9 }] }]
+          }}
         zoom = {15} 
         center = {center} 
         mapContainerClassName='RO__map-container' 

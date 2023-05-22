@@ -13,21 +13,20 @@ const Footer = () => {
           <Maps />
         </div>
         <div className='RO__footer-content_logo'>
-          <Link className='RO__footer-content_logo' to='/#home'>
+          <Link className='RO__footer-content_logo' to='/#header'>
             <img src= {logoGold} alt='logo in gold' />  
           </Link>
-          
           <h1>Rafael Oliva</h1>
         </div>
         <div className='RO__footer-content_links'>
           <Link to='/contactForm'>
-            <p>Contact</p>
+            <p>Contacto</p>
           </Link>
           <div className='RO__footer-content_links-bar'></div>
           <p>Social</p>
           <div className='RO__footer-content_links-bar'></div>
           <Link to='/#services'>
-            <p>Services</p>
+            <p>Servicios</p>
           </Link>
         </div>
       </div>

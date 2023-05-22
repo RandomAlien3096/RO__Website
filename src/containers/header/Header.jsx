@@ -6,8 +6,6 @@ import Typewriter from 'typewriter-effect';
 import { Parallax, ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 
 import video_bg from '../../assets/Videos/bg_video1.mp4';
-import textil from '../../assets/Guatemala/textil2.jpg';
-import tree from '../../assets/Guatemala/tree.png';
 import { Circle } from '../../icons';
 import { CircleRings } from '../../icons';
 
@@ -33,7 +31,7 @@ const Header = () => {
         </h1>
       </div>
     </div>
-    <div className='RO__Parallax'>
+    <div className='RO__Parallax' id='header'>
       <div className='RO__Parallax_background'>
         <div className='RO__Parallax_background-overlay'></div>
         <video 
