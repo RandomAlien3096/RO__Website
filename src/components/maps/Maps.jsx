@@ -6,11 +6,29 @@ import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 
 const Maps = () => {
   const { isLoaded } = useLoadScript({ 
-    googleMapsApiKey: 'process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY',
-   });
-  return (
-    <div>Map</div>
-  )
-}
+    //googleMapsApiKey: 'process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY',
+    googleMapsApiKey: "AIzaSyBCVxdfTabBoeB863_aiSBi_dgxwMQzkJE",
+     });
 
-export default Maps
+   if (!isLoaded) return <div>Loading...</div>;
+
+   
+   return <Map />
+  }
+  
+function Map() {
+  const center = useMemo(() => (
+   { lat: 14.608035512342898, lng: -90.51561171346732 }), []);
+  return (
+    <div className='RO__map-container'>
+      <GoogleMap 
+        zoom = {15} 
+        center = {center} 
+        mapContainerClassName='RO__map-container' 
+      > 
+        <Marker position={center} />
+      </GoogleMap>
+    </div>
+  );
+}
+  export default Maps

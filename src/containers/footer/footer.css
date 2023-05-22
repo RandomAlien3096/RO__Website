@@ -3,31 +3,38 @@
     position: relative;
     flex-direction: column;
     aspect-ratio: 1.623;
-    justify-content: center;
-    align-items: center;
+    align-content: space-between;
+    /* justify-content: center; */
+    /* align-items: center; */
     width: 100vw;
-    height: 330px;
+    height: 55vh;
     margin-top: 20vmin;
     background-color: #11171d;
 }
 .RO__footer-content_maps {
-    display: flex;
+    position: relative;
+    width: 100%;
+    height: 25vh;
+    top: 0;
+    left: 0;
 }
 .RO__footer-content_logo {
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
+    margin-top: 2vh;
     margin-bottom: 2rem;
 }
 .RO__footer-content_logo img {
-    width: 10%;
+    width: 7%;
 }
 .RO__footer-content_logo h1{
     font-family: "Montserrat";
     font-weight: 300;
-    font-size: 32px;
+    font-size: 28px;
     color: #fff;
-    margin-top: 1%;
+    /* margin-top: 1%; */
 }
 
 .RO__footer-content_links{
